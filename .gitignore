@@ -1,0 +1,31 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Dataset folders
+ai/dataset/original/
+ai/dataset/resized/
+ai/dataset/split/
+
+# Large/generated model files
+ai/saved_model/*.keras
+ai/saved_model/*.h5
+ai/saved_model/*.zip
+
+# Temporary uploads
+backend/uploads/
+
+# Environment files
+.env
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
