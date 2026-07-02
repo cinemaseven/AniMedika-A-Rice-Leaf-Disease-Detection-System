@@ -1,0 +1,7 @@
+,Pred_Bacterial_Leaf_Blight,Pred_Brown_Spot,Pred_Healthy,Pred_Rice_Blast,Pred_Sheath_Blight,Pred_Tungro
+True_Bacterial_Leaf_Blight,28,2,0,0,0,0
+True_Brown_Spot,4,26,0,0,0,0
+True_Healthy,5,0,24,1,0,0
+True_Rice_Blast,2,3,2,23,0,0
+True_Sheath_Blight,0,0,0,0,30,0
+True_Tungro,0,0,1,1,0,28

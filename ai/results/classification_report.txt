@@ -1,12 +1,12 @@
                        precision    recall  f1-score   support
 
-Bacterial_Leaf_Blight     0.7879    0.8667    0.8254        30
-           Brown_Spot     0.8696    0.6667    0.7547        30
-              Healthy     0.7778    0.9333    0.8485        30
-           Rice_Blast     0.6957    0.5333    0.6038        30
-        Sheath_Blight     0.8667    0.8667    0.8667        30
-               Tungro     0.7714    0.9000    0.8308        30
+Bacterial_Leaf_Blight     0.7568    0.9333    0.8358        30
+           Brown_Spot     0.8387    0.8667    0.8525        30
+              Healthy     0.9600    0.8000    0.8727        30
+           Rice_Blast     0.9259    0.8333    0.8772        30
+        Sheath_Blight     0.9677    1.0000    0.9836        30
+               Tungro     1.0000    0.9667    0.9831        30
 
-             accuracy                         0.7944       180
-            macro avg     0.7948    0.7944    0.7883       180
-         weighted avg     0.7948    0.7944    0.7883       180
+             accuracy                         0.9000       180
+            macro avg     0.9082    0.9000    0.9008       180
+         weighted avg     0.9082    0.9000    0.9008       180
