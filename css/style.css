@@ -29,7 +29,13 @@ body {
 
 /* === HEADER === */
 .site-header {
+    background-color: var(--base);
     padding: 2rem 6rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.22);
+
 }
 
 .container {
@@ -40,6 +46,12 @@ body {
 }
 
 .header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-actions {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -57,7 +69,127 @@ body {
     font-family: var(--heading-font);
 }
 
+.language-selector {
+    position: relative;
+}
+
+.language-toggle {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    background-color: var(--primary);
+    color: var(--text-color2);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-family: var(--body-font);
+    font-size: 1.09rem;
+    cursor: pointer;
+}
+
+.language-toggle .material-icons {
+    font-size: 2rem;
+}
+
+.language-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    right: 0;
+    width: 160px;
+    background-color: var(--base);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+    z-index: 50;
+}
+
+.language-menu.active {
+    display: block;
+}
+
+.language-menu-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-color1);
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+.language-menu-btn:hover {
+    background-color: var(--accent2);
+}
+
+.language-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    z-index: 10000;
+}
+
+.language-popup-overlay.active {
+    display: flex;
+}
+
+.language-popup {
+    width: min(480px, 100%);
+    background-color: var(--base);
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.30);
+}
+
+.language-popup h2 {
+    color: var(--secondary);
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 0.7rem;
+}
+
+.language-popup p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.language-popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.language-option-btn {
+    min-width: 150px;
+    background-color: var(--primary);
+    color: var(--text-color2);
+    border: none;
+    border-radius: 100px;
+    padding: 0.8rem 1.2rem;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.language-option-btn span {
+    margin-right: 0.4rem;
+}
+
 .calendar {
+    width: 220px;
+    justify-content: space-between;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -69,23 +201,39 @@ body {
 }
 
 .date-input {
+    width: 100%;
     border: none;
     outline: none;
     background: transparent;
     color: var(--text-color2);
-    font-size: 1.2rem;
+    font-size: 1.09rem;
     font-family: var(--body-font);
     cursor: pointer;
+    pointer-events: none;
+    z-index: 1;
 }
 
-.date-input::-webkit-calendar-picker-indicator {
+.real-date-picker {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
     cursor: pointer;
+    z-index: 2;
 }
+
+.calendar .material-icons {
+    pointer-events: none;
+}
+/* .date-input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+} */
 
 .material-icons {
     font-size: 2rem;
@@ -113,14 +261,28 @@ body {
 
 /* === MAIN CONTENT WRAPPER === */
 .main-content-wrapper {
-    width: min(1700px, 100%);
+    width: 100%;
+    max-width: 1700px;
     margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 
 /* === MAIN CONTENT === */
 .main-content {
     margin: 1.9rem 0;
 }
+
+/* === MAIN CONTENT WRAPPER === */
+/* .main-content-wrapper {
+    width: min(1700px, 100%);
+    margin: 0 auto;
+} */
+
+/* === MAIN CONTENT === */
+/* .main-content {
+    margin: 1.9rem 0;
+} */
 
 /* ===  ABOUT CARD === */
 .about-container {
@@ -175,7 +337,6 @@ body {
     text-align: justify;
 }
 
-
 h2 {
     font-family: var(--heading-font);
     font-size: 2rem;
@@ -186,7 +347,6 @@ p, ol {
     line-height: 1.6;
     font-size: 1.15rem;
 }
-
 
 .show-more-btn {
     font-family: var(--body-font);
@@ -205,16 +365,21 @@ p, ol {
 }
 
 /* ===  INSTRUCTIONS CARD === */
+#img-specs{
+    color: rgb(221, 7, 7);
+    font-weight: bold;
+}
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    align-items: stretch;
 }
 
 .instructions-card {
     border: 2px solid var(--text-color1);
     border-radius: 15px;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .instructions-card h2 {
@@ -237,6 +402,69 @@ p, ol {
 
 /* ===  UPLOAD CARD === */
 .upload-card {
+    width: 100%;
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.22);
+    background-color: var(--base);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-card h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.upload-box {
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--accent2);
+    border: 4.5px dashed var(--secondary);
+    border-radius: 25px;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.upload-icon {
+    font-size: 7rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.upload-box p {
+    color: var(--secondary);
+    margin-top: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.source-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.upload-btn {
+    width: 270px;
+    color: var(--text-color2);
+    font-size: 1.25rem;
+    background-color: var(--secondary);
+    cursor: pointer;
+    padding: 0.55rem 1rem;
+    border: none;
+    border-radius: 100px;
+    font-family: var(--body-font);
+}
+/* .upload-card {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.50);
     background-color: var(--base);
     border-radius: 15px;
@@ -276,7 +504,7 @@ p, ol {
     padding: 0.75rem 1.25rem;
     border: none;
     border-radius: 100px;
-}
+} */
 
 /* ===  RESULTS === */
 .results-section {
@@ -481,7 +709,7 @@ p, ol {
     color: var(--text-color1);
     font-style: italic;
     font-family: var(--body-font);
-    font-size: 1.35rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     margin-bottom: 2rem;
     text-align: justify;
@@ -495,7 +723,7 @@ p, ol {
 .site-footer {
     background: var(--accent1);
     color: var(--text-color2);
-    padding: 2rem 2rem;
+    padding: 0.2rem 5rem;
     margin-top: 3rem;
 }
 
@@ -506,8 +734,8 @@ p, ol {
 }
 
 .footer-left h2 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin: 0.5rem 0;
 }
 
 .footer-left p {
@@ -522,18 +750,18 @@ p, ol {
 }
 
 .footer-img {
-    width: 220px;
-    height: 60px;
-    object-fit: cover;
-    margin-bottom: 0.5rem;
+    width: 190px;
+    height: 40px;
+    object-fit: fill;
+    margin: 1rem 0 0.5rem 0;
 }
 
 .copyright {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 0.75rem;
 }
 
-.footer-links {
+/* .footer-links {
     display: flex;
     gap: 1.2rem;
     flex-wrap: nowrap;
@@ -548,10 +776,79 @@ p, ol {
 
 .footer-links a:hover {
     text-decoration: underline;
+} */
+
+#contactUsBtn {
+    cursor: pointer;
+}
+
+.contact-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    z-index: 9999;
+}
+
+.contact-popup-overlay.active {
+    display: flex;
+}
+
+.contact-popup {
+    width: min(1000px, 100%);
+    background-color: var(--base);
+    border-radius: 15px;
+    padding: 2rem 4rem 4rem;
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.30);
+    position: relative;
+}
+
+.contact-popup h2 {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+.contact-close-btn {
+    position: absolute;
+    top: 1.3rem;
+    right: 2rem;
+    background: transparent;
+    border: none;
+    color: var(--accent1);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 3rem;
+}
+
+.contact-person {
+    text-align: center;
+}
+
+.contact-person h3 {
+    font-size: 1.55rem;
+    margin-bottom: 1.3rem;
+}
+
+.contact-person p {
+    font-size: 1.25rem;
+    line-height: 1.3;
 }
 
 /* ==========================================
-   TABLET VIEW (1024px and below)
+    TABLET VIEW (1024px and below)
 ========================================== */
 @media (max-width: 1024px) {
 
@@ -561,12 +858,29 @@ p, ol {
         padding-right: 2rem;
     }
 
-    .main-content-wrapper {
+    /* .main-content-wrapper {
         padding: 0 2rem;
+    } */
+
+    .site-title {
+        font-size: 1.7rem;
     }
 
     .hero-image {
         height: 350px;
+    }
+
+    .header-actions {
+        gap: 0.6rem;
+    }
+
+    .language-toggle {
+        font-size: 1rem;
+    }
+
+    .date-input {
+        font-size: 1rem;
+        min-width: 0;
     }
 
     .about-card-top {
@@ -601,6 +915,10 @@ p, ol {
         font-size: 2.5rem;
     }
 
+    .disclaimer{
+        font-size: 0.98rem;
+    }
+
     .footer-container {
     flex-direction: row;
     justify-content: space-between;
@@ -610,11 +928,32 @@ p, ol {
     .footer-right {
         align-items: flex-end;
     }
+
+    .contact-popup {
+    padding: 2rem;
+    }
+
+    .contact-popup h2 {
+        font-size: 2rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .contact-person h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-person p {
+        font-size: 1rem;
+    }
 }
 
 
 /* ==========================================
-   MOBILE VIEW (768px and below)
+    MOBILE VIEW (768px and below)
 ========================================== */
 @media (max-width: 768px) {
 
@@ -643,13 +982,49 @@ p, ol {
         font-size: 1.3rem;
     }
 
+    .header-actions {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .language-selector,
     .calendar {
-        width: auto;             
+        width: 220px;
+        height: 48px;
+    }
+
+    .language-toggle,
+    .calendar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.6rem 0.9rem;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+
+    .language-toggle {
+        width: 100%;
+        height: 100%;
+    }
+
+    .language-popup-buttons {
+        flex-direction: column;
+    }
+
+    .language-option-btn {
+        width: 100%;
+    }
+
+    /* .calendar {
+        width: 220px;             
         display: inline-flex;   
         padding: 0.6rem 0.9rem;  
         font-size: 0.9rem;      
         border-radius: 8px;
-    }
+    } */
 
     .date-input {
         font-size: 1rem;          
@@ -659,9 +1034,9 @@ p, ol {
         display: none;
     }
 
-    .main-content-wrapper {
+    /* .main-content-wrapper {
         padding: 0 1rem;
-    }
+    } */
 
     .about-card-top {
         display: flex;
@@ -713,9 +1088,9 @@ p, ol {
         padding: 2rem 1rem;
     }
 
-    .upload-icon {
+    /* .upload-icon {
         font-size: 4rem;
-    }
+    } */
 
     .upload-box p {
         font-size: 1.1rem;
@@ -723,6 +1098,16 @@ p, ol {
 
     .upload-btn {
         width: 100%;
+        max-width: 270px;
+    }
+
+    .upload-card h2 {
+    font-size: 1.3rem;
+    }
+
+    .source-buttons {
+        width: 100%;
+        /* max-width: 220px; */
     }
 
     .result-details h2 {
@@ -770,7 +1155,7 @@ p, ol {
     }
 
     .disclaimer{
-        font-size: 0.7rem;
+        font-size: 0.77rem;
     }
 
     .footer-left h2 {
@@ -809,7 +1194,7 @@ p, ol {
 }
 
 /* ==========================================
-   SMALL PHONES (480px and below)
+    SMALL PHONES (480px and below)
 ========================================== */
 
 @media (max-width: 480px) {

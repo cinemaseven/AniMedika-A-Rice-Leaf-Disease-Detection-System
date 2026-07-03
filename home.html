@@ -13,7 +13,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- js-->
-     <script type="module" src="js/script.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
     <!-- tensorflow -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 </head>
@@ -27,18 +27,44 @@
                 <img src="images/logo-ss.png" alt ="Cropix logo" class="logo">
                 <h1 class="site-title">Cropix: Rice Leaf Disease Detection</h1>
             </div>
-            <!-- calendar -->
-            <div class="calendar">
-                <span class="material-icons">calendar_month</span>
-                <input type="date" id="date-display" class="date-input" value="2026-06-20">
-                <span class="material-icons">expand_more</span>
+            <!-- language selector and calendar -->
+            <div class="header-actions">
+                <!-- language selector -->
+                <div class="language-selector">
+                    <button class="language-toggle" id="languageToggleBtn" type="button">
+                        <span id="currentLanguageFlag">🇵🇭</span>
+                        <span id="currentLanguageText">Filipino</span>
+                        <span class="material-icons">expand_more</span>
+                    </button>
+
+                    <div class="language-menu" id="languageMenu">
+                        <button class="language-menu-btn" type="button" data-lang="fil">
+                            <span>🇵🇭</span>
+                            <span>Filipino</span>
+                        </button>
+
+                        <button class="language-menu-btn" type="button" data-lang="en">
+                            <span>🇺🇸</span>
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- calendar -->
+                <div class="calendar">
+                    <span class="material-icons">calendar_month</span>
+                    <!-- <input type="date" id="date-display" class="date-input"> -->
+                    <input type="text" id="date-display" class="date-input" placeholder="MM/DD/YYYY" readonly>
+                    <input type="date" id="date-picker" class="real-date-picker">
+                    <span class="material-icons">expand_more</span>
+                </div>
             </div>
         </div>
     </header>
+
     <!-- hero image -->
     <div class="hero-container">
         <img src="images/hero-image.png" alt="An image of farmers working in a rice field" class="hero-image">
-        <a href="https://www.eco-business.com/news/from-farmers-to-importers-how-filipino-rice-growing-went-wrong/" class="hero-link">https://www.eco-business.com/news/from-farmers-to-importers-how-filipino-rice-growing-went-wrong/</a>
+        <a href="https://www.eco-business.com/news/from-farmers-to-importers-how-filipino-rice-growing-went-wrong/" target="_blank" class="hero-link">https://www.eco-business.com/news/from-farmers-to-importers-how-filipino-rice-growing-went-wrong/</a>
     </div>
 
     <!-- main content -->
@@ -78,27 +104,30 @@
                 <div class="instructions-card">
                     <h2>How to Use</h2>
                     <ol>
-                        <li>Prepare a rice leaf image.</li>
+                        <li>Prepare one close-up image of a rice leaf. <i id="img-specs">Please make sure that it is clear and not too dark.</i></li>
                         <li>Select or update the date using the calendar icon above to match when the image was taken.</li>
-                        <li>Drag and drop the image or click <i>Choose file</i> to upload.</li>
-                        <li>Upload one image at a time.</li>
-                        <li>The disease protection and confidence score will be displayed automatically.</li>
-                        <li>Click the <span class="material-icons info-icon">info</span> icon for more information about the results.</li>
-                        <li>To analyze another image, simply repeat the steps aboved</li>
+                        <li>Upload the image using the camera or <i>select from gallery</i> option.</li>
+                        <li>The disease prediction and recommended actions will be displayed automatically.</li>
+                        <li>To analyze another image, simply repeat the steps above.</li>
                     </ol>
                 </div>
 
                 <!-- photo upload -->
                 <div class="upload-card">
-                    <h2>Photo Upload</h2>
+                    <h2>Select Image Source</h2>
                     <input type="file" id="leafFileInput" accept="image/*" style="display: none;">
                     <div class="upload-box" id="dropZone">
-                        <span class="material-icons upload-icon">cloud_upload</span>
-                        <p>Drag and Drop files here</p>
-                        <p>or</p>
-                        <button class="upload-btn" id="customUploadBtn" type="button">
-                            Choose file
-                        </button>
+                        <span class="material-icons upload-icon">add_photo_alternate</span>
+
+                        <div class="source-buttons">
+                            <button class="upload-btn" id="customUploadBtn" type="button">
+                                Select from gallery
+                            </button>
+
+                            <button class="upload-btn" id="cameraUploadBtn" type="button">
+                                Use camera
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,63 +142,45 @@
                 <hr>
             </div>
 
+            <!-- results prediction -->
             <div class="result-content">
-
                 <div class="result-image-card">
-
                     <img id="previewImage" src="" alt="Uploaded Rice Leaf">
-
-                    <div class="confidence-overlay">
-                        <span id="confidenceValue" class="percentage-text">0%</span>
-                    </div>
-
                 </div>
 
                 <div class="result-details">
-
-                    <p class="confidence-text">
-                        We are <span id="confidenceText">0%</span> sure that the detected disease is...
-                    </p>
-
                     <h2 id="diseaseName">
                         Evaluating...
                         <span class="material-icons">info</span>
                     </h2>
-
                     <p id="diseaseDescription">
                         Awaiting image analysis...
                     </p>
-
                 </div>
-
             </div>
 
+            <!-- recommendations -->
             <div class="recommendation-card">
-
                 <h2>Recommended Actions</h2>
-
                 <ul id="recommendationList">
                     <li>Awaiting local performance processing...</li>
                 </ul>
-
             </div>
 
+            <!-- disclaimer -->
             <p class="disclaimer">
                 <strong>Disclaimer:</strong>
                 This system is intended to assist, not replace, Filipino farmers and agricultural professionals. The results provided are meant to support disease identification and decision-making and should be used together with field observations and expert advice when necessary.
             </p>
 
         </section>
-        <!-- <section class="results">
-
-        </section> -->
     </main>
 
     <!-- footer -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-left">
-                <h2>Contact Us</h2>
+                <h2 id="contactUsBtn">Contact Us</h2>
                 <p onclick="window.scrollTo({top:0, behavior: 'smooth'});">Back to Top</p>
             </div>
 
@@ -177,13 +188,69 @@
                 <img src="images/logo-name-ss.png" alt="Logo with name" class="footer-img">
                 <p class="copyright">All rights reserved 2026</p>
 
-                <div class="footer-links">
+                <!-- <div class="footer-links">
                     <a href="#">Advertisement</a>
                     <a href="#">Privacy Policy</a>
                     <a href="#">Visitor Agreement</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>
+
+    <!-- language selector popup -->
+    <div class="language-popup-overlay" id="languagePopupOverlay">
+        <div class="language-popup">
+            <h2>Pumili ng Wika</h2>
+            <p>Piliin ang nais mong gamitin na wika.</p>
+
+            <div class="language-popup-buttons">
+                <button class="language-option-btn" type="button" data-lang="fil">
+                    <span>🇵🇭</span>
+                    Filipino
+                </button>
+
+                <button class="language-option-btn" type="button" data-lang="en">
+                    <span>🇺🇸</span>
+                    English
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact us popup -->
+    <div class="contact-popup-overlay" id="contactPopupOverlay">
+    <div class="contact-popup">
+        <button class="contact-close-btn" id="closeContactPopup" type="button">&times;</button>
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-grid">
+            <div class="contact-person">
+                <h3>Francine Angela G. Alejandro</h3>
+                <p>+63 XXXXXXXXXX</p>
+                <p>ssample@gmail.com</p>
+            </div>
+
+            <div class="contact-person">
+                <h3>Yohanna A. Decilio</h3>
+                <p>+63 XXXXXXXXXX</p>
+                <p>ssample@gmail.com</p>
+            </div>
+
+            <div class="contact-person">
+                <h3>Shane S. Mendoza</h3>
+                <p>+63 XXXXXXXXXX</p>
+                <p>ssample@gmail.com</p>
+            </div>
+
+            <div class="contact-person">
+                <h3>Maria Niña Grace L. Pascua</h3>
+                <p>+63 XXXXXXXXXX</p>
+                <p>ssample@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
