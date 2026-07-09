@@ -3,7 +3,7 @@ export const WEBSITE_TEXT = {
         flag: "🇵🇭",
         label: "Filipino",
 
-        siteTitle: "Cropix: Rice Leaf Disease Detection",
+        siteTitle: "AniMedika",
 
         aboutTitle: "Tungkol sa Website",
         aboutShort: "Ang website na ito ay nagsisilbing opisyal na digital platform at deployment interface para sa software project na nagbibigay ng madaling gamitin at mataas ang katumpakang kasangkapan para sa mabilis na pagsusuri ng kalusugan ng pananim.",
@@ -50,7 +50,7 @@ export const WEBSITE_TEXT = {
         flag: "🇺🇸",
         label: "English",
 
-        siteTitle: "Cropix: Rice Leaf Disease Detection",
+        siteTitle: "AniMedika",
 
         aboutTitle: "About this Website",
         aboutShort: "This website serves as the official digital platform and deployment interface for a software project that provides an accessible, high-precision tool for rapid crop health assessment.",

@@ -464,6 +464,10 @@ p, ol {
     border-radius: 100px;
     font-family: var(--body-font);
 }
+
+    #cameraUploadBtn {
+        display: none;
+    }
 /* .upload-card {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.50);
     background-color: var(--base);
@@ -891,6 +895,10 @@ p, ol {
         position: absolute;
         right: 3rem;
         margin-top: 0;
+    }
+
+    #cameraUploadBtn {
+        display: block;
     }
 
     .content-grid {
