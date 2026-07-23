@@ -1,0 +1,19 @@
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: animedika-development
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./home.html:/usr/share/nginx/html/index.html:ro
+      - ./css:/usr/share/nginx/html/css:ro
+      - ./images:/usr/share/nginx/html/images:ro
+      - ./js:/usr/share/nginx/html/js:ro
+      - ./model_web:/usr/share/nginx/html/model_web:ro
+
+    restart: unless-stopped
