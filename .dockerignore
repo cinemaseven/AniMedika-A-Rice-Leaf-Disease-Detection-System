@@ -1,0 +1,16 @@
+.git
+.github
+.vscode
+
+ai
+python
+
+README.md
+VERSION.md
+
+__pycache__
+*.pyc
+*.pyo
+*.log
+*.keras
+.env
