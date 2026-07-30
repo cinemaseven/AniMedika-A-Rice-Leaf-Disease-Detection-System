@@ -420,7 +420,6 @@ AniMedika-A-Rice-Leaf-Disease-Detection-System/
 │
 ├── dataset/                 # Local only; ignored by Git
 ├── outputs/                 # Generated locally; ignored by Git
-├── .venv/                   # Local environment; ignored by Git
 ├── .env.example
 ├── .gitignore
 ├── Dockerfile
@@ -437,7 +436,7 @@ Generated datasets, outputs, prediction logs, alternate checkpoints, and tempora
 
 ### Prerequisites
 
-- Python 3.13
+- Python 3.13 with the Windows `py` launcher
 - Git
 - Node.js, when required by the frontend
 - Docker Desktop, for container-based execution
@@ -450,26 +449,30 @@ git clone <repository-url>
 cd AniMedika-A-Rice-Leaf-Disease-Detection-System
 ```
 
-### Create and Activate a Virtual Environment
-
-```powershell
-py -3.13 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-When PowerShell blocks activation:
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
-```
-
 ### Install Python Dependencies
+
+This project was developed and tested using the system-installed Python 3.13 interpreter through the Windows Python Launcher. A virtual environment was not used during the documented model-development and evaluation process.
+
+Install the required packages directly with:
 
 ```powershell
 py -3.13 -m pip install --upgrade pip
 py -3.13 -m pip install -r requirements.txt
 ```
+
+Confirm the active Python version:
+
+```powershell
+py -3.13 --version
+```
+
+Confirm that TensorFlow is installed:
+
+```powershell
+py -3.13 -m pip show tensorflow
+```
+
+A virtual environment may still be used by future contributors as an optional dependency-isolation method, but it is not required to reproduce the commands documented in this repository.
 
 ### Install Frontend Dependencies
 
