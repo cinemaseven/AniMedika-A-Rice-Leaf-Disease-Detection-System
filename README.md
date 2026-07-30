@@ -365,17 +365,42 @@ Six of the ten final errors involved the Rice Blast–Sheath Blight pair.
 ```text
 AniMedika-A-Rice-Leaf-Disease-Detection-System/
 │
-├── backend/
-├── frontend/
+├── css/
+│   ├── style.css
+│
+├── images/
+│   ├── hero-image.png
+│   ├── logo-name-ss.png
+│   ├── logo-ss.png
+│
+├── js/
+│   ├── main.js
+│   ├── results.js
+│   ├── script.js
+│   ├── translations.js
+│
+├── model_web/
+│   ├── model.json
+│
 ├── src/
+│   ├── audit_dataset.py
+│   ├── augmentation.py
 │   ├── calibration.py
+│   ├── compare_experiments.py
+│   ├── compare_multiseed.py
 │   ├── compare_splits.py
 │   ├── config.py
+│   ├── dataset.py
+│   ├── environment_check.py
 │   ├── evaluate.py
+│   ├── experiemnts.py
 │   ├── kfold.py
+│   ├── metrics.py
 │   ├── model.py
 │   ├── paths.py
 │   ├── predict.py
+│   ├── repair_selected_model_outputs.py
+│   ├── split_dataset.py
 │   ├── train.py
 │   └── training_utils.py
 │
@@ -384,6 +409,11 @@ AniMedika-A-Rice-Leaf-Disease-Detection-System/
 │       └── exp08_vertical_translation003/
 │           ├── best_model.keras
 │           └── labels.json
+│
+├── scripts/
+│   ├── reset_generated.ps1
+│   ├── run_baseline_after_audit.ps1
+│   ├── run_final.ps1
 │
 ├── data/
 │   └── recommendations.json
