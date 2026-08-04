@@ -9,10 +9,11 @@ from config import SEED
 
 BASELINE: dict[str, Any] = {
     "name": "baseline",
-    "description": (
-        "Baseline EfficientNetB0 model using the original model settings, "
-        "but evaluated under the corrected 70/10/20 dataset protocol."
-    ),
+        "description": (
+            "Initial reference EfficientNetB0 configuration used as the "
+            "experimental control for evaluating succeeding model modifications "
+            "under the group-aware 70/10/20 dataset protocol."
+        ),
     "seed": SEED,
     "model": {
         "backbone": "EfficientNetB0",

@@ -7,7 +7,7 @@ from pathlib import Path
 
 import numpy as np
 import tensorflow as tf
-from PIL import Image, UnidentifiedImageError
+from PIL import Image, ImageOps, UnidentifiedImageError
 
 from calibration import apply_temperature
 from config import CLASS_NAMES, IMAGE_SIZE
@@ -15,7 +15,7 @@ from paths import get_experiment_paths
 
 
 # Default model configuration used for prediction.
-DEFAULT_EXPERIMENT = "exp08_vertical_translation003"
+DEFAULT_EXPERIMENT = "exp04_finetune40"
 
 # Maximum confidence displayed to the user.
 # The genuine probability remains unchanged in the saved JSON file.
@@ -23,20 +23,37 @@ MAX_DISPLAY_CONFIDENCE = 0.999
 
 
 def load_image(path: Path) -> np.ndarray:
-    """Load and prepare one image for model prediction."""
+    """Load one image using preprocessing consistent with training."""
 
     with Image.open(path) as image:
+        # Apply the orientation recorded by phones and cameras.
+        image = ImageOps.exif_transpose(image)
+
+        # Ensure exactly three RGB channels.
         image = image.convert("RGB")
-        image = image.resize(IMAGE_SIZE)
+
         image_array = np.asarray(
             image,
             dtype=np.float32,
         )
 
-    return np.expand_dims(
+    # TensorFlow image datasets normally use bilinear resizing.
+    image_tensor = tf.convert_to_tensor(
         image_array,
-        axis=0,
+        dtype=tf.float32,
     )
+
+    image_tensor = tf.image.resize(
+        image_tensor,
+        IMAGE_SIZE,
+        method="bilinear",
+        antialias=False,
+    )
+
+    return tf.expand_dims(
+        image_tensor,
+        axis=0,
+    ).numpy()
 
 
 def get_display_confidence(confidence: float) -> float:
