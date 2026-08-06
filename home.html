@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- js-->
     <script type="module" src="js/main.js" defer></script>
-    <!-- tensorflow -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 </head>
 
 <body>
@@ -49,13 +47,31 @@
                         </button>
                     </div>
                 </div>
-                <!-- calendar -->
-                <div class="calendar">
-                    <span class="material-icons">calendar_month</span>
-                    <!-- <input type="date" id="date-display" class="date-input"> -->
-                    <input type="text" id="date-display" class="date-input" placeholder="MM/DD/YYYY" readonly>
-                    <input type="date" id="date-picker" class="real-date-picker">
-                    <span class="material-icons">expand_more</span>
+                <!-- calendar and automatically determined season -->
+                <div class="date-season-group">
+                    <div class="calendar">
+                        <span class="material-icons">calendar_month</span>
+
+                        <input
+                            type="text"
+                            id="date-display"
+                            class="date-input"
+                            placeholder="MM/DD/YYYY"
+                            readonly
+                        >
+
+                        <input
+                            type="date"
+                            id="date-picker"
+                            class="real-date-picker"
+                        >
+
+                        <span class="material-icons">expand_more</span>
+                    </div>
+
+                    <!-- removed this -->
+                    <p class="season-display" id="seasonDisplay"></p>
+                    <!-- --- -->
                 </div>
             </div>
         </div>
@@ -93,7 +109,7 @@
                 
                 <div class="about-card-bottom" id="extendedAboutText" style="display: none;">
                     <p>This website serves as the official digital platform and deployment interface for the software project titled "Rice Leaf Disease Detection Using EfficientNet-Based Convolutional Neural Network with Multi-Metric Performance Evaluation." Developed by computer science researchers at Holy Angel University, this web application directly bridges the gap between complex deep learning models and practical agricultural management.</p>
-                    <p>The platform provides an accessible, high-precision tool for rapid crop health assessment by leveraging a fine-tuned EfficientNet Convolutional Neural Network (CNN) architecture. Users can seamlessly upload images of symptomatic rice leaves directly through the web interface to receive real-time predictions with confidence scores along with comprehensive multi-metric evaluations—including k-fold cross-validation, confusion matrices, precision, recall, F1-Score, and ROC AUC analysis.</p>
+                    <p>The platform provides an accessible, high-precision tool for rapid crop health assessment by leveraging a fine-tuned EfficientNet Convolutional Neural Network (CNN) architecture. Users can seamlessly upload images of symptomatic rice leaves directly through the web interface to receive real-time predictions.</p>
                     <p>The underlying system is engineered to detect critical rice leaf diseases early, empowering agricultural communities to mitigate threats before they compromise seasonal crop yields. Ultimately, this user-centric platform stands as a dedicated technological solution aimed at modernizing crop protection, supporting sustainable farming practices, and contributing to food security.</p>
                 </div>
             </div>
@@ -110,12 +126,16 @@
                         <li>The disease prediction and recommended actions will be displayed automatically.</li>
                         <li>To analyze another image, simply repeat the steps above.</li>
                     </ol>
+
+                    <p class="temporary-storage-note" id="temporaryStorageNote">
+                        <strong>Note:</strong> Uploaded or captured images are processed temporarily and are not permanently stored.
+                    </p>
                 </div>
 
                 <!-- photo upload -->
                 <div class="upload-card">
                     <h2>Select Image Source</h2>
-                    <input type="file" id="leafFileInput" accept="image/*" style="display: none;">
+                    <input type="file" id="leafFileInput" accept="image/jpeg,image/png,image/webp" style="display: none;">
                     <div class="upload-box" id="dropZone">
                         <span class="material-icons upload-icon">add_photo_alternate</span>
 
@@ -146,9 +166,19 @@
             <div class="result-content">
                 <div class="result-image-card">
                     <img id="previewImage" src="" alt="Uploaded Rice Leaf">
+                    <!-- removed this -->
+                    <div class="confidence-overlay" id="confidenceOverlay" aria-hidden="true">
+                        <p id="confidenceValue">--%</p>
+                    </div> 
+                    <!-- --- -->
                 </div>
 
                 <div class="result-details">
+                    <p class="result-status" id="resultStatus" role="status" aria-live="polite"></p>
+                    <!-- removed this -->
+                    <p class="confidence-text" id="confidenceText"></p>
+                    <!-- --- -->
+                    <p class="result-season" id="resultSeason"></p>
                     <h2 id="diseaseName">
                         Evaluating...
                         <span class="material-icons">info</span>
@@ -162,9 +192,13 @@
             <!-- recommendations -->
             <div class="recommendation-card">
                 <h2>Recommended Actions</h2>
+                <!-- added this -->
+                <p class="season-note" id="seasonNote"></p>
+                <!-- --- -->
                 <ul id="recommendationList">
                     <li>Awaiting local performance processing...</li>
                 </ul>
+                <div class="more-information" id="moreInformation" hidden></div>
             </div>
 
             <!-- disclaimer -->
@@ -200,8 +234,14 @@
     <!-- language selector popup -->
     <div class="language-popup-overlay" id="languagePopupOverlay">
         <div class="language-popup">
-            <h2>Pumili ng Wika</h2>
-            <p>Piliin ang nais mong gamitin na wika.</p>
+            <h2>
+                <span class="language-popup-primary-title">Pumili ng Wika</span>
+                <span class="language-popup-translation language-popup-title-translation">Choose a Language</span>
+            </h2>
+            <p>
+                <span class="language-popup-primary-text">Piliin ang nais mong gamitin na wika.</span>
+                <span class="language-popup-translation language-popup-text-translation">Please select your preferred language.</span>
+            </p>
 
             <div class="language-popup-buttons">
                 <button class="language-option-btn" type="button" data-lang="fil">
@@ -213,6 +253,51 @@
                     <span>🇺🇸</span>
                     English
                 </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- manual camera popup for tablet and mobile devices -->
+    <div class="camera-popup-overlay" id="cameraPopupOverlay" aria-hidden="true">
+        <div class="camera-popup" role="dialog" aria-modal="true" aria-labelledby="cameraPopupTitle">
+            <button class="popup-close-btn" id="closeCameraPopup" type="button" aria-label="Close camera">&times;</button>
+            <h2 id="cameraPopupTitle">Use Camera</h2>
+            <p class="camera-guidance" id="cameraGuidance">
+                Use good, even lighting. Keep one rice leaf steady and make sure the lesions are clearly visible.
+            </p>
+
+            <div class="camera-stage">
+                <video id="cameraVideo" autoplay playsinline muted></video>
+                <img id="cameraPreview" alt="Captured rice leaf preview" hidden>
+                <canvas id="cameraCanvas" hidden></canvas>
+            </div>
+
+            <p class="camera-error" id="cameraError" role="alert"></p>
+
+            <div class="camera-actions" id="liveCameraActions">
+                <button class="secondary-action-btn" id="cancelCameraBtn" type="button">Cancel</button>
+                <button class="primary-action-btn" id="capturePhotoBtn" type="button">Capture</button>
+            </div>
+
+            <div class="camera-actions" id="capturedCameraActions" hidden>
+                <button class="secondary-action-btn" id="retakePhotoBtn" type="button">Retake</button>
+                <button class="primary-action-btn" id="usePhotoBtn" type="button">Use Photo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- image-quality warning popup -->
+    <div class="quality-popup-overlay" id="qualityPopupOverlay" aria-hidden="true">
+        <div class="quality-popup" role="dialog" aria-modal="true" aria-labelledby="qualityPopupTitle">
+            <h2 id="qualityPopupTitle">Image Quality Warning</h2>
+            <p id="qualityPopupText">The image may be difficult to analyze.</p>
+            <ul id="qualityWarningList"></ul>
+            <div class="quality-metrics" id="qualityMetrics"></div>
+            <div class="quality-actions">
+                <button class="secondary-action-btn" id="replaceImageBtn" type="button">Retake or Choose Another</button>
+                <button class="primary-action-btn" id="continueImageBtn" type="button">Continue Anyway</button>
             </div>
         </div>
     </div>

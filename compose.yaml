@@ -1,19 +1,13 @@
 services:
-  website:
+  animedika:
     build:
       context: .
       dockerfile: Dockerfile
-
-    container_name: animedika-development
-
+    image: animedika-final
+    container_name: animedika-final-development
     ports:
-      - "8080:80"
-
+      - "8080:8000"
     volumes:
-      - ./home.html:/usr/share/nginx/html/index.html:ro
-      - ./css:/usr/share/nginx/html/css:ro
-      - ./images:/usr/share/nginx/html/images:ro
-      - ./js:/usr/share/nginx/html/js:ro
-      - ./model_web:/usr/share/nginx/html/model_web:ro
-
+      - ./:/app
+    command: python -m backend.app
     restart: unless-stopped

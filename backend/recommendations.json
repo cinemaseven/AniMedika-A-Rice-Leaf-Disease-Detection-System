@@ -1,0 +1,248 @@
+{
+"Bacterial_Leaf_Blight": {
+"en": {
+    "name": "Bacterial Leaf Blight",
+    "description": "Bacterial leaf blight is a rice disease caused by the bacterium Xanthomonas campestris pv. oryzae. It can cause serious yield loss, especially in Asia. The disease commonly appears as yellow to white lesions that begin as water-soaked streaks along the leaf margins, then enlarge and spread across the leaf. In the morning, infected leaves may show milky or cloudy bacterial droplets on new lesions. Severe infection causes leaves to turn yellow, dry, wilt, and may even kill the whole plant, especially under warm, humid conditions and excessive nitrogen fertilization.",
+    "general": [
+    "Avoid letting water from infected fields flow into healthy fields.",
+    "Keep the water level low during severe flooding periods.",
+    "Avoid applying too much nitrogen fertilizer because it can worsen the disease.",
+    "Remove or reduce infected rice straw, old rice stems, stubbles, ratoons, volunteer rice, unwanted seedlings, and weeds that may carry bacteria.",
+    "Use clean and healthy seeds or seedlings; avoid seedlings from fields that already showed bacterial leaf blight.",
+    "Be careful when transplanting; avoid damaging roots and leaves because bacteria can enter through wounds.",
+    "Check the field often during warm, rainy, and humid weather.",
+    "Use chemical control only when recommended; follow the product label, dosage, timing, and pre-harvest interval.",
+    "Wear protective clothing when using any pesticide.",
+    "For the next planting, use rice varieties resistant to bacterial leaf blight."
+    ],
+    "season_notes": {
+    "wet": "Since it is the rainy season, bacterial leaf blight may spread faster through rain, floodwater, irrigation water, dew, and strong wind. Prioritize preventing water from infected fields from reaching healthy fields.",
+    "dry": "During the dry season, still monitor irrigated fields because bacterial leaf blight can still spread through irrigation water and infected plant remains."
+    }
+},
+"fil": {
+    "name": "Bacterial Leaf Blight",
+    "description": "Ang bacterial leaf blight ay sakit ng palay na sanhi ng bakteryang Xanthomonas campestris pv. oryzae. Maaari itong magdulot ng malaking pagbaba sa ani, lalo na sa Asya. Karaniwang sintomas nito ang dilaw hanggang puting sugat o lesyon na nagsisimula bilang tila basang guhit sa gilid ng dahon, pagkatapos ay lumalaki at kumakalat sa buong dahon. Sa umaga, maaaring makita ang parang gatas o malabong patak ng bakterya sa bagong lesyon. Kapag malala, ang dahon ay naninilaw, natutuyo, nalalanta, at maaari ring mamatay ang buong halaman, lalo na sa kundisyong mainit, mahalumigmig, at mataas ang nitroheno sa lupa",
+    "general": [
+    "Iwasang dumaloy ang tubig mula sa may sakit na palayan papunta sa malusog na palayan.",
+    "Panatilihing mababa ang tubig sa palayan kapag may matinding pagbaha.",
+    "Iwasan ang sobrang paggamit ng nitrohenong abono dahil maaari nitong palalain ang sakit.",
+    "Alisin o bawasan ang infected na dayami, lumang tangkay, pinaggapasan, muling usbong ng palay, kusang tumubong palay, hindi kailangang punla, at damo na maaaring magdala ng bakterya.",
+    "Gumamit ng malinis at malusog na binhi o punla; iwasang gumamit ng punla mula sa palayang nagkaroon na ng bacterial leaf blight.",
+    "Mag-ingat sa paglilipat-tanim; iwasang masugatan ang ugat at dahon dahil maaaring pumasok ang bakterya sa mga sugat.",
+    "Regular na suriin ang palayan, lalo na kapag mainit, maulan, at mahalumigmig ang panahon.",
+    "Gumamit lamang ng kemikal kung inirerekomenda; sundin ang label ng produkto, tamang dami, tamang oras ng paggamit, at palugit bago anihin.",
+    "Magsuot ng proteksiyon na damit kapag gumagamit ng anumang pesticide.",
+    "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa bacterial leaf blight."
+    ],
+    "season_notes": {
+    "wet": "Dahil tag-ulan, maaaring mas mabilis kumalat ang bacterial leaf blight sa pamamagitan ng ulan, baha, tubig-irigasyon, hamog, at malakas na hangin. Unahin ang pagpigil sa pagdaloy ng tubig mula sa may sakit na palayan papunta sa malusog na palayan.",
+    "dry": "Sa panahon ng tag-init, bantayan pa rin ang mga palayang may irigasyon dahil maaari pa ring kumalat ang bacterial leaf blight sa pamamagitan ng tubig-irigasyon at tirang bahagi ng halamang may impeksiyon."
+    }
+}
+},
+"Brown_Spot": {
+"en": {
+    "name": "Brown Spot",
+    "description": "Brown spot is a rice disease caused by the fungus Helminthosporium oryzae. It commonly occurs in fields with poor water supply or nutrient deficiency and is less common in fertile soil. Its main symptom is the presence of brown spots on rice leaves and grains. On the leaves, the spots are usually oval-shaped, similar to sesame seeds, with a brown margin, a grayish or whitish center, and sometimes a yellowish halo. Severe infection may also cause seedling blight when infected seeds are used. When the disease becomes serious, it can reduce the quantity, quality, and weight of rice grains.",
+    "general": [
+    "Check the field for small brown oval spots, especially in fields with poor soil or water shortage.",
+    "Do not let the field become too dry because brown spot becomes worse when rice lacks water.",
+    "Keep the soil healthy by applying enough and balanced fertilizer when the soil lacks nutrients.",
+    "Apply good farming practices that help the plant grow stronger and healthier.",
+    "Remove rice straw, ratoons, and weeds that may help disease problems continue in the field.",
+    "Use soil liming when needed to prevent harmful soil conditions that can weaken the plant.",
+    "Use clean and healthy seeds because brown spot may come from infected seeds.",
+    "Treat seeds with fungicide before planting if needed.",
+    "Hot water seed treatment may also help, but it should be done carefully so the seeds will not be damaged.",
+    "Use fungicide only if the disease is serious, and follow the product label or agricultural advice.",
+    "For the next planting, use rice varieties resistant to brown spot, especially in areas where it is common."
+    ],
+    "season_notes": {
+    "wet": "Since it is the rainy season, brown spot may still appear because leaf spots can occur throughout the season. Continue checking the leaves and grains, but the main concern is still poor soil nutrients and weak plant condition.",
+    "dry": "During the dry season, brown spot may become worse when the field becomes too dry or when the soil lacks nutrients. Prioritize enough water and balanced fertilizer."
+    }
+},
+"fil": {
+    "name": "Brown Spot",
+    "description": "Ang brown spot ay sakit ng palay na sanhi ng amag na Helminthosporium oryzae. Karaniwan itong lumalabas sa mga lupang kulang sa tubig o sustansiya, at bihira sa matabang lupa. Ang pangunahing palatandaan nito ay mga kayumangging batik sa dahon at butil ng uhay. Sa dahon, ang mga batik ay kadalasang hugis-itlog, kahawig ng buto ng linga, at may gitnang abuhin o maputi na napapalibutan ng madilaw na halo. Maaari rin itong magdulot ng seedling blight o pagkabulok ng punla kapag malala ang impeksiyon sa binhi. Kapag lumubha, maaari nitong mapababa ang dami, kalidad, at timbang ng mga butil.",
+    "general": [
+    "Suriin ang palayan para sa maliliit na kayumangging hugis-itlog na batik, lalo na sa mga palayang may mahinang lupa o kulang sa tubig.",
+    "Huwag hayaang masyadong matuyo ang palayan dahil lumalala ang brown spot kapag kulang sa tubig ang palay.",
+    "Panatilihing malusog ang lupa sa pamamagitan ng sapat at balanseng abono kapag kulang sa sustansiya ang lupa.",
+    "Gumamit ng mabuting paraan ng pagsasaka upang mas lumakas at maging mas malusog ang halaman.",
+    "Alisin ang dayami, muling usbong ng palay, at damo na maaaring magpatuloy ng problema sa sakit sa palayan.",
+    "Gumamit ng apog sa lupa kung kinakailangan upang maiwasan ang masasamang kondisyon ng lupa na nagpapahina sa halaman.",
+    "Gumamit ng malinis at malusog na binhi dahil maaaring manggaling ang brown spot sa infected na binhi.",
+    "Gamitan ng pamatay-amag ang binhi bago itanim kung kinakailangan.",
+    "Maaari ring makatulong ang hot water seed treatment, ngunit dapat itong gawin nang maingat upang hindi masira ang binhi.",
+    "Gumamit lamang ng pamatay-amag kung malala ang sakit, at sundin ang label ng produkto o payo ng agricultural technician.",
+    "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa brown spot, lalo na sa mga lugar kung saan karaniwan ang sakit."
+    ],
+    "season_notes": {
+    "wet": "Dahil tag-ulan, maaari pa ring lumitaw ang brown spot dahil ang mga batik sa dahon ay maaaring makita sa buong panahon ng taniman. Patuloy na suriin ang mga dahon at butil, ngunit ang pangunahing dapat bantayan ay ang kakulangan sa sustansiya ng lupa at mahinang kondisyon ng halaman.",
+    "dry": "Sa panahon ng tag-init, maaaring lumala ang brown spot kapag masyadong natutuyo ang palayan o kulang sa sustansiya ang lupa. Unahin ang sapat na tubig at balanseng abono."
+    }
+}
+},
+"Healthy": {
+"en": {
+    "name": "Healthy Rice Leaf",
+    "description": "Healthy rice leaves are green, fresh-looking, and free from visible signs of disease or damage, such as unusual spots, yellowing, drying, wilting, holes, or water-soaked lesions. They are important because leaves help the rice plant capture sunlight and make food through photosynthesis, which supports plant growth and grain formation. A rice photosynthesis review explains that photosynthesis determines the crop’s maximum attainable yield, and that capturing solar radiation and converting carbon into rice grain is important for high yield.",
+    "general": [
+    "Prepare and level the field well before planting: A leveled field helps water spread evenly. It also helps rice plants grow evenly and reduces weeds.",
+    "Keep enough water in the field: Rice needs enough water to keep its leaves healthy. Proper water control also helps fertilizer and pesticide work better.",
+    "Remove weeds from the field: Weeds take water, nutrients, sunlight, and space from rice plants. This can make the rice weaker. ",
+    "Apply the right amount of fertilizer: Use fertilizer based on what the rice plants need. Do not apply too much at once because too much nitrogen can make rice more likely to get pests and diseases.",
+    "Clean the field between planting seasons: Remove or manage old rice stems, ratoons, and weeds around the field. This helps reduce places where pests and diseases can survive."
+    ],
+    "season_notes": {
+    "wet": "Wet-season note: Increase monitoring because humid and rainy conditions may favor several rice diseases.",
+    "dry": "Dry-season note: Maintain adequate irrigation and watch for signs of water or nutrient stress."
+    }
+},
+"fil": {
+    "name": "Malusog na Dahon ng Palay",
+    "description": "Ang malusog na dahon ng palay ay berde, sariwa ang itsura, at walang nakikitang palatandaan ng sakit o pinsala, tulad ng kakaibang batik, paninilaw, pagkatuyo, pagkalanta, butas, o tila basang sugat. Mahalaga ito dahil ang dahon ang tumutulong sa palay na sumagap ng sikat ng araw at gumawa ng pagkain sa pamamagitan ng photosynthesis, na kailangan para sa maayos na paglaki ng halaman at pagbuo ng butil. Ayon sa isang review tungkol sa rice photosynthesis, mahalaga ang photosynthesis sa pinakamataas na posibleng ani ng palay, at mahalaga rin ang pagsagap ng sikat ng araw at pag-convert nito para sa pagbuo ng butil.",
+    "general": [
+    "Ihanda at pantayin ang bukid bago magtanim: Kapag pantay ang bukid, mas pantay ang pagkalat ng tubig. Nakakatulong din ito para pantay ang paglaki ng palay at mabawasan ang damo.",
+    "Panatilihing may sapat na tubig ang palayan: Kailangan ng palay ng sapat na tubig para manatiling malusog ang mga dahon. Nakakatulong din ang tamang pamamahala ng tubig para mas maging epektibo ang abono at pesticide.",
+    "Alisin ang mga damo sa palayan: Kinukuha ng damo ang tubig, sustansiya, sikat ng araw, at espasyo na kailangan ng palay. Dahil dito, maaaring humina ang palay.",
+    "Maglagay ng tamang dami ng abono: Mag-abono batay sa kailangan ng palay. Huwag maglagay ng sobra-sobra nang isang beses dahil ang sobrang nitroheno ay maaaring magpalala ng peste at sakit.",
+    "Linisin ang bukid sa pagitan ng mga taniman: Alisin o ayusin ang mga lumang tangkay ng palay, muling usbong ng palay, at damo sa paligid ng bukid. Nakakatulong ito para mabawasan ang pinamumugaran ng peste at sakit."
+    ],
+    "season_notes": {
+    "wet": "Paalala sa tag-ulan: Dagdagan ang pagmamanman dahil maaaring paboran ng mahalumigmig at maulang kondisyon ang ilang sakit sa palay.",
+    "dry": "Paalala sa tag-init: Panatilihin ang sapat na irigasyon at bantayan ang palatandaan ng kakulangan sa tubig o sustansya."
+    }
+}
+},
+"Rice_Blast": {
+"en": {
+    "name": "Rice Blast",
+    "description": "Rice blast is a disease caused by the fungus Pyricularia oryzae. It is one of the most destructive rice diseases because it can infect the leaves, nodes, panicle neck, stems, panicles, and grains at any growth stage. On the leaves, it usually appears as spindle-shaped lesions with gray centers and brown margins. In severe cases, infected leaves may die.\nThe disease can also attack the nodes and panicle neck. When the panicle neck is infected, it turns black, rots, and breaks easily, which may result in empty or poorly filled grains. Blast spreads faster during rainy weather, high humidity, wet leaf conditions, and excessive nitrogen fertilization.",
+    "general": [
+    "Check the field often during rainy and humid weather.",
+    "Look for pointed or diamond-shaped brown spots with gray centers.",
+    "Avoid keeping the leaves wet for a long time because blast spreads faster on wet leaves.",
+    "Keep seedlings with enough water, especially in the seedbed.",
+    "Avoid applying too much nitrogen fertilizer, especially ammonium sulfate.",
+    "Apply fertilizer in smaller amounts at the right time instead of applying too much at once.",
+    "If the disease is severe or spreading fast, use the recommended fungicide for rice blast.",
+    "Follow the label instructions or ask an agricultural technician for the correct amount and timing.",
+    "Use healthy seeds from fields or panicles without rice blast infection.",
+    "For the next planting, use rice varieties resistant to rice blast."
+    ],
+    "season_notes": {
+    "wet": "Since it is the rainy season, rice blast may spread faster because the leaves stay wet longer from rain, dew, and high humidity. Prioritize checking the field and reducing long leaf wetness.",
+    "dry": "During the dry season, rice blast can still appear if seedlings are stressed or if dew keeps the leaves wet, especially in the morning."
+    }
+},
+"fil": {
+    "name": "Rice Blast",
+    "description": "Ang blast sa palay ay sakit na sanhi ng amag na Pyricularia oryzae. Isa ito sa mapaminsalang sakit ng palay dahil maaari nitong salakayin ang dahon, buko, leeg ng uhay, tangkay, uhay, at butil sa anumang yugto ng pagtubo. Sa dahon, karaniwang makikita ang pahaba at patulis na batik na may abuhing gitna at kayumangging gilid. Kapag malala, namamatay ang dahon.\nMaaari ring maimpeksiyon ang buko at leeg ng uhay. Kapag ang leeg ng uhay ay naimpeksiyon, ito ay nangingitim, nabubulok, at madaling mabali, kaya maaaring maging walang laman ang uhay. Mas mabilis kumalat ang blast sa maulang panahon, mataas na halumigmig, basang dahon, at labis na abonong nitroheno.",
+    "general": [
+    "Regular na suriin ang palayan kapag maulan at mahalumigmig ang panahon.",
+    "Hanapin ang patulis o hugis-diyamanteng kayumangging batik na may abuhing gitna.",
+    "Iwasang manatiling basa ang mga dahon nang matagal dahil mas mabilis kumalat ang blast sa basang dahon.",
+    "Panatilihing may sapat na tubig ang mga punla, lalo na sa punlaan.",
+    "Iwasan ang sobrang paggamit ng nitrohenong abono, lalo na ang ammonium sulfate.",
+    "Maglagay ng abono sa mas maliit na dami at sa tamang panahon sa halip na maglagay ng sobra nang isang beses.",
+    "Kung malala o mabilis kumalat ang sakit, gumamit ng inirerekomendang pamatay-amag para sa rice blast.",
+    "Sundin ang label ng produkto o magtanong sa agricultural technician para sa tamang dami at tamang oras ng paggamit.",
+    "Gumamit ng malusog na binhi mula sa palayan o uhay na walang impeksiyon ng rice blast.",
+    "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa rice blast."
+    ],
+    "season_notes": {
+    "wet": "Dahil tag-ulan, maaaring mas mabilis kumalat ang rice blast dahil mas matagal na nananatiling basa ang mga dahon mula sa ulan, hamog, at mataas na halumigmig. Unahin ang regular na pagsuri sa palayan at pagbabawas ng matagal na pagkabasa ng mga dahon.",
+    "dry": "Sa panahon ng tag-init, maaari pa ring lumitaw ang rice blast kung mahina o stress ang mga punla, o kung nababasa ang dahon dahil sa hamog, lalo na sa umaga."
+    }
+}
+},
+"Sheath_Blight": {
+"en": {
+    "name": "Sheath Blight",
+    "description": "Sheath blight is a rice disease caused by the fungus Rhizoctonia solani Kühn. It usually starts on the leaf sheath near the water surface as greenish-gray, water-soaked, and oval-shaped spots. As the disease progresses, the lesions enlarge, lengthen, merge, and spread upward or to nearby rice plants.\nThe disease spreads faster under warm and humid conditions, especially when the plants are dense and nitrogen fertilizer is excessive. The fungus produces sclerotia, small hard structures that survive in the soil and water and later infect new plants. Severe infection can cause leaves to die, reduce grain filling, and lower yield.",
+    "general": [
+    "Check the lower part of the rice plant, especially the leaf sheath near the water level.",
+    "Look for oval, grayish-green, or water-soaked spots on the leaf sheath.",
+    "Monitor the field from maximum tillering until booting or heading stage.",
+    "Avoid applying too much nitrogen fertilizer because it can help the disease spread.",
+    "When new infections are seen, stop applying nitrogen fertilizer.",
+    "Avoid planting rice too close together; give enough space so air can move between plants.",
+    "Drain the field for a few days, around 3–5 days, then fill it with water again.",
+    "Remove old stubbles and bury infected plant remains through deep ploughing during field preparation.",
+    "Apply balanced fertilizer, including potassium fertilizer and manure.",
+    "If the disease is severe or spreading quickly, use a recommended fungicide.",
+    "Spray the leaf sheath where symptoms appear; repeat during booting if needed.",
+    "Wear protective clothing and follow the product label when using pesticide.",
+    "For the next planting, use rice varieties with moderate resistance to sheath blight, if available."
+    ],
+    "season_notes": {
+    "wet": "Since it is the rainy season, sheath blight may spread faster because the field is more humid, especially when plants are crowded and nitrogen fertilizer is high. Prioritize checking the lower part of the plant near the water level.",
+    "dry": "During the dry season, sheath blight can still develop if the field is humid, the plants are too close together, or too much nitrogen fertilizer is used."
+    }
+},
+"fil": {
+    "name": "Sheath Blight",
+    "description": "Ang sheath blight ay sakit ng palay na sanhi ng amag na Rhizoctonia solani Kühn. Karaniwan itong nagsisimula sa lapak o leaf sheath malapit sa ibabaw ng tubig bilang mamerdeng-abuhing, basang, at hugis-itlog na batik. Habang lumalala, ang mga lesyon ay lumalaki, humahaba, nagsasama-sama, at kumakalat pataas sa halaman o sa katabing palay.\nMas mabilis itong kumalat sa mainit at mahalumigmig na kondisyon, lalo na kung siksik ang tanim at mataas ang nitrohenong abono. Ang amag ay bumubuo ng sclerotia, maliliit at matitigas na bahagi na nabubuhay sa lupa at tubig at muling nakahahawa sa halaman. Kapag malala, maaari itong magdulot ng pagkamatay ng mga dahon, mahinang paglalamán ng butil, at pagbaba ng ani.",
+    "general": [
+    "Suriin ang ibabang bahagi ng palay, lalo na ang leaf sheath o lapak malapit sa tubig.",
+    "Hanapin ang hugis-itlog, mamerdeng-abo, o tila basang batik sa lapak.",
+    "Bantayan ang palayan mula sa pinakamaraming pagsusuwi hanggang sa pagsapaw o paglabas ng uhay.",
+    "Iwasan ang sobrang paggamit ng nitrohenong abono dahil maaari nitong tulungan ang pagkalat ng sakit.",
+    "Kapag may bagong impeksiyon, itigil muna ang paglalagay ng nitrohenong abono.",
+    "Iwasang magtanim ng palay na masyadong magkakadikit; magbigay ng sapat na agwat para makadaloy ang hangin sa pagitan ng mga halaman.",
+    "Patuyuin ang palayan sa loob ng ilang araw, mga 3–5 araw, pagkatapos ay lagyan muli ng tubig.",
+    "Alisin ang lumang pinaggapasan at ibaon ang infected na tirang halaman sa pamamagitan ng malalim na pag-aararo habang inihahanda ang bukid.",
+    "Gumamit ng balanseng abono, kabilang ang potassium fertilizer at organikong pataba.",
+    "Kung malala o mabilis kumalat ang sakit, gumamit ng inirerekomendang pamatay-amag.",
+    "I-spray ang lapak o leaf sheath kung saan makikita ang sintomas; ulitin sa panahon ng pagsapaw kung kinakailangan.",
+    "Magsuot ng proteksiyon na damit at sundin ang label ng produkto kapag gumagamit ng pesticide.",
+    "Sa susunod na taniman, gumamit ng uri ng palay na may katamtamang tibay laban sa sheath blight, kung mayroon."
+    ],
+    "season_notes": {
+    "wet": "Dahil tag-ulan, maaaring mas mabilis kumalat ang sheath blight dahil mas mahalumigmig ang palayan, lalo na kapag siksik ang tanim at mataas ang nitrohenong abono. Unahin ang pagsuri sa ibabang bahagi ng halaman malapit sa tubig.",
+    "dry": "Sa panahon ng tag-init, maaari pa ring tumubo ang sheath blight kung mahalumigmig ang palayan, masyadong magkakadikit ang mga tanim, o sobra ang paggamit ng nitrohenong abono."
+    }
+}
+},
+"Tungro": {
+"en": {
+    "name": "Tungro",
+    "description": "Tungro is one of the most destructive viral diseases of rice in Southeast Asia.  Infected plants are usually stunted, produce fewer tillers, have shortened leaf sheaths and leaf blades, and show yellow to orange-yellow discoloration of the leaves. The yellowing often begins at the tip of older leaves and may spread downward; infected leaves may also show mottling or pale green, white, or yellow streaks.\nThe disease is transmitted by green leafhoppers, especially Nephotettix virescens, which is considered the most efficient vector. Severe infection can delay flowering and maturity, produce small and poorly filled panicles, make grains lighter, and greatly reduce yield.",
+    "general": [
+    "Control green leafhoppers because they carry and spread the tungro virus.",
+    "Check young rice plants often because tungro is more serious during the early growth stage.",
+    "Look for stunted plants, yellow to orange-yellow leaves, and fewer tillers.",
+    "Remove badly infected plants early so they will not become a source of the virus.",
+    "Remove volunteer rice, wild rice, weeds, and grasses that may carry the virus or serve as hiding places for green leafhoppers.",
+    "Avoid planting near fields already infected with tungro, especially when rice plants are still young.",
+    "Plant at the same time as nearby farmers when possible to reduce the spread of green leafhoppers.",
+    "For the next planting, use rice varieties resistant to tungro or resistant to green leafhoppers, if available."
+    ],
+    "season_notes": {
+    "wet": "Since it is the rainy season, tungro may spread more because green leafhoppers can increase and move the virus from infected plants to healthy plants. Prioritize controlling green leafhoppers and removing infected plants early.",
+    "dry": "During the dry season, tungro can still spread if green leafhoppers and infected plants are present. Continue checking young rice plants and remove possible virus sources."
+    }
+},
+"fil": {
+    "name": "Tungro",
+    "description": "Ang tungro ay isa sa pinakamapaminsalang sakit na bayral ng palay sa Southeast Asia. Ang mga palay na may tungro ay karaniwang nababan­sot, kakaunti ang suwi, umiikli ang lapak at balat-dahon, at naninilaw hanggang kahel-dilaw ang mga dahon. Ang paninilaw ay madalas nagsisimula sa dulo ng matatandang dahon at maaaring kumalat pababa; maaari ring magkaroon ng batik-batik o guhit na maputla, berde, o puti.\nAng sakit ay naipapasa ng mga ngusong-kabayong kulisap tulad ng Nephotettix virescens, na itinuturing na pinakamabisang tagapagdala. Kapag malala ang impeksiyon, naaantala ang pamumulaklak at paggulang, nagiging maliit at walang laman ang uhay, gumagaan ang butil, at bumababa ang ani.",
+    "general": [
+    "Kontrolin ang green leafhoppers o berdeng ngusong-kabayo dahil sila ang nagdadala at nagpapakalat ng tungro virus.",
+    "Regular na suriin ang batang palay dahil mas malala ang epekto ng tungro sa maagang yugto ng pagtubo.",
+    "Hanapin ang mga palay na bansot, may dilaw hanggang kahel-dilaw na dahon, at kakaunti ang suwi.",
+    "Alisin nang maaga ang malalang infected na halaman upang hindi ito maging pagmulan ng bayrus.",
+    "Alisin ang kusang tumubong palay, ligaw na palay, damo, at grasses na maaaring magdala ng bayrus o pagtaguan ng green leafhoppers.",
+    "Iwasang magtanim malapit sa palayang may tungro, lalo na kung bata pa ang palay.",
+    "Magtanim kasabay ng mga kalapit na magsasaka kung maaari upang mabawasan ang pagkalat ng green leafhoppers.",
+    "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa tungro o matibay laban sa green leafhoppers, kung mayroon."
+    ],
+    "season_notes": {
+    "wet": "Dahil tag-ulan, maaaring mas kumalat ang tungro dahil maaaring dumami ang green leafhoppers at mailipat nila ang bayrus mula sa infected na halaman papunta sa malusog na halaman. Unahin ang pagkontrol sa green leafhoppers at maagang pagtanggal ng infected na halaman.",
+    "dry": "Sa panahon ng tag-init, maaari pa ring kumalat ang tungro kung may green leafhoppers at infected na halaman sa paligid. Patuloy na suriin ang batang palay at alisin ang maaaring pagmulan ng bayrus."
+    }
+}
+}
+}

@@ -165,6 +165,24 @@ body {
     margin-bottom: 2rem;
 }
 
+.language-popup-translation {
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    opacity: 0.75;
+}
+
+.language-popup-title-translation {
+    margin-top: 0.25rem;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.language-popup-text-translation {
+    margin-top: 0.35rem;
+    font-size: 0.85rem;
+}
+
 .language-popup-buttons {
     display: flex;
     justify-content: center;
@@ -558,11 +576,12 @@ p, ol {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    aspect-ratio: 1 / 1;
 }
 
 .result-image-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
 }
@@ -578,6 +597,7 @@ p, ol {
     background: rgba(255, 255, 255, 0.45);
     border-radius: 50%;
     pointer-events: none; /* Allows clicks to pass through to the image */
+    --fill-deg: 0deg;
 }
 
 /* The segmented gauge */
@@ -590,9 +610,6 @@ p, ol {
     width: 260px;
     height: 130px; /* Exactly half of the width */
     border-radius: 130px 130px 0 0;
-
-    /* Controls the fill percentage (75% of 180 degrees = 135deg) */
-    --fill-deg: 0deg;
 
     /* Smooth color gradient that snaps to white at the specified fill degree */
     background: conic-gradient(from 270deg,
@@ -706,6 +723,47 @@ p, ol {
 
 #recommendationList li::marker {
     color: var(--text-color1);
+}
+
+.more-information {
+    margin-top: 1.5rem;
+    color: var(--text-color1);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.more-information-label {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.more-information-list {
+    margin: 0;
+    padding-left: 1.75rem;
+    font-size: inherit;
+}
+
+.more-information-list li + li {
+    margin-top: 0.35rem;
+}
+
+.more-information a {
+    display: inline-block;
+    color: var(--secondary);
+    border-radius: 4px;
+    padding: 0.05rem 0.25rem;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.more-information a:hover,
+.more-information a:focus-visible {
+    background-color: var(--secondary);
+    color: var(--text-color2);
+    outline: none;
 }
 
 /* Disclaimer Styling */
@@ -850,6 +908,30 @@ p, ol {
     font-size: 1.25rem;
     line-height: 1.3;
 }
+
+/* ADDED THIS */
+/* Hide season text below date and confidence display only */
+.season-display,
+.confidence-overlay,
+.confidence-text {
+    display: none !important;
+}
+
+.season-note {
+    margin: 0 0 1.5rem;
+    color: var(--text-color1);
+    font-family: var(--body-font);
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.season-note:empty {
+    display: none;
+}
+
+/* --- */
 
 /* ==========================================
     TABLET VIEW (1024px and below)
@@ -1226,5 +1308,220 @@ p, ol {
         flex-wrap: wrap;
         justify-content: flex-end;
         gap: 0.3rem 0.75rem;
+    }
+}
+/* ==========================================
+   FINAL IMAGE-TO-BACKEND ARCHITECTURE
+========================================== */
+
+[hidden] {
+    display: none !important;
+}
+
+.date-season-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+}
+
+.season-display {
+    min-height: 1.1rem;
+    padding-left: 0.35rem;
+    color: var(--text-color1);
+    font-family: var(--body-font);
+    font-size: 0.78rem;
+    opacity: 0.78;
+}
+
+.result-status {
+    min-height: 1.2rem;
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.result-status.loading {
+    opacity: 0.75;
+}
+
+.result-status.error {
+    color: #8a140f;
+}
+
+.result-status.success {
+    color: var(--secondary);
+}
+
+.result-season {
+    margin: 0;
+    color: var(--text-color1);
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.temporary-storage-note {
+    margin: 1rem 0 0;
+    color: var(--text-color1);
+    font-style: italic;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.camera-popup-overlay,
+.quality-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.68);
+}
+
+.camera-popup-overlay.active,
+.quality-popup-overlay.active {
+    display: flex;
+}
+
+.camera-popup,
+.quality-popup {
+    position: relative;
+    width: min(92vw, 680px);
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    background: var(--base);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.camera-popup h2,
+.quality-popup h2 {
+    margin: 0 2.5rem 0.75rem 0;
+    color: var(--secondary);
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.popup-close-btn {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    border: none;
+    background: transparent;
+    color: var(--text-color1);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.camera-guidance,
+.quality-popup > p {
+    margin-bottom: 1rem;
+    font-family: var(--body-font);
+    line-height: 1.55;
+}
+
+.camera-stage {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #111;
+    aspect-ratio: 4 / 3;
+}
+
+.camera-stage video,
+.camera-stage img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.camera-error {
+    min-height: 1.4rem;
+    margin: 0.75rem 0;
+    color: #8a140f;
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+}
+
+.camera-actions,
+.quality-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.primary-action-btn,
+.secondary-action-btn {
+    min-width: 130px;
+    padding: 0.7rem 1rem;
+    border-radius: 100px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.primary-action-btn {
+    border: 1px solid var(--secondary);
+    background: var(--secondary);
+    color: var(--text-color2);
+}
+
+.secondary-action-btn {
+    border: 1px solid var(--secondary);
+    background: transparent;
+    color: var(--secondary);
+}
+
+#qualityWarningList {
+    margin: 1rem 0;
+    padding-left: 1.4rem;
+    font-family: var(--body-font);
+    line-height: 1.55;
+}
+
+.quality-metrics {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: var(--accent2);
+    color: var(--text-color1);
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .camera-popup,
+    .quality-popup {
+        width: min(96vw, 620px);
+        padding: 1.25rem;
+    }
+
+    .camera-popup h2,
+    .quality-popup h2 {
+        font-size: 1.5rem;
+    }
+
+    .camera-actions,
+    .quality-actions {
+        flex-direction: column-reverse;
+    }
+
+    .primary-action-btn,
+    .secondary-action-btn {
+        width: 100%;
+    }
+
+    .season-display {
+        text-align: center;
     }
 }

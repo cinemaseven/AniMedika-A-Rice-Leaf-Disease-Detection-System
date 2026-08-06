@@ -1,0 +1,1 @@
+"""AniMedika backend package."""
