@@ -44,7 +44,7 @@ export function initLanguage(app, WEBSITE_TEXT) {
         // Results section 
         document.querySelector(".results-header span").textContent = text.results;
         document.querySelector(".recommendation-card h2").textContent = text.recommendedActions;
-        document.querySelector(".temporary-storage-note").textContent = text.storageNote;
+        document.querySelector(".temporary-storage-note").innerHTML = text.storageNote;
         document.querySelector(".disclaimer").innerHTML = text.disclaimer;
 
         // Footer
