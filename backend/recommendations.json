@@ -2,7 +2,10 @@
 "Bacterial_Leaf_Blight": {
 "en": {
     "name": "Bacterial Leaf Blight",
-    "description": "Bacterial leaf blight is a rice disease caused by the bacterium Xanthomonas campestris pv. oryzae. It can cause serious yield loss, especially in Asia. The disease commonly appears as yellow to white lesions that begin as water-soaked streaks along the leaf margins, then enlarge and spread across the leaf. In the morning, infected leaves may show milky or cloudy bacterial droplets on new lesions. Severe infection causes leaves to turn yellow, dry, wilt, and may even kill the whole plant, especially under warm, humid conditions and excessive nitrogen fertilization.",
+    "description": [
+    "Bacterial leaf blight is a rice disease caused by the bacterium Xanthomonas campestris pv. oryzae. It commonly appears as yellow to white lesions that begin as water-soaked streaks along the leaf margins, then enlarge and spread across the leaf. In the morning, infected leaves may show milky or cloudy bacterial droplets on new lesions.",
+    "The disease is more severe during the rainy period, especially when rain, dew, flooding, irrigation water, storms, or strong winds help spread the bacteria. It also favors warm and humid conditions, especially in fields with weeds, stubbles, or infected plant remains. Severe infection causes leaves to turn yellow, dry, wilt, and may even kill the whole plant."
+    ],
     "general": [
     "Avoid letting water from infected fields flow into healthy fields.",
     "Keep the water level low during severe flooding periods.",
@@ -22,7 +25,10 @@
 },
 "fil": {
     "name": "Bacterial Leaf Blight",
-    "description": "Ang bacterial leaf blight ay sakit ng palay na sanhi ng bakteryang Xanthomonas campestris pv. oryzae. Maaari itong magdulot ng malaking pagbaba sa ani, lalo na sa Asya. Karaniwang sintomas nito ang dilaw hanggang puting sugat o lesyon na nagsisimula bilang tila basang guhit sa gilid ng dahon, pagkatapos ay lumalaki at kumakalat sa buong dahon. Sa umaga, maaaring makita ang parang gatas o malabong patak ng bakterya sa bagong lesyon. Kapag malala, ang dahon ay naninilaw, natutuyo, nalalanta, at maaari ring mamatay ang buong halaman, lalo na sa kundisyong mainit, mahalumigmig, at mataas ang nitroheno sa lupa",
+    "description": [
+    "Ang bacterial leaf blight ay sakit ng palay na sanhi ng bakteryang Xanthomonas campestris pv. oryzae. Karaniwang sintomas nito ang dilaw hanggang puting sugat o lesyon na nagsisimula bilang tila basang guhit sa gilid ng dahon, pagkatapos ay lumalaki at kumakalat sa buong dahon. Sa umaga, maaaring makita ang parang gatas o malabong patak ng bakterya sa bagong lesyon.",
+    "Mas madalas itong lumalala sa panahon ng tag-ulan o rainy period, lalo na kapag may malakas na ulan, bagyo, hamog, baha, irigasyon, o malakas na hangin na nakatutulong sa pagkalat ng bakterya. Mas pabor din sa sakit ang mainit at mahalumigmig na kondisyon, lalo na sa palayang may mga damo, pinaggapasan, o tirang bahagi ng halamang may impeksiyon. Kapag malala, ang dahon ay naninilaw, natutuyo, nalalanta, at maaari ring mamatay ang buong halaman."
+    ],
     "general": [
     "Iwasang dumaloy ang tubig mula sa may sakit na palayan papunta sa malusog na palayan.",
     "Panatilihing mababa ang tubig sa palayan kapag may matinding pagbaha.",
@@ -44,7 +50,10 @@
 "Brown_Spot": {
 "en": {
     "name": "Brown Spot",
-    "description": "Brown spot is a rice disease caused by the fungus Helminthosporium oryzae. It commonly occurs in fields with poor water supply or nutrient deficiency and is less common in fertile soil. Its main symptom is the presence of brown spots on rice leaves and grains. On the leaves, the spots are usually oval-shaped, similar to sesame seeds, with a brown margin, a grayish or whitish center, and sometimes a yellowish halo. Severe infection may also cause seedling blight when infected seeds are used. When the disease becomes serious, it can reduce the quantity, quality, and weight of rice grains.",
+    "description": [
+    "Brown spot is a rice disease caused by the fungus Helminthosporium oryzae. It commonly occurs in fields with poor water supply or nutrient deficiency and is less common in fertile soil. Its main symptom is the presence of brown spots on rice leaves and grains. On the leaves, the spots are usually oval-shaped, similar to sesame seeds, with a brown margin, a grayish or whitish center, and sometimes a yellowish halo.",
+    "Brown spots are not limited to one specific season because leaf spots may be found throughout the season. However, the disease develops more easily under high humidity, long leaf wetness, poor water conditions, and nutrient-deficient soil. Severe infection may cause seedling blight when infected seeds are used and can reduce the quantity, quality, and weight of rice grains."
+    ],
     "general": [
     "Check the field for small brown oval spots, especially in fields with poor soil or water shortage.",
     "Do not let the field become too dry because brown spot becomes worse when rice lacks water.",
@@ -65,7 +74,10 @@
 },
 "fil": {
     "name": "Brown Spot",
-    "description": "Ang brown spot ay sakit ng palay na sanhi ng amag na Helminthosporium oryzae. Karaniwan itong lumalabas sa mga lupang kulang sa tubig o sustansiya, at bihira sa matabang lupa. Ang pangunahing palatandaan nito ay mga kayumangging batik sa dahon at butil ng uhay. Sa dahon, ang mga batik ay kadalasang hugis-itlog, kahawig ng buto ng linga, at may gitnang abuhin o maputi na napapalibutan ng madilaw na halo. Maaari rin itong magdulot ng seedling blight o pagkabulok ng punla kapag malala ang impeksiyon sa binhi. Kapag lumubha, maaari nitong mapababa ang dami, kalidad, at timbang ng mga butil.",
+    "description": [
+    "Ang brown spot ay sakit ng palay na sanhi ng amag na Helminthosporium oryzae. Karaniwan itong lumalabas sa mga lupang kulang sa tubig o sustansiya, at bihira sa matabang lupa. Ang pangunahing palatandaan nito ay mga kayumangging batik sa dahon at butil ng uhay. Sa dahon, ang mga batik ay kadalasang hugis-itlog, kahawig ng buto ng linga, at may gitnang abuhin o maputi na maaaring napapalibutan ng madilaw na halo.",
+    "Hindi ito limitado sa isang tiyak na season dahil ang mga batik sa dahon ay maaaring makita sa buong panahon ng taniman. Gayunpaman, mas nagiging paborable ang sakit sa mataas na halumigmig, basang dahon sa loob ng ilang oras, at lupang kulang sa tubig o sustansiya. Kapag lumubha, maaari itong magdulot ng seedling blight o pagkabulok ng punla, at maaari ring mapababa ang dami, kalidad, at timbang ng mga butil."
+    ],
     "general": [
     "Suriin ang palayan para sa maliliit na kayumangging hugis-itlog na batik, lalo na sa mga palayang may mahinang lupa o kulang sa tubig.",
     "Huwag hayaang masyadong matuyo ang palayan dahil lumalala ang brown spot kapag kulang sa tubig ang palay.",
@@ -120,7 +132,10 @@
 "Rice_Blast": {
 "en": {
     "name": "Rice Blast",
-    "description": "Rice blast is a disease caused by the fungus Pyricularia oryzae. It is one of the most destructive rice diseases because it can infect the leaves, nodes, panicle neck, stems, panicles, and grains at any growth stage. On the leaves, it usually appears as spindle-shaped lesions with gray centers and brown margins. In severe cases, infected leaves may die.\nThe disease can also attack the nodes and panicle neck. When the panicle neck is infected, it turns black, rots, and breaks easily, which may result in empty or poorly filled grains. Blast spreads faster during rainy weather, high humidity, wet leaf conditions, and excessive nitrogen fertilization.",
+    "description": [
+    "Rice leaf blast or rice blast is a disease caused by the fungus Pyricularia oryzae. It is one of the most destructive rice diseases because it can infect the leaves, nodes, panicle neck, stems, panicles, and grains at any growth stage. On the leaves, it usually appears as long, pointed or spindle-shaped lesions with gray centers and brown margins. In severe cases, infected leaves may die.",
+    "Rice blast spreads faster when leaves stay wet for a long time, and when there is high humidity, frequent or prolonged rain showers, dew, and cooler daytime conditions. In upland rice, large day-night temperature differences can cause dew formation on leaves, which favors disease development. The fungal spores can spread through wind and rain. When the panicle neck is infected, it can turn black, rot, break easily, and produce empty or poorly filled grains. "
+    ],
     "general": [
     "Check the field often during rainy and humid weather.",
     "Look for pointed or diamond-shaped brown spots with gray centers.",
@@ -140,7 +155,10 @@
 },
 "fil": {
     "name": "Rice Blast",
-    "description": "Ang blast sa palay ay sakit na sanhi ng amag na Pyricularia oryzae. Isa ito sa mapaminsalang sakit ng palay dahil maaari nitong salakayin ang dahon, buko, leeg ng uhay, tangkay, uhay, at butil sa anumang yugto ng pagtubo. Sa dahon, karaniwang makikita ang pahaba at patulis na batik na may abuhing gitna at kayumangging gilid. Kapag malala, namamatay ang dahon.\nMaaari ring maimpeksiyon ang buko at leeg ng uhay. Kapag ang leeg ng uhay ay naimpeksiyon, ito ay nangingitim, nabubulok, at madaling mabali, kaya maaaring maging walang laman ang uhay. Mas mabilis kumalat ang blast sa maulang panahon, mataas na halumigmig, basang dahon, at labis na abonong nitroheno.",
+    "description": [
+    "Ang rice leaf blast o blast sa palay ay sakit na sanhi ng amag na Pyricularia oryzae. Isa ito sa mapaminsalang sakit ng palay dahil maaari nitong salakayin ang dahon, buko, leeg ng uhay, tangkay, uhay, at butil sa anumang yugto ng pagtubo. Sa dahon, karaniwang makikita ang pahaba at patulis na batik na may abuhing gitna at kayumangging gilid. Kapag malala, maaaring mamatay ang dahon.",
+    "Mas mabilis kumalat ang blast kapag may mahabang panahon ng pagkabasa ng dahon, mataas na halumigmig, madalas o matagal na pag-ulan, hamog, at malamig na kondisyon sa araw. Mas nagiging paborable rin ito sa lugar na may malaking diperensiya ng temperatura sa araw at gabi dahil nagdudulot ito ng hamog sa dahon. Ang mga isporo ng amag ay maaaring kumalat sa pamamagitan ng hangin at ulan. Kapag naimpeksiyon ang leeg ng uhay, ito ay maaaring mangitim, mabulok, madaling mabali, at magdulot ng walang laman o mahihinang butil."
+    ],
     "general": [
     "Regular na suriin ang palayan kapag maulan at mahalumigmig ang panahon.",
     "Hanapin ang patulis o hugis-diyamanteng kayumangging batik na may abuhing gitna.",
@@ -162,7 +180,10 @@
 "Sheath_Blight": {
 "en": {
     "name": "Sheath Blight",
-    "description": "Sheath blight is a rice disease caused by the fungus Rhizoctonia solani Kühn. It usually starts on the leaf sheath near the water surface as greenish-gray, water-soaked, and oval-shaped spots. As the disease progresses, the lesions enlarge, lengthen, merge, and spread upward or to nearby rice plants.\nThe disease spreads faster under warm and humid conditions, especially when the plants are dense and nitrogen fertilizer is excessive. The fungus produces sclerotia, small hard structures that survive in the soil and water and later infect new plants. Severe infection can cause leaves to die, reduce grain filling, and lower yield.",
+    "description": [
+    "Sheath blight is a rice disease caused by the fungus Rhizoctonia solani Kühn. It usually starts on the leaf sheath near the water surface as greenish-gray, water-soaked, oval-shaped spots. As the disease progresses, the lesions enlarge, lengthen, merge, and spread upward or to nearby rice plants.",
+    "The disease becomes worse under warm and humid conditions, especially when nitrogen fertilizer is high, plants are crowded, and humidity inside the crop canopy is high. It is more common and severe during the rainy season or the second planting season, such as the summer-autumn crop season, especially when there is too much water, drought stress, excess fertilizer, or high-density planting. The fungus produces sclerotia, small hard structures that survive in the soil and water and later infect new plants. Severe infection can cause leaves to die, reduce grain filling, and lower yield."
+    ],
     "general": [
     "Check the lower part of the rice plant, especially the leaf sheath near the water level.",
     "Look for oval, grayish-green, or water-soaked spots on the leaf sheath.",
@@ -185,7 +206,10 @@
 },
 "fil": {
     "name": "Sheath Blight",
-    "description": "Ang sheath blight ay sakit ng palay na sanhi ng amag na Rhizoctonia solani Kühn. Karaniwan itong nagsisimula sa lapak o leaf sheath malapit sa ibabaw ng tubig bilang mamerdeng-abuhing, basang, at hugis-itlog na batik. Habang lumalala, ang mga lesyon ay lumalaki, humahaba, nagsasama-sama, at kumakalat pataas sa halaman o sa katabing palay.\nMas mabilis itong kumalat sa mainit at mahalumigmig na kondisyon, lalo na kung siksik ang tanim at mataas ang nitrohenong abono. Ang amag ay bumubuo ng sclerotia, maliliit at matitigas na bahagi na nabubuhay sa lupa at tubig at muling nakahahawa sa halaman. Kapag malala, maaari itong magdulot ng pagkamatay ng mga dahon, mahinang paglalamán ng butil, at pagbaba ng ani.",
+    "description": [
+    "Ang sheath blight ay sakit ng palay na sanhi ng amag na Rhizoctonia solani Kühn. Karaniwan itong nagsisimula sa lapak o leaf sheath malapit sa ibabaw ng tubig bilang mamerdeng-abuhing, basang, at hugis-itlog na batik. Habang lumalala, ang mga lesyon ay lumalaki, humahaba, nagsasama-sama, at kumakalat pataas sa halaman o sa katabing palay.",
+    "Mas lumalala ang sheath blight sa mainit at mahalumigmig na kondisyon, lalo na kapag mataas ang nitrohenong abono, siksik ang tanim, at mataas ang halumigmig sa loob ng taniman. Mas madalas itong maging malubha sa panahon ng tag-ulan o sa ikalawang taniman tulad ng summer-autumn crop season, lalo na kung may sobrang tubig, kakulangan sa tubig, o sobrang abono. Ang amag ay bumubuo ng sclerotia, maliliit at matitigas na bahagi na nabubuhay sa lupa at tubig at muling nakahahawa sa halaman. Kapag malala, maaari itong magdulot ng pagkamatay ng mga dahon, mahinang paglalamán ng butil, at pagbaba ng ani."
+    ],
     "general": [
     "Suriin ang ibabang bahagi ng palay, lalo na ang leaf sheath o lapak malapit sa tubig.",
     "Hanapin ang hugis-itlog, mamerdeng-abo, o tila basang batik sa lapak.",
@@ -210,7 +234,10 @@
 "Tungro": {
 "en": {
     "name": "Tungro",
-    "description": "Tungro is one of the most destructive viral diseases of rice in Southeast Asia.  Infected plants are usually stunted, produce fewer tillers, have shortened leaf sheaths and leaf blades, and show yellow to orange-yellow discoloration of the leaves. The yellowing often begins at the tip of older leaves and may spread downward; infected leaves may also show mottling or pale green, white, or yellow streaks.\nThe disease is transmitted by green leafhoppers, especially Nephotettix virescens, which is considered the most efficient vector. Severe infection can delay flowering and maturity, produce small and poorly filled panicles, make grains lighter, and greatly reduce yield.",
+    "description": [
+    "Tungro is one of the most destructive viral diseases of rice in Southeast Asia. Infected plants are usually stunted, produce fewer tillers, have shortened leaf sheaths and leaf blades, and show yellow to orange-yellow discoloration of the leaves. The yellowing often begins at the tip of older leaves and may spread downward; infected leaves may also show mottling or pale green, white, or yellow streaks.",
+    "Tungro usually starts increasing around the beginning of the wet season because green leafhopper populations also increase during this period. The disease is transmitted by green leafhoppers, especially Nephotettix virescens, which is considered the most efficient vector. Severe infection can delay flowering and maturity, produce small and poorly filled panicles, make grains lighter, and greatly reduce yield. "
+    ],
     "general": [
     "Control green leafhoppers because they carry and spread the tungro virus.",
     "Check young rice plants often because tungro is more serious during the early growth stage.",
@@ -228,7 +255,10 @@
 },
 "fil": {
     "name": "Tungro",
-    "description": "Ang tungro ay isa sa pinakamapaminsalang sakit na bayral ng palay sa Southeast Asia. Ang mga palay na may tungro ay karaniwang nababan­sot, kakaunti ang suwi, umiikli ang lapak at balat-dahon, at naninilaw hanggang kahel-dilaw ang mga dahon. Ang paninilaw ay madalas nagsisimula sa dulo ng matatandang dahon at maaaring kumalat pababa; maaari ring magkaroon ng batik-batik o guhit na maputla, berde, o puti.\nAng sakit ay naipapasa ng mga ngusong-kabayong kulisap tulad ng Nephotettix virescens, na itinuturing na pinakamabisang tagapagdala. Kapag malala ang impeksiyon, naaantala ang pamumulaklak at paggulang, nagiging maliit at walang laman ang uhay, gumagaan ang butil, at bumababa ang ani.",
+    "description": [
+    "Ang tungro ay isa sa pinakamapaminsalang sakit na bayral ng palay sa Southeast Asia. Ang mga palay na may tungro ay karaniwang nababansot, kakaunti ang suwi, umiikli ang lapak at balat-dahon, at naninilaw hanggang kahel-dilaw ang mga dahon. Ang paninilaw ay madalas nagsisimula sa dulo ng matatandang dahon at maaaring kumalat pababa; maaari ring magkaroon ng batik-batik o guhit na maputla, berde, o puti.",
+    "Mas madalas tumaas ang pagkalat ng tungro sa simula ng tag-ulan, dahil sa pagdami ng green leafhoppers o ngusong-kabayong kulisap na nagdadala ng bayrus. Ang sakit ay naipapasa ng mga kulisap tulad ng Nephotettix virescens, na itinuturing na pinakamabisang tagapagdala. Kapag malala ang impeksiyon, naaantala ang pamumulaklak at paggulang, nagiging maliit at walang laman ang uhay, gumagaan ang butil, at bumababa ang ani."
+    ],
     "general": [
     "Kontrolin ang green leafhoppers o berdeng ngusong-kabayo dahil sila ang nagdadala at nagpapakalat ng tungro virus.",
     "Regular na suriin ang batang palay dahil mas malala ang epekto ng tungro sa maagang yugto ng pagtubo.",

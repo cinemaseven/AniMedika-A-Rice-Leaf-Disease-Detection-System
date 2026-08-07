@@ -48,7 +48,7 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.20rem;
 }
 
 .header-actions {
@@ -57,17 +57,22 @@ body {
     gap: 1rem;
 }
 
+.header-img {
+    width: 300px;
+    height: auto;
+}
+
 .logo {
     width: 90px;
     height: auto;
 }
 
-.site-title {
+/* .site-title {
     font-size: 2rem;
     font-weight: bold;
     color: var(--text-color1);
     font-family: var(--heading-font);
-}
+} */
 
 .language-selector {
     position: relative;
@@ -275,6 +280,13 @@ body {
     color: var(--text-color1);
     font-size: 0.8rem;
     margin: 0.2rem 1rem;
+    text-decoration: none;
+    
+}
+
+.hero-link:hover {
+    color: var(--secondary);
+    text-decoration: underline;
 }
 
 /* === MAIN CONTENT WRAPPER === */
@@ -754,14 +766,15 @@ p, ol {
     color: var(--secondary);
     border-radius: 4px;
     padding: 0.05rem 0.25rem;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     text-underline-offset: 0.15em;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .more-information a:hover,
 .more-information a:focus-visible {
-    background-color: var(--secondary);
+    /* background-color: var(--secondary); */
+    text-decoration: underline;
     color: var(--text-color2);
     outline: none;
 }
@@ -779,7 +792,6 @@ p, ol {
 
 .disclaimer strong {
     color: var(--secondary);
-    font-weight: bold;
 }
 /* ===  FOOTER === */
 .site-footer {
@@ -919,7 +931,7 @@ p, ol {
 
 .season-note {
     margin: 0 0 1.5rem;
-    color: var(--text-color1);
+    color: var(--secondary);
     font-family: var(--body-font);
     font-size: 1.15rem;
     font-style: italic;
@@ -948,9 +960,9 @@ p, ol {
         padding: 0 2rem;
     } */
 
-    .site-title {
+    /* .site-title {
         font-size: 1.7rem;
-    }
+    } */
 
     .hero-image {
         height: 350px;
@@ -1048,41 +1060,62 @@ p, ol {
 @media (max-width: 768px) {
 
     .site-header {
-        padding: 1.5rem;
+        width: 100%;
+        padding: 0.75rem 1rem;
         border-bottom: 1.5px solid rgba(14,14,14);
         margin-bottom: 1rem;
     }
 
     .container {
+        width: 100%;
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.5rem;
         align-items: center;
         text-align: center;
     }
 
     .header-content {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.2rem;
     }
 
     .logo {
-        width: 70px;
+        width: 50px;
     }
 
-    .site-title {
-        font-size: 1.3rem;
+    .header-img {
+        width: 160px;
+        height: auto;
     }
+
+    /* .site-title {
+        font-size: 1.3rem;
+    } */
 
     .header-actions {
+        width: 100%;
+        max-width: 300px;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 0.8rem;
+        gap: 0.6rem;
+        padding: 0 0.5rem;
+    }
+
+    .language-selector,
+    .date-season-group {
+        flex: 0 0 140px;
+        min-width: 0;
     }
 
     .language-selector,
     .calendar {
-        width: 220px;
-        height: 48px;
+        height: 42px;
+    }
+
+    .calendar {
+        width: 100%;
     }
 
     .language-toggle,
@@ -1090,11 +1123,16 @@ p, ol {
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0.6rem 0.9rem;
-        font-size: 0.9rem;
+        padding: 0.45rem 0.55rem;
+        font-size: 0.8rem;
         border-radius: 8px;
     }
 
+    .language-toggle .material-icons, 
+    .calendar .material-icons {
+        font-size: 1.2rem;
+    }
+    
     .language-toggle {
         width: 100%;
         height: 100%;
@@ -1117,7 +1155,7 @@ p, ol {
     } */
 
     .date-input {
-        font-size: 1rem;          
+        font-size: 0.78rem;          
     }
 
     .hero-image, .hero-link {
@@ -1149,7 +1187,7 @@ p, ol {
         display: block;
         text-align: center;
         font-size: 1.3rem;
-        order:1;
+        order: 1;
     }
 
     .about-text {
@@ -1172,6 +1210,27 @@ p, ol {
     .instructions-card,
     .upload-card {
         padding: 1.5rem;
+    }
+
+    .instructions-card h2 {
+        font-size: 1.15rem;
+        margin-bottom: 0.65rem;
+    }
+
+    .instructions-card ol {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .instructions-card li {
+        margin-bottom: 0.45rem;
+        line-height: 1.4;
+    }
+
+    .temporary-storage-note {
+        margin-top: 0.65rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
 
     .upload-box {
@@ -1200,27 +1259,69 @@ p, ol {
         /* max-width: 220px; */
     }
 
+    .results-section {
+        margin: 2rem 0 1.5rem;
+    }
+
+    .results-header {
+        margin-bottom: 1.25rem;
+    }
+
+    .results-header span {
+        padding: 0 1rem;
+    }
+
     .result-details h2 {
         font-size: 1.9rem;
         flex-wrap: wrap;
+        margin-bottom: 0.2rem;
     }
 
     .result-content{
-        margin-top:1.9rem;
+        gap: 1rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .result-image-card {
+        border-radius: 0;
+    }
+
+    .result-details {
+        gap: 0.45rem;
+    }
+
+    #diseaseDescription {
+        font-size: 0.85rem;
+        line-height: 1.45;
     }
 
     .recommendation-card {
-        padding: 2rem;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
     }
 
     .recommendation-card h2 {
         font-size: 1.5rem;
-        margin:1rem;
+        margin: 0 0 0.75rem;
     }
 
-    #recommendationList li{
-        font-size: 0.8rem;
-        margin: 1rem;
+    .season-note {
+        margin: 0 0 0.65rem;
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    #recommendationList {
+        row-gap: 0.55rem;
+        padding-left: 1.2rem;
+    }
+
+    #recommendationList li {
+        font-size: 0.95rem;
+        line-height: 1.45;
+        margin: 0;
+        padding-left: 0.2rem;
     }
 
     .confidence-overlay {
@@ -1241,6 +1342,7 @@ p, ol {
     }
 
     .site-footer {
+        width: 100%;
         padding: 2rem 1rem;
     }
 
@@ -1281,6 +1383,42 @@ p, ol {
     justify-content: flex-end;
     gap: 0.75rem;
     }
+
+    .camera-popup,
+    .quality-popup {
+        width: min(96vw, 620px);
+        padding: 1.25rem;
+    }
+
+    .camera-popup h2,
+    .quality-popup h2 {
+        font-size: 1.5rem;
+    }
+
+    .camera-actions,
+    .quality-actions {
+        flex-direction: column-reverse;
+    }
+
+    .primary-action-btn,
+    .secondary-action-btn {
+        width: 100%;
+    }
+
+    .season-display {
+        text-align: center;
+    }
+
+    .result-status {
+        min-height: 0;
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    .result-season {
+        font-size: 0.82rem;
+        line-height: 1.3;
+    }
 }
 
 /* ==========================================
@@ -1311,7 +1449,7 @@ p, ol {
     }
 }
 /* ==========================================
-   FINAL IMAGE-TO-BACKEND ARCHITECTURE
+    FINAL IMAGE-TO-BACKEND ARCHITECTURE
 ========================================== */
 
 [hidden] {
@@ -1367,9 +1505,13 @@ p, ol {
     color: var(--text-color1);
     font-style: italic;
     font-family: var(--body-font);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.5;
     text-align: justify;
+}
+
+.temporary-storage-note strong {
+    color: var(--secondary);
 }
 
 .camera-popup-overlay,
@@ -1499,7 +1641,7 @@ p, ol {
     opacity: 0.85;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .camera-popup,
     .quality-popup {
         width: min(96vw, 620px);
@@ -1524,4 +1666,4 @@ p, ol {
     .season-display {
         text-align: center;
     }
-}
+} */
