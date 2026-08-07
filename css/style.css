@@ -766,15 +766,14 @@ p, ol {
     color: var(--secondary);
     border-radius: 4px;
     padding: 0.05rem 0.25rem;
-    /* text-decoration: underline; */
+    text-decoration: underline;
     text-underline-offset: 0.15em;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .more-information a:hover,
 .more-information a:focus-visible {
-    /* background-color: var(--secondary); */
-    text-decoration: underline;
+    background-color: var(--secondary);
     color: var(--text-color2);
     outline: none;
 }
