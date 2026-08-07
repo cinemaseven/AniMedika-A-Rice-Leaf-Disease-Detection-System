@@ -131,7 +131,8 @@ export function initResults(app) {
         elements.resultStatus.className = "result-status success";
         elements.resultStatus.textContent = "";
         elements.diseaseName.textContent = localized.name;
-        elements.diseaseDescription.textContent = localized.description;
+        // elements.diseaseDescription.textContent = localized.description;
+        renderDescription(localized.description);
         elements.confidenceValue.textContent = `${safeConfidence.toFixed(1)}%`;
         elements.confidenceText.textContent = `${app.text().confidence}: ` + `${safeConfidence.toFixed(1)}%`;
         elements.resultSeason.textContent = `${app.text().selectedSeason}: ` + `${seasonLabel}`;
@@ -154,6 +155,34 @@ export function initResults(app) {
             .join("");
 
         renderMoreInformation(localized.sources);
+    }
+
+    function renderDescription(description) {
+        const paragraphs = Array.isArray(description)
+            ? description
+            : [description];
+
+        elements.diseaseDescription.replaceChildren();
+
+        paragraphs
+            .filter(
+                (paragraph) =>
+                    paragraph !== null &&
+                    paragraph !== undefined &&
+                    String(paragraph).trim()
+            )
+            .forEach((paragraph, index) => {
+                if (index > 0) {
+                    elements.diseaseDescription.append(
+                        document.createElement("br"),
+                        document.createElement("br")
+                    );
+                }
+
+                elements.diseaseDescription.append(
+                    document.createTextNode(String(paragraph))
+                );
+            });
     }
 
     // Sends the uploaded or captured image to the Flask backend

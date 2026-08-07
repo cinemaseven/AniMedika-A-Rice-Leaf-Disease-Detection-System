@@ -16,7 +16,11 @@ export function initLanguage(app, WEBSITE_TEXT) {
         elements.currentLanguageText.textContent = text.label;
 
         // Website title
-        document.querySelector(".site-title").textContent = text.siteTitle;
+        const siteTitle = document.querySelector(".site-title");
+
+        if (siteTitle) {
+            siteTitle.textContent = text.siteTitle;
+        }
 
         // About section
         document.querySelector(".about-header h2").textContent = text.aboutTitle;
