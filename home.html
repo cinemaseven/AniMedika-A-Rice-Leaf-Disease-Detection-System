@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AniMedika</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <!-- google icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- google fonts-->
@@ -31,19 +32,19 @@
                 <!-- language selector -->
                 <div class="language-selector">
                     <button class="language-toggle" id="languageToggleBtn" type="button">
-                        <span id="currentLanguageFlag">🇵🇭</span>
+                        <img src="images/flag-ph.svg" alt="🇵🇭" class="language-flag" id="currentLanguageFlag">
                         <span id="currentLanguageText">Filipino</span>
                         <span class="material-icons">expand_more</span>
                     </button>
 
                     <div class="language-menu" id="languageMenu">
                         <button class="language-menu-btn" type="button" data-lang="fil">
-                            <span>🇵🇭</span>
+                            <img src="images/flag-ph.svg" alt="🇵🇭" class="language-flag">
                             <span>Filipino</span>
                         </button>
 
                         <button class="language-menu-btn" type="button" data-lang="en">
-                            <span>🇺🇸</span>
+                            <img src="images/flag-us.svg" alt="🇺🇸" class="language-flag">
                             <span>English</span>
                         </button>
                     </div>
@@ -121,10 +122,11 @@
                 <div class="instructions-card">
                     <h2>How to Use</h2>
                     <ol>
-                        <li>Prepare one close-up image of a rice leaf. <i id="img-specs">Please make sure that it is clear and not too dark.</i></li>
-                        <li>Select or update the date using the calendar icon above to match when the image was taken.</li>
-                        <li>Upload the image using the camera or <i>select from gallery</i> option.</li>
-                        <li>The disease prediction and recommended actions will be displayed automatically.</li>
+                        <li>Prepare one close-up image of a rice leaf. <i id="img-specs">Use good lighting and keep the lesions clearly visible.</i></li>
+                        <li>Select the date when the image was taken. The system will automatically determine the dry or wet season.</li>
+                        <li>Choose an image from the gallery or use the camera on a tablet or phone.</li>
+                        <li>If the captured image is detected as too dark or blurry, you may retake the image or continue anyway.</li>
+                        <li>The prediction, recommended actions, and seasonal note will be displayed.</li>
                         <li>To analyze another image, simply repeat the steps above.</li>
                     </ol>
 
@@ -187,6 +189,10 @@
                     <p id="diseaseDescription">
                         Awaiting image analysis...
                     </p>
+                    <div class="key-phrases" id="keyPhrases" hidden>
+                        <span class="key-phrases-label" id="keyPhrasesLabel">Key Signs</span>
+                        <ul class="key-phrases-list" id="keyPhraseList"></ul>
+                    </div>
                 </div>
             </div>
 
@@ -246,12 +252,12 @@
 
             <div class="language-popup-buttons">
                 <button class="language-option-btn" type="button" data-lang="fil">
-                    <span>🇵🇭</span>
+                    <img src="images/flag-ph.svg" alt="🇵🇭" class="language-flag">
                     Filipino
                 </button>
 
                 <button class="language-option-btn" type="button" data-lang="en">
-                    <span>🇺🇸</span>
+                    <img src="images/flag-us.svg" alt="🇺🇸" class="language-flag">
                     English
                 </button>
             </div>

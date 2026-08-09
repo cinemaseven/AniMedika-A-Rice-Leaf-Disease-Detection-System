@@ -5,9 +5,9 @@ from datetime import datetime
 from functools import lru_cache
 
 from backend.config import RECOMMENDATIONS_PATH, RECOMMENDATION_SOURCES_PATH
-from backend.nlp_recommendation_service import (
-    NLPRecommendationError,
-    build_nlp_recommendations,
+from backend.nlp_keyphrase_service import (
+    NLPKeyphraseError,
+    extract_key_phrases,
 )
 
 class RecommendationError(RuntimeError):
@@ -63,24 +63,24 @@ def get_result_bundle(disease_id: str, season: str) -> dict:
     
     for language in ("en", "fil"):
         content = disease.get(language, {})
+        description = content.get("description", "")
         general = content.get("general", [])
         season_note = content.get("season_notes", {}).get(season, "")
 
         try:
-            nlp_result = build_nlp_recommendations(
-                recommendations=general,
-                season_note=season_note,
-                language=language,
+            nlp_result = extract_key_phrases(
+                description = description,
+                language = language,
             )
-        except NLPRecommendationError as exc:
+        except NLPKeyphraseError as exc:
             raise RecommendationError(str(exc)) from exc
 
         localized[language] = {
             "name": content.get("name", disease_id.replace("_", " ")),
-            "description": content.get("description", ""),
-            "general_recommendations": nlp_result["general_recommendations"],
-            "recommendation_analysis": nlp_result["recommendation_analysis"],
-            "season_note": nlp_result["season_note"],
+            "description": description,
+            "key_phrases": nlp_result["key_phrases"],
+            "general_recommendations": general,
+            "season_note": season_note,
             "sources": sources,
             "nlp_component": nlp_result["nlp_component"],
         }

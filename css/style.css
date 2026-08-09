@@ -67,15 +67,18 @@ body {
     height: auto;
 }
 
-/* .site-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--text-color1);
-    font-family: var(--heading-font);
-} */
 
 .language-selector {
     position: relative;
+}
+
+.language-flag {
+    width: 1.35rem;
+    height: 0.9rem;
+    display: inline-block;
+    flex: 0 0 auto;
+    object-fit: cover;
+    vertical-align: middle;
 }
 
 .language-toggle {
@@ -207,6 +210,10 @@ body {
 }
 
 .language-option-btn span {
+    margin-right: 0.4rem;
+}
+
+.language-option-btn .language-flag {
     margin-right: 0.4rem;
 }
 
@@ -585,7 +592,7 @@ p, ol {
 .result-image-card {
     flex: 0 0 40%;
     position: relative;
-    border-radius: 15px;
+    border-radius: 0;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     aspect-ratio: 1 / 1;
@@ -695,9 +702,31 @@ p, ol {
 #diseaseDescription {
     color: var(--text-color1);
     font-family: var(--body-font);
+    text-align: justify;
     font-size: 1.15rem;
     line-height: 1.6;
     opacity: 0.8;
+}
+
+.key-phrases {
+    margin-top: 0.8rem;
+    color: var(--text-color1);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.key-phrases-label {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+}
+
+.key-phrases-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: inherit;
 }
 
 /* Recommended Actions 2-Column Grid */
@@ -1088,10 +1117,6 @@ p, ol {
         height: auto;
     }
 
-    /* .site-title {
-        font-size: 1.3rem;
-    } */
-
     .header-actions {
         width: 100%;
         max-width: 300px;
@@ -1295,6 +1320,11 @@ p, ol {
         line-height: 1.45;
     }
 
+    .key-phrases {
+        margin-top: 0.6rem;
+        font-size: 0.78rem;
+        line-height: 1.4;
+    }
     .recommendation-card {
         padding: 1.25rem;
         margin-bottom: 1rem;
@@ -1639,30 +1669,3 @@ p, ol {
     font-size: 0.85rem;
     opacity: 0.85;
 }
-
-/* @media (max-width: 768px) {
-    .camera-popup,
-    .quality-popup {
-        width: min(96vw, 620px);
-        padding: 1.25rem;
-    }
-
-    .camera-popup h2,
-    .quality-popup h2 {
-        font-size: 1.5rem;
-    }
-
-    .camera-actions,
-    .quality-actions {
-        flex-direction: column-reverse;
-    }
-
-    .primary-action-btn,
-    .secondary-action-btn {
-        width: 100%;
-    }
-
-    .season-display {
-        text-align: center;
-    }
-} */

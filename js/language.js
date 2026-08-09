@@ -12,7 +12,7 @@ export function initLanguage(app, WEBSITE_TEXT) {
         state.currentLanguage = language;
 
         // Language selector
-        elements.currentLanguageFlag.textContent = text.flag;
+        elements.currentLanguageFlag.src = text.flag;
         elements.currentLanguageText.textContent = text.label;
 
         // Website title

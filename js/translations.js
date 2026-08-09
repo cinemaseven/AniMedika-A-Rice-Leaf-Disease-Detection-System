@@ -1,6 +1,6 @@
 export const WEBSITE_TEXT = {
     fil: {
-        flag: "🇵🇭",
+        flag: "images/flag-ph.svg",
         label: "Filipino",
         siteTitle: "AniMedika",
         aboutTitle: "Tungkol sa Website",
@@ -18,7 +18,7 @@ export const WEBSITE_TEXT = {
             'Maghanda ng isang malinaw na close-up na larawan ng dahon ng palay. <i id="img-specs">Gumamit ng maayos na ilaw at tiyaking malinaw ang mga lesion.</i>',
             "Piliin ang petsa kung kailan kinuha ang larawan. Awtomatikong tutukuyin ng sistema kung tag-init o tag-ulan.",
             "Pumili ng larawan mula sa gallery o gamitin ang camera sa tablet o cellphone.",
-            "Kapag may babala sa liwanag o linaw, maaaring kumuha ulit ng larawan o magpatuloy.",
+            "Kung matukoy na masyadong madilim o malabo ang nakuhang larawan, maaari kang kumuha ulit ng larawan o magpatuloy.",
             "Ipapakita ang prediction, rekomendadong aksyon, at seasonal note.",
             "Upang magsuri muli ng panibagong larawan, ulitin lamang ang mga hakbang sa itaas."
         ],
@@ -29,6 +29,7 @@ export const WEBSITE_TEXT = {
         evaluating: "Sinusuri...",
         processing: "Ipinapadala at pinoproseso ang larawan...",
         awaiting: "Naghihintay ng pagsusuri ng larawan...",
+        keySigns: "Mga Pangunahing Palatandaan",
         recommendedActions: "Mga Rekomendadong Aksyon",
         awaitingRecommendations: "Naghihintay ng prediction...",
         disclaimer: "<strong>Paalala:</strong> Ang sistemang ito ay ginawa upang tumulong, hindi upang palitan, ang mga magsasakang Pilipino at mga propesyonal sa agrikultura. Ang mga resultang ibinibigay ay suporta lamang sa pagtukoy ng sakit at paggawa ng desisyon, at dapat pa ring gamitin kasama ng obserbasyon sa bukid at payo ng eksperto kung kinakailangan.",
@@ -67,7 +68,7 @@ export const WEBSITE_TEXT = {
         blurMetric: "Blur score"
     },
     en: {
-        flag: "🇺🇸",
+        flag: "images/flag-us.svg",
         label: "English",
         siteTitle: "AniMedika",
         aboutTitle: "About this Website",
@@ -85,8 +86,8 @@ export const WEBSITE_TEXT = {
             'Prepare one clear close-up image of a rice leaf. <i id="img-specs">Use good lighting and keep the lesions clearly visible.</i>',
             "Select the date when the image was taken. The system will automatically determine the dry or wet season.",
             "Choose an image from the gallery or use the camera on a tablet or phone.",
-            "When a lighting or blur warning appears, retake the image or continue anyway.",
-            "The prediction, recommended acctions, and seasonal note will be displayed.",
+            "If the captured image is detected as too dark or blurry, you may retake the image or continue anyway.",
+            "The prediction, recommended actions, and seasonal note will be displayed.",
             "To analyze another image, simply repeat the steps above."
         ],
         selectImageSource: "Select Image Source",
@@ -96,6 +97,7 @@ export const WEBSITE_TEXT = {
         evaluating: "Evaluating...",
         processing: "Uploading and processing the image...",
         awaiting: "Awaiting image analysis...",
+        keySigns: "Key Signs",
         recommendedActions: "Recommended Actions",
         awaitingRecommendations: "Awaiting prediction...",
         disclaimer: "<strong>Disclaimer:</strong> This system is intended to assist, not replace, Filipino farmers and agricultural professionals. The results support disease identification and decision-making and should be used together with field observations and expert advice when necessary.",

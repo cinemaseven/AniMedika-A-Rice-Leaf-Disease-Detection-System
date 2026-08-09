@@ -11,6 +11,26 @@ export function initResults(app) {
             .replaceAll("'", "&#039;");
     }
 
+    // Displays NLP-extracted key phrases
+    function renderKeyPhrases(keyPhrases = []) {
+        elements.keyPhraseList.replaceChildren();
+
+        if (!Array.isArray(keyPhrases) || keyPhrases.length === 0) {
+            elements.keyPhrases.hidden = true;
+            return;
+        }
+
+        elements.keyPhrasesLabel.textContent = app.text().keySigns;
+
+        keyPhrases.forEach((phrase) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = phrase;
+            elements.keyPhraseList.append(listItem);
+        });
+
+        elements.keyPhrases.hidden = false;
+    }
+
     // Displays the trusted source titles returned by the backend as clickable links
     function renderMoreInformation(sources = []) {
         elements.moreInformation.replaceChildren();
@@ -73,6 +93,7 @@ export function initResults(app) {
         elements.resultStatus.textContent = app.text().processing;
         elements.diseaseName.textContent = app.text().evaluating;
         elements.diseaseDescription.textContent = app.text().awaiting;
+        renderKeyPhrases();
         elements.recommendationList.innerHTML = `<li>${escapeHtml(app.text().awaitingRecommendations)}</li>`;
         renderMoreInformation();
         elements.confidenceValue.textContent = "--%";
@@ -90,6 +111,7 @@ export function initResults(app) {
         elements.resultStatus.textContent = message;
         elements.confidenceValue.textContent = "--%";
         elements.confidenceText.textContent = "";
+        renderKeyPhrases();
         renderMoreInformation();
         elements.gaugeContainer.style.setProperty("--fill-deg", "0deg");
 
@@ -133,6 +155,7 @@ export function initResults(app) {
         elements.diseaseName.textContent = localized.name;
         // elements.diseaseDescription.textContent = localized.description;
         renderDescription(localized.description);
+        renderKeyPhrases(localized.key_phrases);
         elements.confidenceValue.textContent = `${safeConfidence.toFixed(1)}%`;
         elements.confidenceText.textContent = `${app.text().confidence}: ` + `${safeConfidence.toFixed(1)}%`;
         elements.resultSeason.textContent = `${app.text().selectedSeason}: ` + `${seasonLabel}`;
