@@ -25,7 +25,7 @@ _calibration_applied = False
 _load_lock = Lock()
 _prediction_lock = Lock()
 
-MAX_DISPLAY_CONFIDENCE = 0.999
+# MAX_DISPLAY_CONFIDENCE = 0.999
 
 
 def _load_class_names(path: Path) -> list[str]:
@@ -182,13 +182,13 @@ def predict_preprocessed_image(batch: np.ndarray) -> dict:
         probabilities = _apply_temperature(probabilities[None, :],temperature,)[0]
 
     predicted_index = int(np.argmax(probabilities))
-    confidence = float(np.clip(probabilities[predicted_index], 0.0, 1.0))
+    # confidence = float(np.clip(probabilities[predicted_index], 0.0, 1.0))
 
     return {
         "class_index": predicted_index,
         "disease_id": class_names[predicted_index],
-        "confidence": confidence,
-        "display_confidence": min(confidence, MAX_DISPLAY_CONFIDENCE),
+        # "confidence": confidence,
+        # "display_confidence": min(confidence, MAX_DISPLAY_CONFIDENCE),
         "temperature_used": temperature,
         "calibration_applied": calibration_applied,
     }

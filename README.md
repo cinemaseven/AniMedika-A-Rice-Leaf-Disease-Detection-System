@@ -1,6 +1,6 @@
 # AniMedika: A Browser-Based Rice Leaf Disease Detection System
 
-AniMedika is a browser-based rice leaf disease detection system developed to identify six rice leaf conditions using an EfficientNetB0-based Convolutional Neural Network (CNN). The system allows users to upload or capture a rice leaf image, receive a predicted class and confidence score, and view corresponding disease-management recommendations.
+AniMedika is a browser-based rice leaf disease detection system developed to identify six rice leaf conditions using an EfficientNetB0-based Convolutional Neural Network (CNN). The system allows users to upload or capture a rice leaf image, receive a predicted class and view corresponding disease-management recommendations.
 
 The project focuses on rice leaf diseases that affect crop productivity and food security, particularly in rice-producing regions of Luzon, Philippines.
 
@@ -12,7 +12,7 @@ The project focuses on rice leaf diseases that affect crop productivity and food
 
 Rice leaf diseases such as Rice Blast, Bacterial Leaf Blight, Brown Spot, Sheath Blight, and Tungro can reduce rice yield and negatively affect food security. Manual disease identification may be difficult when symptoms appear visually similar or when trained agricultural personnel are not immediately available.
 
-AniMedika applies deep learning and transfer learning to assist with rice leaf disease identification through a standard web browser. The system uses an EfficientNetB0 CNN trained on labeled rice leaf images. It produces one predicted class, a user-facing confidence score, and disease-management information.
+AniMedika applies deep learning and transfer learning to assist with rice leaf disease identification through a standard web browser. The system uses an EfficientNetB0 CNN trained on labeled rice leaf images. It produces one predicted class and disease-management information.
 
 The final model supports the following six classes:
 
@@ -37,7 +37,7 @@ The project aims to:
 - Apply image augmentation to improve generalization.
 - Evaluate the model using multiple metrics rather than accuracy alone.
 - Compare controlled model experiments using five-fold cross-validation.
-- Provide users with a predicted condition, confidence score, and management recommendations.
+- Provide users with a predicted condition and management recommendations.
 - Support deployment through standard web browsers and Docker-based environments.
 
 ---
@@ -65,8 +65,6 @@ The model performs **single-label multiclass classification**. Each uploaded ima
 - Six-class rice leaf condition classification
 - EfficientNetB0 transfer-learning model
 - Real-time inference through a Python backend
-- User-facing confidence score
-- Confidence display capped at 99.9%
 - English and Filipino disease-management recommendations
 - Docker support for consistent local and hosted deployment
 - Separate research and deployment files
@@ -365,22 +363,51 @@ Six of the ten final errors involved the Rice Blast–Sheath Blight pair.
 ```text
 AniMedika-A-Rice-Leaf-Disease-Detection-System/
 │
+├── backend/
+│   ├── __init__.py
+│   ├── app.py
+│   ├── config.py
+│   ├── image_processing.py
+│   ├── model_service.py
+│   ├── nlp_keyphrase_service.py
+│   ├── recommendation_service.py
+│   ├── recommendation_sources.json
+│   ├── recommendations.json
+│ 
 ├── css/
 │   ├── style.css
 │
 ├── images/
+│   ├── favicon.png
+│   ├── flag-ph.svg
+│   ├── flag-us.svg
 │   ├── hero-image.png
-│   ├── logo-name-ss.png
-│   ├── logo-ss.png
+│   ├── logo-name.png
+│   ├── logo.png
 │
 ├── js/
+│   ├── date.js
+│   ├── image-upload.js
+│   ├── language.js
 │   ├── main.js
+│   ├── popups.js
 │   ├── results.js
-│   ├── script.js
 │   ├── translations.js
+│
+├── models/
+│   └── experiments/
+│       └── exp04_finetune40/
+│           ├── best_model.keras
+│           ├── labels.json
+│           └── temperature.json
 │
 ├── model_web/
 │   ├── model.json
+│
+├── scripts/
+│   ├── reset_generated.ps1
+│   ├── run_baseline_after_audit.ps1
+│   ├── run_final.ps1
 │
 ├── src/
 │   ├── audit_dataset.py
@@ -404,28 +431,16 @@ AniMedika-A-Rice-Leaf-Disease-Detection-System/
 │   ├── train.py
 │   └── training_utils.py
 │
-├── models/
-│   └── experiments/
-│       └── exp08_vertical_translation003/
-│           ├── best_model.keras
-│           └── labels.json
-│
-├── scripts/
-│   ├── reset_generated.ps1
-│   ├── run_baseline_after_audit.ps1
-│   ├── run_final.ps1
-│
-├── data/
-│   └── recommendations.json
-│
 ├── dataset/                 # Local only; ignored by Git
 ├── outputs/                 # Generated locally; ignored by Git
 ├── .env.example
+├── .dockerignore
 ├── .gitignore
+├── compose.yaml
 ├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
+├── home.html
+├── README.md
+└── requirements.txt
 ```
 
 Generated datasets, outputs, prediction logs, alternate checkpoints, and temporary files should remain excluded from Git.
@@ -654,7 +669,7 @@ Example:
 
 ```text
 Actual probability:   0.999999
-Displayed confidence: 99.9%
+Confidence: 99.9%
 ```
 
 ---
@@ -686,9 +701,8 @@ A database is not required for a stateless upload-predict-display workflow.
 4. Rice Blast and Sheath Blight remain the most frequently confused classes.
 5. Poor lighting, blur, distance, obstruction, and extreme cropping may reduce reliability.
 6. Performance may change on field images that differ from the development dataset.
-7. High softmax confidence does not guarantee correctness.
-8. Disease-management recommendations should be confirmed using local agricultural guidance.
-9. The system is not a replacement for expert or laboratory diagnosis.
+7. Disease-management recommendations should be confirmed using local agricultural guidance.
+8. The system is not a replacement for expert or laboratory diagnosis.
 
 ---
 

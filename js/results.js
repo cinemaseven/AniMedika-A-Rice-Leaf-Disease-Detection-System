@@ -91,47 +91,71 @@ export function initResults(app) {
         elements.resultsSection.style.display = "block";
         elements.resultStatus.className = "result-status loading";
         elements.resultStatus.textContent = app.text().processing;
+        elements.diseaseName.classList.remove("analysis-error");
         elements.diseaseName.textContent = app.text().evaluating;
         elements.diseaseDescription.textContent = app.text().awaiting;
         renderKeyPhrases();
+
+        const recommendationCard = elements.recommendationList.closest(".recommendation-card");
+
+        if (recommendationCard) {
+            recommendationCard.hidden = false;
+        }
+
         elements.recommendationList.innerHTML = `<li>${escapeHtml(app.text().awaitingRecommendations)}</li>`;
         renderMoreInformation();
-        elements.confidenceValue.textContent = "--%";
-        elements.confidenceText.textContent = "";
         elements.resultSeason.textContent = "";
-        elements.gaugeContainer.style.setProperty("--fill-deg", "0deg");
+        // elements.confidenceValue.textContent = "--%";
+        // elements.confidenceText.textContent = "";
+        // elements.gaugeContainer.style.setProperty("--fill-deg", "0deg");
     }
 
     // Displays prediction or server errors.
     function showError(message, modelNotReady = false) {
-        state.displayedError = {modelNotReady, message};
+        state.displayedError = { modelNotReady, message };
 
         elements.resultsSection.style.display = "block";
         elements.resultStatus.className = "result-status error";
-        elements.resultStatus.textContent = message;
-        elements.confidenceValue.textContent = "--%";
-        elements.confidenceText.textContent = "";
+        elements.resultStatus.textContent = "";
+        elements.resultSeason.textContent = "";
+
         renderKeyPhrases();
         renderMoreInformation();
-        elements.gaugeContainer.style.setProperty("--fill-deg", "0deg");
 
-        const season = app.actions.updateSeasonDisplay();
+        if (elements.seasonNote) {
+            elements.seasonNote.textContent = "";
+            elements.seasonNote.hidden = true;
+        }
 
-        const seasonLabel = season === "wet" ? app.text().wetSeason : app.text().drySeason;
-
-        elements.resultSeason.textContent = `${app.text().selectedSeason}: ` + `${seasonLabel}`;
+        const recommendationCard =
+            elements.recommendationList.closest(".recommendation-card");
 
         // Special error shown when the backend is running but the AI model has not been loaded
         if (modelNotReady) {
+            elements.diseaseName.classList.add("analysis-error");
             elements.diseaseName.textContent = app.text().modelNotReadyTitle;
-            elements.diseaseDescription.textContent = app.text().modelNotReadyDescription;
-            elements.recommendationList.innerHTML = `<li>${escapeHtml(app.text().modelNotReadyRecommendation)}</li>`;
+            elements.diseaseDescription.textContent =
+                app.text().modelNotReadyDescription;
+
+            if (recommendationCard) {
+                recommendationCard.hidden = false;
+            }
+
+            elements.recommendationList.innerHTML =
+                `<li>${escapeHtml(app.text().modelNotReadyRecommendation)}</li>`;
 
             return;
         }
 
+        // Generic analysis error
+        elements.diseaseName.classList.add("analysis-error");
         elements.diseaseName.textContent = app.text().requestFailed;
-        elements.diseaseDescription.textContent = message;
+        elements.diseaseDescription.textContent = "";
+
+        if (recommendationCard) {
+            recommendationCard.hidden = true;
+        }
+
         elements.recommendationList.innerHTML = "";
     }
 
@@ -146,25 +170,30 @@ export function initResults(app) {
             return;
         }
 
-        const confidencePercent = Number(result.prediction.confidence) * 100;
-        const safeConfidence = Number.isFinite(confidencePercent) ? confidencePercent : 0;
+        // const confidencePercent = Number(result.prediction.confidence) * 100;
+        // const safeConfidence = Number.isFinite(confidencePercent) ? confidencePercent : 0;
         const seasonLabel = result.context.season === "wet" ? app.text().wetSeason : app.text().drySeason;
 
         elements.resultStatus.className = "result-status success";
         elements.resultStatus.textContent = "";
+        elements.diseaseName.classList.remove("analysis-error");
         elements.diseaseName.textContent = localized.name;
-        // elements.diseaseDescription.textContent = localized.description;
+
+        const recommendationCard = elements.recommendationList.closest(".recommendation-card");
+
+        if (recommendationCard) {
+            recommendationCard.hidden = false;
+        }
         renderDescription(localized.description);
         renderKeyPhrases(localized.key_phrases);
-        elements.confidenceValue.textContent = `${safeConfidence.toFixed(1)}%`;
-        elements.confidenceText.textContent = `${app.text().confidence}: ` + `${safeConfidence.toFixed(1)}%`;
+        // elements.confidenceValue.textContent = `${safeConfidence.toFixed(1)}%`;
+        // elements.confidenceText.textContent = `${app.text().confidence}: ` + `${safeConfidence.toFixed(1)}%`;
         elements.resultSeason.textContent = `${app.text().selectedSeason}: ` + `${seasonLabel}`;
 
-        // Updates the confidence gauge. 100% confidence corresponds to 180 degrees
-        elements.gaugeContainer.style.setProperty(
-            "--fill-deg",
-            `${Math.max(0, Math.min(180, safeConfidence * 1.8))}deg`
-        );
+        // elements.gaugeContainer.style.setProperty(
+        //     "--fill-deg",
+        //     `${Math.max(0, Math.min(180, safeConfidence * 1.8))}deg`
+        // );
 
         if (elements.seasonNote) {
             elements.seasonNote.textContent = localized.season_note || "";

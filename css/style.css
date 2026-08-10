@@ -8,6 +8,7 @@
     --accent2: #D7DAE3;
     --text-color1: #000000;
     --text-color2: #FFFFFF;
+    --error: #8a140f;
 
     /* === TYPOGRAPHY === */
     --heading-font: "Kaisei HarunoUmi", serif;
@@ -605,8 +606,7 @@ p, ol {
     object-fit: cover;
 }
 
-/* Semi-transparent circular backdrop */
-.confidence-overlay {
+/* .confidence-overlay {
     position: absolute;
     bottom: -70px; 
     left: 50%;
@@ -615,11 +615,10 @@ p, ol {
     height: 320px;
     background: rgba(255, 255, 255, 0.45);
     border-radius: 50%;
-    pointer-events: none; /* Allows clicks to pass through to the image */
+    pointer-events: none; 
     --fill-deg: 0deg;
 }
 
-/* The segmented gauge */
 .confidence-overlay::before {
     content: "";
     position: absolute;
@@ -627,10 +626,8 @@ p, ol {
     left: 50%;
     transform: translateX(-50%);
     width: 260px;
-    height: 130px; /* Exactly half of the width */
+    height: 130px;
     border-radius: 130px 130px 0 0;
-
-    /* Smooth color gradient that snaps to white at the specified fill degree */
     background: conic-gradient(from 270deg,
         #8A140F 0deg,
         #C03E15 25deg,
@@ -643,7 +640,6 @@ p, ol {
         transparent 180deg
     );
 
-    /* CSS Masks to hollow out the center and slice the gaps */
     -webkit-mask:
         radial-gradient(circle at bottom, transparent 62%, black 63%),
         repeating-conic-gradient(from 270deg, black 0deg, black 8.5deg, transparent 8.5deg, transparent 11.25deg);
@@ -654,10 +650,9 @@ p, ol {
     mask-composite: intersect;
 }
 
-/* The percentage text */
 #confidenceValue {
     position: absolute;
-    top: 100px; /* Centers text perfectly inside the hollow ring */
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--heading-font);
@@ -667,20 +662,14 @@ p, ol {
     font-weight: normal;
     margin: 0;
     line-height: 1;
-}
+} */
+
 /* Right-side Details Box */
 .result-details {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-.confidence-text {
-    color: var(--secondary);
-    font-family: var(--body-font);
-    font-size: 1rem;
-    opacity: 0.9;
 }
 
 .result-details h2 {
@@ -692,6 +681,10 @@ p, ol {
     gap: 0.5rem;
     margin-bottom: 0.5rem;
     font-weight: normal;
+}
+
+.result-details h2.analysis-error {
+    color: var(--error);
 }
 
 .result-details h2 .material-icons {
@@ -951,9 +944,7 @@ p, ol {
 
 /* ADDED THIS */
 /* Hide season text below date and confidence display only */
-.season-display,
-.confidence-overlay,
-.confidence-text {
+.season-display {
     display: none !important;
 }
 
@@ -1353,7 +1344,7 @@ p, ol {
         padding-left: 0.2rem;
     }
 
-    .confidence-overlay {
+    /* .confidence-overlay {
         width: 240px;
         height: 240px;
         bottom: -55px;
@@ -1368,7 +1359,7 @@ p, ol {
     #confidenceValue {
         top: 75px;
         font-size: 2.5rem;
-    }
+    } */
 
     .site-footer {
         width: 100%;

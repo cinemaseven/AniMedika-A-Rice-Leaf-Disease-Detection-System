@@ -76,6 +76,8 @@ ALLOWED_IMAGE_FORMATS = {
     "JPEG",
     "PNG",
     "WEBP",
+    "HEIF",
+    "HEIC",
 }
 
 INPUT_SCALE_MODE = os.getenv(

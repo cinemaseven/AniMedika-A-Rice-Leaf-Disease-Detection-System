@@ -5,9 +5,11 @@ from io import BytesIO
 
 import numpy as np
 from PIL import Image, ImageOps, UnidentifiedImageError
+from pillow_heif import register_heif_opener
 
 from backend.config import ALLOWED_IMAGE_FORMATS, IMAGE_SIZE, INPUT_SCALE_MODE
 
+register_heif_opener()
 
 class InvalidImageError(ValueError):
     """Raised when an uploaded file cannot safely be used as an image."""
@@ -30,7 +32,7 @@ def decode_uploaded_image(image_bytes: bytes) -> tuple[Image.Image, str]:
             image_format = (source.format or "").upper()
             if image_format not in ALLOWED_IMAGE_FORMATS:
                 raise InvalidImageError(
-                    "Unsupported image format. Please use JPEG, PNG, or WEBP."
+                    "Unsupported image format. Please use JPEG, PNG, or WEBP, HEIC, or HEIF."
                 )
 
             source.verify()

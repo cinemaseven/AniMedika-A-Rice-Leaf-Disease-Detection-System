@@ -18,8 +18,23 @@ export function initImageUpload(app) {
         const allowedTypes = new Set([
             "image/jpeg",
             "image/png",
-            "image/webp"
+            "image/webp",
+            "image/heic",
+            "image/heif"
         ]);
+        const allowedExtensions = [
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".webp",
+            ".heic",
+            ".heif"
+        ];
+        const fileType = String(file?.type || "").toLowerCase();
+        const fileName = String(file?.name || "").toLowerCase();
+        const hasAllowedExtension = allowedExtensions.some(
+            (extension) => fileName.endsWith(extension)
+        );
 
         if (!file || !allowedTypes.has(file.type)) {
             alert(app.text().invalidImage);

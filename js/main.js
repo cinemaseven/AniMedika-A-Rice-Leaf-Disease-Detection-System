@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
         resultsSection: document.getElementById("resultsSection"),
         previewImage: document.getElementById("previewImage"),
         resultStatus: document.getElementById("resultStatus"),
-        confidenceValue: document.getElementById("confidenceValue"),
-        confidenceText: document.getElementById("confidenceText"),
+        // confidenceValue: document.getElementById("confidenceValue"),
+        // confidenceText: document.getElementById("confidenceText"),
         resultSeason: document.getElementById("resultSeason"),
         diseaseName: document.getElementById("diseaseName"),
         diseaseDescription: document.getElementById("diseaseDescription"),
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         seasonNote: document.getElementById("seasonNote"),
         recommendationList: document.getElementById("recommendationList"),
         moreInformation: document.getElementById("moreInformation"),
-        gaugeContainer: document.getElementById("confidenceOverlay"),
+        // gaugeContainer: document.getElementById("confidenceOverlay"),
 
         // Language selector
         languagePopupOverlay: document.getElementById("languagePopupOverlay"),

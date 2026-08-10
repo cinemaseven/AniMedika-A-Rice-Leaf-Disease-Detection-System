@@ -138,7 +138,7 @@
                 <!-- photo upload -->
                 <div class="upload-card">
                     <h2>Select Image Source</h2>
-                    <input type="file" id="leafFileInput" accept="image/jpeg,image/png,image/webp" style="display: none;">
+                    <input type="file" id="leafFileInput" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif" style="display: none;">
                     <div class="upload-box" id="dropZone">
                         <span class="material-icons upload-icon">add_photo_alternate</span>
 
@@ -170,16 +170,16 @@
                 <div class="result-image-card">
                     <img id="previewImage" src="" alt="Uploaded Rice Leaf">
                     <!-- removed this -->
-                    <div class="confidence-overlay" id="confidenceOverlay" aria-hidden="true">
+                    <!-- <div class="confidence-overlay" id="confidenceOverlay" aria-hidden="true">
                         <p id="confidenceValue">--%</p>
-                    </div> 
+                    </div>  -->
                     <!-- --- -->
                 </div>
 
                 <div class="result-details">
                     <p class="result-status" id="resultStatus" role="status" aria-live="polite"></p>
                     <!-- removed this -->
-                    <p class="confidence-text" id="confidenceText"></p>
+                    <!-- <p class="confidence-text" id="confidenceText"></p> -->
                     <!-- --- -->
                     <p class="result-season" id="resultSeason"></p>
                     <h2 id="diseaseName">
