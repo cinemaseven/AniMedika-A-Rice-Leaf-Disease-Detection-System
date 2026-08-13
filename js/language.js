@@ -58,11 +58,7 @@ export function initLanguage(app, WEBSITE_TEXT) {
         document.querySelector(".copyright").textContent = text.copyright;
 
         // Initial language popup
-        // document.querySelector(".language-popup h2").textContent = text.popupTitle;
-        // document.querySelector(".language-popup p").textContent = text.popupText;
-        document.querySelector(".language-popup-primary-title").textContent = WEBSITE_TEXT.fil.popupTitle;
         document.querySelector(".language-popup-primary-text").textContent = WEBSITE_TEXT.fil.popupText;
-        document.querySelector(".language-popup-title-translation").textContent = WEBSITE_TEXT.en.popupTitle;
         document.querySelector(".language-popup-text-translation").textContent = WEBSITE_TEXT.en.popupText;
 
         // Camera popup
@@ -83,7 +79,7 @@ export function initLanguage(app, WEBSITE_TEXT) {
         // About section button
         const expandedAbout = document.getElementById("extendedAboutText");
 
-        document.querySelector("#toggleAboutBtn .btn-text").textContent = expandedAbout.style.display === "flex" ? text.showLess : text.showMore;
+        document.querySelector("#toggleAboutBtn .btn-text").textContent = expandedAbout.classList.contains("active") ? text.showLess : text.showMore;
 
         // Updates the season text to the newly selected language
         app.actions.updateSeasonDisplay();

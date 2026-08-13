@@ -71,9 +71,7 @@
                         <span class="material-icons">expand_more</span>
                     </div>
 
-                    <!-- removed this -->
                     <p class="season-display" id="seasonDisplay"></p>
-                    <!-- --- -->
                 </div>
             </div>
         </div>
@@ -97,7 +95,7 @@
                     </div>
 
                     <div class="about-text">
-                        <p>This website serves as the official digital platform and deployment interface for a software project that provides an accessible, high-precision tool for rapid crop health assessment.</p>
+                        <p>This website serves as the digital platform and deployment interface for a software project designed to assist with rice leaf condition assessment using image-based classification.</p>
                     </div>
 
                     <div class="about-action">
@@ -109,10 +107,11 @@
 
                 </div>
                 
-                <div class="about-card-bottom" id="extendedAboutText" style="display: none;">
-                    <p>This website serves as the official digital platform and deployment interface for the software project titled "Rice Leaf Disease Detection Using EfficientNet-Based Convolutional Neural Network with Multi-Metric Performance Evaluation." Developed by computer science researchers at Holy Angel University, this web application directly bridges the gap between complex deep learning models and practical agricultural management.</p>
-                    <p>The platform provides an accessible, high-precision tool for rapid crop health assessment by leveraging a fine-tuned EfficientNet Convolutional Neural Network (CNN) architecture. Users can seamlessly upload images of symptomatic rice leaves directly through the web interface to receive real-time predictions.</p>
-                    <p>The underlying system is engineered to detect critical rice leaf diseases early, empowering agricultural communities to mitigate threats before they compromise seasonal crop yields. Ultimately, this user-centric platform stands as a dedicated technological solution aimed at modernizing crop protection, supporting sustainable farming practices, and contributing to food security.</p>
+                <div class="about-card-bottom" id="extendedAboutText">
+                    <p>This website serves as the digital platform and deployment interface for the software project titled "Rice Leaf Disease Detection Using EfficientNet-Based Convolutional Neural Network with Multi-Metric Performance Evaluation." Developed by computer science researchers at Holy Angel University, the web application integrates a deep learning model into a browser-based system for rice leaf condition assessment.</p>
+                    <p>The platform uses a fine-tuned EfficientNet Convolutional Neural Network (CNN) architecture to analyze uploaded rice leaf images and provide a predicted condition through the web interface.</p>
+                    <p>The system is intended to support the identification of selected rice leaf conditions and provide related disease information and recommended actions as a browser-based tool for crop health assessment.</p>
+                    <p>Its results should be used together with field observations and professional advice when necessary.</p>
                 </div>
             </div>
 
@@ -123,7 +122,7 @@
                     <h2>How to Use</h2>
                     <ol>
                         <li>Prepare one close-up image of a rice leaf. <i id="img-specs">Use good lighting and keep the lesions clearly visible.</i></li>
-                        <li>Select the date when the image was taken. The system will automatically determine the dry or wet season.</li>
+                        <li>Select the date when the image was taken. Based on the selected date, the system will provide the corresponding seasonal note for the dry or wet season.</li>
                         <li>Choose an image from the gallery or use the camera on a tablet or phone.</li>
                         <li>If the captured image is detected as too dark or blurry, you may retake the image or continue anyway.</li>
                         <li>The prediction, recommended actions, and seasonal note will be displayed.</li>
@@ -169,18 +168,10 @@
             <div class="result-content">
                 <div class="result-image-card">
                     <img id="previewImage" src="" alt="Uploaded Rice Leaf">
-                    <!-- removed this -->
-                    <!-- <div class="confidence-overlay" id="confidenceOverlay" aria-hidden="true">
-                        <p id="confidenceValue">--%</p>
-                    </div>  -->
-                    <!-- --- -->
                 </div>
 
                 <div class="result-details">
                     <p class="result-status" id="resultStatus" role="status" aria-live="polite"></p>
-                    <!-- removed this -->
-                    <!-- <p class="confidence-text" id="confidenceText"></p> -->
-                    <!-- --- -->
                     <p class="result-season" id="resultSeason"></p>
                     <h2 id="diseaseName">
                         Evaluating...
@@ -199,9 +190,7 @@
             <!-- recommendations -->
             <div class="recommendation-card">
                 <h2>Recommended Actions</h2>
-                <!-- added this -->
                 <p class="season-note" id="seasonNote"></p>
-                <!-- --- -->
                 <ul id="recommendationList">
                     <li>Awaiting local performance processing...</li>
                 </ul>
@@ -241,10 +230,6 @@
     <!-- language selector popup -->
     <div class="language-popup-overlay" id="languagePopupOverlay">
         <div class="language-popup">
-            <h2>
-                <span class="language-popup-primary-title">Pumili ng Wika</span>
-                <span class="language-popup-translation language-popup-title-translation">Choose a Language</span>
-            </h2>
             <p>
                 <span class="language-popup-primary-text">Piliin ang nais mong gamitin na wika.</span>
                 <span class="language-popup-translation language-popup-text-translation">Please select your preferred language.</span>

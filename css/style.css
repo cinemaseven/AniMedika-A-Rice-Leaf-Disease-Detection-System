@@ -257,14 +257,6 @@ body {
 .calendar .material-icons {
     pointer-events: none;
 }
-/* .date-input::-webkit-calendar-picker-indicator {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-} */
 
 .material-icons {
     font-size: 2rem;
@@ -310,17 +302,6 @@ body {
 .main-content {
     margin: 1.9rem 0;
 }
-
-/* === MAIN CONTENT WRAPPER === */
-/* .main-content-wrapper {
-    width: min(1700px, 100%);
-    margin: 0 auto;
-} */
-
-/* === MAIN CONTENT === */
-/* .main-content {
-    margin: 1.9rem 0;
-} */
 
 /* ===  ABOUT CARD === */
 .about-container {
@@ -506,52 +487,10 @@ p, ol {
     #cameraUploadBtn {
         display: none;
     }
-/* .upload-card {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.50);
-    background-color: var(--base);
-    border-radius: 15px;
-    padding: 2rem;
-}
 
-.upload-card h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.upload-box {
-    background-color: var(--accent2);
-    border: 4.5px dashed var(--secondary);
-    border-radius: 15px;
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-.upload-icon {
-    font-size: 5rem;
-    color: var(--secondary);
-}
-
-.upload-box p {
-    color: var(--secondary);
-    margin-top: 0.75rem;
-    font-size: 1.5rem;
-}
-
-.upload-btn {
-    color: var(--text-color2);
-    font-size: 1.25rem;
-    background-color: var(--secondary);
-    cursor: pointer;
-    margin-top: 1rem;
-    padding: 0.75rem 1.25rem;
-    border: none;
-    border-radius: 100px;
-} */
-
-/* ===  RESULTS === */
+/* === RESULTS === */
 .results-section {
     margin: 4rem 0;
-    /* Optional: Adds a smooth fade-in effect when results are displayed */
     animation: fadeIn 0.5s ease-in; 
 }
 
@@ -560,7 +499,6 @@ p, ol {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Results Header with Lines */
 .results-header {
     display: flex;
     align-items: center;
@@ -582,7 +520,6 @@ p, ol {
     opacity: 0.7;
 }
 
-/* 2-Column Layout for Image and Text */
 .result-content {
     display: flex;
     gap: 3rem;
@@ -606,65 +543,6 @@ p, ol {
     object-fit: cover;
 }
 
-/* .confidence-overlay {
-    position: absolute;
-    bottom: -70px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 320px; 
-    height: 320px;
-    background: rgba(255, 255, 255, 0.45);
-    border-radius: 50%;
-    pointer-events: none; 
-    --fill-deg: 0deg;
-}
-
-.confidence-overlay::before {
-    content: "";
-    position: absolute;
-    top: 30px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 260px;
-    height: 130px;
-    border-radius: 130px 130px 0 0;
-    background: conic-gradient(from 270deg,
-        #8A140F 0deg,
-        #C03E15 25deg,
-        #E18A1D 55deg,
-        #F3DA15 85deg,
-        #9DB416 115deg,
-        #5A7220 var(--fill-deg),
-        #ffffff var(--fill-deg),
-        #ffffff 180deg,
-        transparent 180deg
-    );
-
-    -webkit-mask:
-        radial-gradient(circle at bottom, transparent 62%, black 63%),
-        repeating-conic-gradient(from 270deg, black 0deg, black 8.5deg, transparent 8.5deg, transparent 11.25deg);
-    -webkit-mask-composite: source-in;
-    mask:
-        radial-gradient(circle at bottom, transparent 62%, black 63%),
-        repeating-conic-gradient(from 270deg, black 0deg, black 8.5deg, transparent 8.5deg, transparent 11.25deg);
-    mask-composite: intersect;
-}
-
-#confidenceValue {
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--heading-font);
-    font-size: 3.5rem;
-    color: white;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
-    font-weight: normal;
-    margin: 0;
-    line-height: 1;
-} */
-
-/* Right-side Details Box */
 .result-details {
     flex: 1;
     display: flex;
@@ -722,7 +600,25 @@ p, ol {
     font-size: inherit;
 }
 
-/* Recommended Actions 2-Column Grid */
+/* === RECOMMENDATIONS === */
+.season-display {
+    display: none !important;
+}
+
+.season-note {
+    margin: 0 0 1.5rem;
+    color: var(--secondary);
+    font-family: var(--body-font);
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.season-note:empty {
+    display: none;
+}
+
 .recommendation-card {
     border: 1.5px solid var(--text-color1);
     border-radius: 15px;
@@ -757,6 +653,18 @@ p, ol {
 
 #recommendationList li::marker {
     color: var(--text-color1);
+}
+
+.recommendation-variety-link {
+    color: var(--secondary);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    transition: color 0.2s ease;
+}
+
+.recommendation-variety-link:hover,
+.recommendation-variety-link:focus-visible {
+    color: var(--primary);
 }
 
 .more-information {
@@ -800,7 +708,7 @@ p, ol {
     outline: none;
 }
 
-/* Disclaimer Styling */
+/* === DISCLAIMER === */
 .disclaimer {
     color: var(--text-color1);
     font-style: italic;
@@ -814,7 +722,7 @@ p, ol {
 .disclaimer strong {
     color: var(--secondary);
 }
-/* ===  FOOTER === */
+/* === FOOTER === */
 .site-footer {
     background: var(--accent1);
     color: var(--text-color2);
@@ -942,532 +850,6 @@ p, ol {
     line-height: 1.3;
 }
 
-/* ADDED THIS */
-/* Hide season text below date and confidence display only */
-.season-display {
-    display: none !important;
-}
-
-.season-note {
-    margin: 0 0 1.5rem;
-    color: var(--secondary);
-    font-family: var(--body-font);
-    font-size: 1.15rem;
-    font-style: italic;
-    line-height: 1.6;
-    opacity: 0.8;
-}
-
-.season-note:empty {
-    display: none;
-}
-
-/* --- */
-
-/* ==========================================
-    TABLET VIEW (1024px and below)
-========================================== */
-@media (max-width: 1024px) {
-
-    .site-header,
-    .site-footer {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    /* .main-content-wrapper {
-        padding: 0 2rem;
-    } */
-
-    /* .site-title {
-        font-size: 1.7rem;
-    } */
-
-    .hero-image {
-        height: 350px;
-    }
-
-    .header-actions {
-        gap: 0.6rem;
-    }
-
-    .language-toggle {
-        font-size: 1rem;
-    }
-
-    .date-input {
-        font-size: 1rem;
-        min-width: 0;
-    }
-
-    .about-card-top {
-        position: relative;
-    }
-
-    .about-action {
-        position: absolute;
-        right: 3rem;
-        margin-top: 0;
-    }
-
-    #cameraUploadBtn {
-        display: block;
-    }
-
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .result-content {
-        flex-direction: column;
-    }
-
-    .result-image-card {
-        width: 100%;
-        max-width: 600px;
-        margin: auto;
-    }
-
-    #recommendationList {
-        grid-template-columns: 1fr;
-    }
-
-    .result-details h2 {
-        font-size: 2.5rem;
-    }
-
-    .disclaimer{
-        font-size: 0.98rem;
-    }
-
-    .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    }
-
-    .footer-right {
-        align-items: flex-end;
-    }
-
-    .contact-popup {
-    padding: 2rem;
-    }
-
-    .contact-popup h2 {
-        font-size: 2rem;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        row-gap: 2rem;
-    }
-
-    .contact-person h3 {
-        font-size: 1.2rem;
-    }
-
-    .contact-person p {
-        font-size: 1rem;
-    }
-}
-
-
-/* ==========================================
-    MOBILE VIEW (768px and below)
-========================================== */
-@media (max-width: 768px) {
-
-    .site-header {
-        width: 100%;
-        padding: 0.75rem 1rem;
-        border-bottom: 1.5px solid rgba(14,14,14);
-        margin-bottom: 1rem;
-    }
-
-    .container {
-        width: 100%;
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-        text-align: center;
-    }
-
-    .header-content {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.2rem;
-    }
-
-    .logo {
-        width: 50px;
-    }
-
-    .header-img {
-        width: 160px;
-        height: auto;
-    }
-
-    .header-actions {
-        width: 100%;
-        max-width: 300px;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 0.6rem;
-        padding: 0 0.5rem;
-    }
-
-    .language-selector,
-    .date-season-group {
-        flex: 0 0 140px;
-        min-width: 0;
-    }
-
-    .language-selector,
-    .calendar {
-        height: 42px;
-    }
-
-    .calendar {
-        width: 100%;
-    }
-
-    .language-toggle,
-    .calendar {
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.45rem 0.55rem;
-        font-size: 0.8rem;
-        border-radius: 8px;
-    }
-
-    .language-toggle .material-icons, 
-    .calendar .material-icons {
-        font-size: 1.2rem;
-    }
-    
-    .language-toggle {
-        width: 100%;
-        height: 100%;
-    }
-
-    .language-popup-buttons {
-        flex-direction: column;
-    }
-
-    .language-option-btn {
-        width: 100%;
-    }
-
-    /* .calendar {
-        width: 220px;             
-        display: inline-flex;   
-        padding: 0.6rem 0.9rem;  
-        font-size: 0.9rem;      
-        border-radius: 8px;
-    } */
-
-    .date-input {
-        font-size: 0.78rem;          
-    }
-
-    .hero-image, .hero-link {
-        display: none;
-    }
-
-    /* .main-content-wrapper {
-        padding: 0 1rem;
-    } */
-
-    .about-card-top {
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;   
-        margin-top: 0.5rem
-    }
-
-    .about-action {
-        order: 3;
-        margin-top: 1rem;
-        display: flex;
-        justify-content: center; 
-        width: 100%;
-        align-self: flex-start;
-        position: static !important;   
-    }
-
-    .about-header {
-        display: block;
-        text-align: center;
-        font-size: 1.3rem;
-        order: 1;
-    }
-
-    .about-text {
-        order: 2;
-    }
-
-    .about-card-bottom {
-        padding: 2rem;
-    }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    p,
-    ol {
-        font-size: 1rem;
-    }
-
-    .instructions-card,
-    .upload-card {
-        padding: 1.5rem;
-    }
-
-    .instructions-card h2 {
-        font-size: 1.15rem;
-        margin-bottom: 0.65rem;
-    }
-
-    .instructions-card ol {
-        font-size: 0.8rem;
-        line-height: 1.4;
-    }
-
-    .instructions-card li {
-        margin-bottom: 0.45rem;
-        line-height: 1.4;
-    }
-
-    .temporary-storage-note {
-        margin-top: 0.65rem;
-        font-size: 0.8rem;
-        line-height: 1.4;
-    }
-
-    .upload-box {
-        padding: 2rem 1rem;
-    }
-
-    /* .upload-icon {
-        font-size: 4rem;
-    } */
-
-    .upload-box p {
-        font-size: 1.1rem;
-    }
-
-    .upload-btn {
-        width: 100%;
-        max-width: 270px;
-    }
-
-    .upload-card h2 {
-    font-size: 1.3rem;
-    }
-
-    .source-buttons {
-        width: 100%;
-        /* max-width: 220px; */
-    }
-
-    .results-section {
-        margin: 2rem 0 1.5rem;
-    }
-
-    .results-header {
-        margin-bottom: 1.25rem;
-    }
-
-    .results-header span {
-        padding: 0 1rem;
-    }
-
-    .result-details h2 {
-        font-size: 1.9rem;
-        flex-wrap: wrap;
-        margin-bottom: 0.2rem;
-    }
-
-    .result-content{
-        gap: 1rem;
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
-
-    .result-image-card {
-        border-radius: 0;
-    }
-
-    .result-details {
-        gap: 0.45rem;
-    }
-
-    #diseaseDescription {
-        font-size: 0.85rem;
-        line-height: 1.45;
-    }
-
-    .key-phrases {
-        margin-top: 0.6rem;
-        font-size: 0.78rem;
-        line-height: 1.4;
-    }
-    .recommendation-card {
-        padding: 1.25rem;
-        margin-bottom: 1rem;
-    }
-
-    .recommendation-card h2 {
-        font-size: 1.5rem;
-        margin: 0 0 0.75rem;
-    }
-
-    .season-note {
-        margin: 0 0 0.65rem;
-        font-size: 1rem;
-        line-height: 1.45;
-    }
-
-    #recommendationList {
-        row-gap: 0.55rem;
-        padding-left: 1.2rem;
-    }
-
-    #recommendationList li {
-        font-size: 0.95rem;
-        line-height: 1.45;
-        margin: 0;
-        padding-left: 0.2rem;
-    }
-
-    /* .confidence-overlay {
-        width: 240px;
-        height: 240px;
-        bottom: -55px;
-    }
-
-    .confidence-overlay::before {
-        width: 190px;
-        height: 95px;
-        border-radius: 95px 95px 0 0;
-    }
-
-    #confidenceValue {
-        top: 75px;
-        font-size: 2.5rem;
-    } */
-
-    .site-footer {
-        width: 100%;
-        padding: 2rem 1rem;
-    }
-
-    .disclaimer{
-        font-size: 0.77rem;
-    }
-
-    .footer-left h2 {
-        font-size: 1.5rem;
-    }
-
-    .footer-img {
-    width: 120px;
-    height: auto;
-    object-fit: contain;
-    }
-
-    .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    }
-    .footer-left {
-        flex: 1;
-    }
-
-    .footer-right {
-        flex: 1;
-        align-items: flex-end;
-        text-align: right;
-    }
-
-    .footer-links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    gap: 0.75rem;
-    }
-
-    .camera-popup,
-    .quality-popup {
-        width: min(96vw, 620px);
-        padding: 1.25rem;
-    }
-
-    .camera-popup h2,
-    .quality-popup h2 {
-        font-size: 1.5rem;
-    }
-
-    .camera-actions,
-    .quality-actions {
-        flex-direction: column-reverse;
-    }
-
-    .primary-action-btn,
-    .secondary-action-btn {
-        width: 100%;
-    }
-
-    .season-display {
-        text-align: center;
-    }
-
-    .result-status {
-        min-height: 0;
-        font-size: 0.8rem;
-        line-height: 1.3;
-    }
-
-    .result-season {
-        font-size: 0.82rem;
-        line-height: 1.3;
-    }
-}
-
-/* ==========================================
-    SMALL PHONES (480px and below)
-========================================== */
-
-@media (max-width: 480px) {
-
-    .footer-left h2 {
-        font-size: 1.4rem;
-    }
-
-    .footer-left p,
-    .copyright,
-    .footer-links a {
-        font-size: 0.65rem;
-    }
-
-    .footer-img {
-        width: 80px;
-        height: auto;
-    }
-
-    .footer-links {
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 0.3rem 0.75rem;
-    }
-}
 /* ==========================================
     FINAL IMAGE-TO-BACKEND ARCHITECTURE
 ========================================== */
@@ -1659,4 +1041,635 @@ p, ol {
     font-family: var(--body-font);
     font-size: 0.85rem;
     opacity: 0.85;
+}
+
+
+/* === TRANSITIONS & ANIMATIONS === */
+html {
+    scroll-behavior: smooth;
+}
+
+.language-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transform-origin: top right;
+
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease,
+        visibility 0.18s ease;
+}
+
+.language-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.language-menu-btn {
+    transition:
+        background-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.language-popup-overlay,
+.contact-popup-overlay,
+.camera-popup-overlay,
+.quality-popup-overlay {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0.22s ease;
+}
+
+.language-popup-overlay.active,
+.contact-popup-overlay.active,
+.camera-popup-overlay.active,
+.quality-popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.language-popup,
+.contact-popup,
+.camera-popup,
+.quality-popup {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+
+    transition:
+        opacity 0.22s ease,
+        transform 0.22s ease;
+}
+
+.language-popup-overlay.active .language-popup,
+.contact-popup-overlay.active .contact-popup,
+.camera-popup-overlay.active .camera-popup,
+.quality-popup-overlay.active .quality-popup {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.calendar {
+    transition:
+        box-shadow 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.calendar:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+.about-card-bottom {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    transform: translateY(-8px);
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        padding-top 0.4s ease,
+        padding-bottom 0.4s ease;
+}
+
+.about-card-bottom.active {
+    max-height: 1000px;
+    opacity: 1;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    transform: translateY(0);
+}
+
+.show-more-btn {
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease;
+}
+
+.show-more-btn:hover {
+    opacity: 0.85;
+}
+
+.show-more-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* Smooth About arrow change */
+.show-more-btn .material-icons {
+    transition: transform 0.3s ease;
+}
+
+.show-more-btn.expanded .material-icons {
+    transform: rotate(180deg);
+}
+
+.language-option-btn,
+.primary-action-btn,
+.secondary-action-btn,
+.contact-close-btn,
+.popup-close-btn {
+    transition:
+        transform 0.18s ease,
+        opacity 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.language-option-btn:hover,
+.primary-action-btn:hover,
+.secondary-action-btn:hover {
+    transform: translateY(-1px);
+}
+
+.language-option-btn:active,
+.primary-action-btn:active,
+.secondary-action-btn:active {
+    transform: translateY(0);
+}
+
+.contact-close-btn:hover,
+.popup-close-btn:hover {
+    opacity: 0.7;
+}
+
+/* ==========================================
+    TABLET VIEW (1024px and below)
+========================================== */
+@media (max-width: 1024px) {
+
+    .site-header,
+    .site-footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .header-actions {
+        gap: 0.6rem;
+    }
+
+    .language-toggle {
+        font-size: 1rem;
+    }
+
+    .date-input {
+        font-size: 1rem;
+        min-width: 0;
+    }
+
+    .about-card-top {
+        position: relative;
+    }
+
+    .about-action {
+        position: absolute;
+        right: 3rem;
+        margin-top: 0;
+    }
+
+    #cameraUploadBtn {
+        display: block;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-content {
+        flex-direction: column;
+    }
+
+    .result-image-card {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    #recommendationList {
+        grid-template-columns: 1fr;
+    }
+
+    .result-details h2 {
+        font-size: 2.5rem;
+    }
+
+    .disclaimer{
+        font-size: 0.98rem;
+    }
+
+    .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    }
+
+    .footer-right {
+        align-items: flex-end;
+    }
+
+    .contact-popup {
+    padding: 2rem;
+    }
+
+    .contact-popup h2 {
+        font-size: 2rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .contact-person h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-person p {
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================
+    MOBILE VIEW (768px and below)
+========================================== */
+@media (max-width: 768px) {
+
+    .site-header {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-bottom: 1.5px solid rgba(14,14,14);
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.2rem;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .header-img {
+        width: 160px;
+        height: auto;
+    }
+
+    .header-actions {
+        width: 100%;
+        max-width: 300px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0 0.5rem;
+    }
+
+    .language-selector,
+    .date-season-group {
+        flex: 0 0 140px;
+        min-width: 0;
+    }
+
+    .language-selector,
+    .calendar {
+        height: 42px;
+    }
+
+    .calendar {
+        width: 100%;
+    }
+
+    .language-toggle,
+    .calendar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.45rem 0.55rem;
+        font-size: 0.8rem;
+        border-radius: 8px;
+    }
+
+    .language-toggle .material-icons, 
+    .calendar .material-icons {
+        font-size: 1.2rem;
+    }
+    
+    .language-toggle {
+        width: 100%;
+        height: 100%;
+    }
+
+    .language-popup-buttons {
+        flex-direction: column;
+    }
+
+    .language-option-btn {
+        width: 100%;
+    }
+
+    .date-input {
+        font-size: 0.78rem;          
+    }
+
+    .hero-image, .hero-link {
+        display: none;
+    }
+
+    .about-card-top {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;   
+        margin-top: 0.5rem
+    }
+
+    .about-action {
+        order: 3;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center; 
+        width: 100%;
+        align-self: flex-start;
+        position: static !important;   
+    }
+
+    .about-header {
+        display: block;
+        text-align: center;
+        font-size: 1.3rem;
+        order: 1;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-card-bottom {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p,
+    ol {
+        font-size: 1rem;
+    }
+
+    .instructions-card,
+    .upload-card {
+        padding: 1.5rem;
+    }
+
+    .instructions-card h2 {
+        font-size: 1.15rem;
+        margin-bottom: 0.65rem;
+    }
+
+    .instructions-card ol {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .instructions-card li {
+        margin-bottom: 0.45rem;
+        line-height: 1.4;
+    }
+
+    .temporary-storage-note {
+        margin-top: 0.65rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .upload-box {
+        padding: 2rem 1rem;
+    }
+
+
+    .upload-box p {
+        font-size: 1.1rem;
+    }
+
+    .upload-btn {
+        width: 100%;
+        max-width: 270px;
+    }
+
+    .upload-card h2 {
+    font-size: 1.3rem;
+    }
+
+    .source-buttons {
+        width: 100%;
+        /* max-width: 220px; */
+    }
+
+    .results-section {
+        margin: 2rem 0 1.5rem;
+    }
+
+    .results-header {
+        margin-bottom: 1.25rem;
+    }
+
+    .results-header span {
+        padding: 0 1rem;
+    }
+
+    .result-details h2 {
+        font-size: 1.9rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.2rem;
+    }
+
+    .result-content{
+        gap: 1rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .result-image-card {
+        border-radius: 0;
+    }
+
+    .result-details {
+        gap: 0.45rem;
+    }
+
+    #diseaseDescription {
+        font-size: 0.85rem;
+        line-height: 1.45;
+    }
+
+    .key-phrases {
+        margin-top: 0.6rem;
+        font-size: 0.78rem;
+        line-height: 1.4;
+    }
+    .recommendation-card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .recommendation-card h2 {
+        font-size: 1.5rem;
+        margin: 0 0 0.75rem;
+    }
+
+    .season-note {
+        margin: 0 0 0.65rem;
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    #recommendationList {
+        row-gap: 0.55rem;
+        padding-left: 1.2rem;
+    }
+
+    #recommendationList li {
+        font-size: 0.95rem;
+        line-height: 1.45;
+        margin: 0;
+        padding-left: 0.2rem;
+    }
+
+    .site-footer {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .disclaimer{
+        font-size: 0.77rem;
+    }
+
+    .footer-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    }
+
+    .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    }
+    .footer-left {
+        flex: 1;
+    }
+
+    .footer-right {
+        flex: 1;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    }
+
+    .camera-popup,
+    .quality-popup {
+        width: min(96vw, 620px);
+        padding: 1.25rem;
+    }
+
+    .camera-popup h2,
+    .quality-popup h2 {
+        font-size: 1.5rem;
+    }
+
+    .camera-actions,
+    .quality-actions {
+        flex-direction: column-reverse;
+    }
+
+    .primary-action-btn,
+    .secondary-action-btn {
+        width: 100%;
+    }
+
+    .season-display {
+        text-align: center;
+    }
+
+    .result-status {
+        min-height: 0;
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    .result-season {
+        font-size: 0.82rem;
+        line-height: 1.3;
+    }
+}
+
+/* ==========================================
+    SMALL PHONES (480px and below)
+========================================== */
+
+@media (max-width: 480px) {
+
+    .footer-left h2 {
+        font-size: 1.4rem;
+    }
+
+    .footer-left p,
+    .copyright,
+    .footer-links a {
+        font-size: 0.65rem;
+    }
+
+    .footer-img {
+        width: 80px;
+        height: auto;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.3rem 0.75rem;
+    }
 }

@@ -4,11 +4,11 @@ export const WEBSITE_TEXT = {
         label: "Filipino",
         siteTitle: "AniMedika",
         aboutTitle: "Tungkol sa Website",
-        aboutShort: "Ang website na ito ay nagsisilbing opisyal na digital platform at deployment interface para sa software project na nagbibigay ng madaling gamitin at mataas ang katumpakang kasangkapan para sa mabilis na pagsusuri ng kalusugan ng pananim.",
+        aboutShort: "Ang website na ito ay nagsisilbing digital platform at deployment interface para sa software project na idinisenyong tumulong sa pagsusuri ng kondisyon ng dahon ng palay gamit ang image-based classification.",
         aboutLong: [
-            'Ang website na ito ay nagsisilbing opisyal na digital platform at deployment interface para sa software project na pinamagatang "Rice Leaf Disease Detection Using EfficientNet-Based Convolutional Neural Network with Multi-Metric Performance Evaluation." Binuo ito ng mga computer science na estudyante mula sa Holy Angel University upang pagdugtungin ang deep learning models at praktikal na pamamahala sa agrikultura.',
-            "Nagbibigay ang platform ng madaling gamitin at mataas ang katumpakang kasangkapan para sa mabilis na pagsusuri ng kalusugan ng pananim gamit ang fine-tuned EfficientNet Convolutional Neural Network o CNN. Maaaring mag-upload ang mga user ng larawan ng dahon ng palay upang makatanggap ng real-time prediction at mga rekomendadong aksyon.",
-            "Layunin ng sistema na maagang matukoy ang mahahalagang sakit sa dahon ng palay upang matulungan ang mga komunidad sa agrikultura na mabawasan ang banta bago pa ito makaapekto sa ani. Sa kabuuan, ang platform na ito ay isang teknolohikal na solusyon para sa mas makabagong proteksyon ng pananim, mas matatag na pagsasaka, at seguridad sa pagkain.",
+            'Ang website na ito ay nagsisilbing digital platform at deployment interface para sa software project na pinamagatang "Rice Leaf Disease Detection Using EfficientNet-Based Convolutional Neural Network with Multi-Metric Performance Evaluation." Binuo ito ng mga computer science na estudyante mula sa Holy Angel University at iniintegrate nito ang deep learning model sa browser-based system para sa pagsusuri ng kondisyon ng dahon ng palay.',
+            "Gumagamit ang platform ng fine-tuned EfficientNet Convolutional Neural Network o CNN upang suriin ang mga in-upload na larawan ng dahon ng palay at magbigay ng predicted condition sa pamamagitan ng web interface.",
+            "Ang sistema ay nilalayong tumulong sa pagtukoy ng mga napiling kondisyon ng dahon ng palay at magbigay ng kaugnay na impormasyon tungkol sa sakit at mga rekomendadong aksyon bilang browser-based na kasangkapan para sa pagsusuri ng kalusugan ng pananim.",
             "Ang resulta ay dapat gamitin kasama ng obserbasyon sa bukid at payo ng eksperto kung kinakailangan."
         ],
         showMore: "Ipakita pa",
@@ -16,7 +16,7 @@ export const WEBSITE_TEXT = {
         howToUse: "Paano Gamitin",
         steps: [
             'Maghanda ng isang malinaw na close-up na larawan ng dahon ng palay. <i id="img-specs">Gumamit ng maayos na ilaw at tiyaking malinaw ang mga lesion.</i>',
-            "Piliin ang petsa kung kailan kinuha ang larawan. Awtomatikong tutukuyin ng sistema kung tag-init o tag-ulan.",
+            "Piliin ang petsa kung kailan kinuha ang larawan. Batay sa napiling petsa, magbibigay ang sistema ng kaukulang seasonal note para sa tuyong panahon o tag-ulan.",
             "Pumili ng larawan mula sa gallery o gamitin ang camera sa tablet o cellphone.",
             "Kung matukoy na masyadong madilim o malabo ang nakuhang larawan, maaari kang kumuha ulit ng larawan o magpatuloy.",
             "Ipapakita ang prediction, rekomendadong aksyon, at seasonal note.",
@@ -40,7 +40,7 @@ export const WEBSITE_TEXT = {
         popupTitle: "Pumili ng Wika",
         popupText: "Piliin ang nais mong gamitin na wika.",
         wetSeason: "Tag-ulan (Hunyo–Nobyembre)",
-        drySeason: "Tag-init (Disyembre–Mayo)",
+        drySeason: "Tag-araw (Disyembre–Mayo)",
         // confidence: "Confidence",
         selectedSeason: "Season batay sa napiling petsa",
         cameraTitle: "Gamitin ang Camera",
@@ -72,11 +72,11 @@ export const WEBSITE_TEXT = {
         label: "English",
         siteTitle: "AniMedika",
         aboutTitle: "About this Website",
-        aboutShort: "This website serves as the official digital platform and deployment interface for a software project that provides an accessible, high-precision tool for rapid crop health assessment.",
+        aboutShort: "This website serves as the digital platform and deployment interface for a software project designed to assist with rice leaf condition assessment using image-based classification.",
         aboutLong: [
-            'This website serves as the official digital platform and deployment interface for the software project titled "Rice Leaf Disease Detection Using EfficientNet-Based Convolutional Neural Network with Multi-Metric Performance Evaluation." Developed by computer science students at Holy Angel University, this web application directly bridges the gap between complex deep learning models and practical agricultural management.',
-            "The platform provides an accessible, high-precision tool for rapid crop health assessment by leveraging a fine-tuned EfficientNet Convolutional Neural Network (CNN) architecture. Users can seamlessly upload images of symptomatic rice leaves directly through the web interface to receive real-time predictions with recommended actions.",
-            "The underlying system is engineered to detect critical rice leaf diseases early, empowering agricultural communities to mitigate threats before they compromise seasonal crop yields. Ultimately, this user-centric platform stands as a dedicated technological solution aimed at modernizing crop protection, supporting sustainable farming practices, and contributing to food security.",
+            'This website serves as the digital platform and deployment interface for the software project titled "Rice Leaf Disease Detection Using EfficientNet-Based Convolutional Neural Network with Multi-Metric Performance Evaluation." Developed by computer science students at Holy Angel University, the web application integrates a deep learning model into a browser-based system for rice leaf condition assessment.',
+            "The platform uses a fine-tuned EfficientNet Convolutional Neural Network (CNN) architecture to analyze uploaded rice leaf images and provide a predicted condition through the web interface.",
+            "The system is intended to support the identification of selected rice leaf conditions and provide related disease information and recommended actions as a browser-based tool for crop health assessment.",
             "Its results should be used together with field observations and professional advice when necessary."
         ],
         showMore: "Show more",
@@ -84,7 +84,7 @@ export const WEBSITE_TEXT = {
         howToUse: "How to Use",
         steps: [
             'Prepare one clear close-up image of a rice leaf. <i id="img-specs">Use good lighting and keep the lesions clearly visible.</i>',
-            "Select the date when the image was taken. The system will automatically determine the dry or wet season.",
+            "Select the date when the image was taken. Based on the selected date, the system will provide the corresponding seasonal note for the dry or wet season.",
             "Choose an image from the gallery or use the camera on a tablet or phone.",
             "If the captured image is detected as too dark or blurry, you may retake the image or continue anyway.",
             "The prediction, recommended actions, and seasonal note will be displayed.",

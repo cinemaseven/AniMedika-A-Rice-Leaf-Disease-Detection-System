@@ -124,8 +124,6 @@ def extract_key_phrases(
         for match in re.finditer(pattern, text, flags=re.IGNORECASE | re.UNICODE):
             matches.append((match.start(), match.end(), match.group(0)))
 
-    # Keep phrases in the same order in which the information appears in the
-    # description. Longer matches win when two matches start in the same place.
     matches.sort(key=lambda item: (item[0], -(item[1] - item[0])))
 
     key_phrases: list[str] = []

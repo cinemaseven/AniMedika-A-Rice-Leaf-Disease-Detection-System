@@ -31,6 +31,93 @@ export function initResults(app) {
         elements.keyPhrases.hidden = false;
     }
 
+     // Displays recommended actions and makes only configured rice variety names clickable
+    function renderRecommendations(recommendations = []) {
+        elements.recommendationList.replaceChildren();
+
+        recommendations.forEach((item) => {
+            const listItem = document.createElement("li");
+
+            if (typeof item === "string") {
+                listItem.textContent = item;
+                elements.recommendationList.append(listItem);
+                return;
+            }
+
+            if (!item?.text) {
+                return;
+            }
+
+            const text = String(item.text);
+            const links = Array.isArray(item.links) ? item.links : [];
+            const matches = [];
+
+            links.forEach((source) => {
+                if (!source?.text || !source?.url) {
+                    return;
+                }
+
+                const position = text.indexOf(source.text);
+
+                if (position === -1) {
+                    return;
+                }
+
+                let parsedUrl;
+
+                try {
+                    parsedUrl = new URL(source.url);
+                } catch (_error) {
+                    return;
+                }
+
+                if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+                    return;
+                }
+
+                matches.push({
+                    start: position,
+                    end: position + source.text.length,
+                    text: source.text,
+                    url: parsedUrl.href
+                });
+            });
+
+            matches.sort((a, b) => a.start - b.start);
+
+            if (matches.length === 0) {
+                listItem.textContent = text;
+                elements.recommendationList.append(listItem);
+                return;
+            }
+
+            let cursor = 0;
+
+            matches.forEach((match) => {
+                if (match.start < cursor) {
+                    return;
+                }
+
+                listItem.append(
+                    document.createTextNode(text.slice(cursor, match.start))
+                );
+
+                const link = document.createElement("a");
+                link.href = match.url;
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+                link.className = "recommendation-variety-link";
+                link.textContent = match.text;
+
+                listItem.append(link);
+                cursor = match.end;
+            });
+
+            listItem.append(document.createTextNode(text.slice(cursor)));
+            elements.recommendationList.append(listItem);
+        });
+    }
+
     // Displays the trusted source titles returned by the backend as clickable links
     function renderMoreInformation(sources = []) {
         elements.moreInformation.replaceChildren();
@@ -105,9 +192,6 @@ export function initResults(app) {
         elements.recommendationList.innerHTML = `<li>${escapeHtml(app.text().awaitingRecommendations)}</li>`;
         renderMoreInformation();
         elements.resultSeason.textContent = "";
-        // elements.confidenceValue.textContent = "--%";
-        // elements.confidenceText.textContent = "";
-        // elements.gaugeContainer.style.setProperty("--fill-deg", "0deg");
     }
 
     // Displays prediction or server errors.
@@ -170,8 +254,6 @@ export function initResults(app) {
             return;
         }
 
-        // const confidencePercent = Number(result.prediction.confidence) * 100;
-        // const safeConfidence = Number.isFinite(confidencePercent) ? confidencePercent : 0;
         const seasonLabel = result.context.season === "wet" ? app.text().wetSeason : app.text().drySeason;
 
         elements.resultStatus.className = "result-status success";
@@ -186,14 +268,8 @@ export function initResults(app) {
         }
         renderDescription(localized.description);
         renderKeyPhrases(localized.key_phrases);
-        // elements.confidenceValue.textContent = `${safeConfidence.toFixed(1)}%`;
-        // elements.confidenceText.textContent = `${app.text().confidence}: ` + `${safeConfidence.toFixed(1)}%`;
-        elements.resultSeason.textContent = `${app.text().selectedSeason}: ` + `${seasonLabel}`;
 
-        // elements.gaugeContainer.style.setProperty(
-        //     "--fill-deg",
-        //     `${Math.max(0, Math.min(180, safeConfidence * 1.8))}deg`
-        // );
+        elements.resultSeason.textContent = `${app.text().selectedSeason}: ` + `${seasonLabel}`;
 
         if (elements.seasonNote) {
             elements.seasonNote.textContent = localized.season_note || "";
@@ -202,9 +278,7 @@ export function initResults(app) {
 
         const recommendations = [...localized.general_recommendations];
 
-        elements.recommendationList.innerHTML = recommendations
-            .map((item) => `<li>${escapeHtml(item)}</li>`)
-            .join("");
+        renderRecommendations(recommendations);
 
         renderMoreInformation(localized.sources);
     }

@@ -16,7 +16,31 @@
     "Check the field often during warm, rainy, and humid weather.",
     "Use chemical control only when recommended; follow the product label, dosage, timing, and pre-harvest interval.",
     "Wear protective clothing when using any pesticide.",
-    "For the next planting, use rice varieties resistant to bacterial leaf blight."
+    {
+        "text": "For the next planting, use rice varieties resistant to bacterial leaf blight such as NSIC Rc 142 (Tubigan 7), NSIC Rc 342SR (Mabango 4), NSIC Rc 354 (Tubigan 28), NSIC Rc 508 (Tubigan 42), or NSIC Rc 512 (Tubigan 44).",
+        "links": [
+            {
+                "text": "NSIC Rc 142 (Tubigan 7)",
+                "url": "https://www.philrice.gov.ph/rice-clientele-recognizes-philrice-role/"
+            },
+            {
+                "text": "NSIC Rc 342SR (Mabango 4)",
+                "url": "https://www.philrice.gov.ph/da-chief-unveils-new-rice-technologies-2/"
+            },
+            {
+                "text": "NSIC Rc 354 (Tubigan 28)",
+                "url": "https://www.philrice.gov.ph/new-philrice-bred-varieties/"
+            },
+            {
+                "text": "NSIC Rc 508 (Tubigan 42)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            },
+            {
+                "text": "NSIC Rc 512 (Tubigan 44)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            }
+        ]
+    }
     ],
     "season_notes": {
     "wet": "Since it is the rainy season, bacterial leaf blight may spread faster through rain, floodwater, irrigation water, dew, and strong wind. Prioritize preventing water from infected fields from reaching healthy fields.",
@@ -39,11 +63,35 @@
     "Regular na suriin ang palayan, lalo na kapag mainit, maulan, at mahalumigmig ang panahon.",
     "Gumamit lamang ng kemikal kung inirerekomenda; sundin ang label ng produkto, tamang dami, tamang oras ng paggamit, at palugit bago anihin.",
     "Magsuot ng proteksiyon na damit kapag gumagamit ng anumang pesticide.",
-    "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa bacterial leaf blight."
+    {
+        "text": "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa bacterial leaf blight katulad ng NSIC Rc 142 (Tubigan 7), NSIC Rc 342SR (Mabango 4), NSIC Rc 354 (Tubigan 28), NSIC Rc 508 (Tubigan 42), or NSIC Rc 512 (Tubigan 44).",
+        "links": [
+            {
+                "text": "NSIC Rc 142 (Tubigan 7)",
+                "url": "https://www.philrice.gov.ph/rice-clientele-recognizes-philrice-role/"
+            },
+            {
+                "text": "NSIC Rc 342SR (Mabango 4)",
+                "url": "https://www.philrice.gov.ph/da-chief-unveils-new-rice-technologies-2/"
+            },
+            {
+                "text": "NSIC Rc 354 (Tubigan 28)",
+                "url": "https://www.philrice.gov.ph/new-philrice-bred-varieties/"
+            },
+            {
+                "text": "NSIC Rc 508 (Tubigan 42)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            },
+            {
+                "text": "NSIC Rc 512 (Tubigan 44)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            }
+        ]
+    }
     ],
     "season_notes": {
     "wet": "Dahil tag-ulan, maaaring mas mabilis kumalat ang bacterial leaf blight sa pamamagitan ng ulan, baha, tubig-irigasyon, hamog, at malakas na hangin. Unahin ang pagpigil sa pagdaloy ng tubig mula sa may sakit na palayan papunta sa malusog na palayan.",
-    "dry": "Sa panahon ng tag-init, bantayan pa rin ang mga palayang may irigasyon dahil maaari pa ring kumalat ang bacterial leaf blight sa pamamagitan ng tubig-irigasyon at tirang bahagi ng halamang may impeksiyon."
+    "dry": "Sa panahon ng tag-araw, bantayan pa rin ang mga palayang may irigasyon dahil maaari pa ring kumalat ang bacterial leaf blight sa pamamagitan ng tubig-irigasyon at tirang bahagi ng halamang may impeksiyon."
     }
 }
 },
@@ -65,7 +113,7 @@
     "Treat seeds with fungicide before planting if needed.",
     "Hot water seed treatment may also help, but it should be done carefully so the seeds will not be damaged.",
     "Use fungicide only if the disease is serious, and follow the product label or agricultural advice.",
-    "For the next planting, use rice varieties resistant to brown spot, especially in areas where it is common."
+    "For the next planting, use a locally recommended rice variety with resistance to brown spot, especially in areas where the disease commonly occurs. "
     ],
     "season_notes": {
     "wet": "Since it is the rainy season, brown spot may still appear because leaf spots can occur throughout the season. Continue checking the leaves and grains, but the main concern is still poor soil nutrients and weak plant condition.",
@@ -89,11 +137,11 @@
     "Gamitan ng pamatay-amag ang binhi bago itanim kung kinakailangan.",
     "Maaari ring makatulong ang hot water seed treatment, ngunit dapat itong gawin nang maingat upang hindi masira ang binhi.",
     "Gumamit lamang ng pamatay-amag kung malala ang sakit, at sundin ang label ng produkto o payo ng agricultural technician.",
-    "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa brown spot, lalo na sa mga lugar kung saan karaniwan ang sakit."
+    "Sa susunod na taniman, gumamit ng lokal na inirerekomendang barayti ng palay na may resistensya sa brown spot, lalo na sa mga lugar kung saan karaniwang lumilitaw ang sakit."
     ],
     "season_notes": {
     "wet": "Dahil tag-ulan, maaari pa ring lumitaw ang brown spot dahil ang mga batik sa dahon ay maaaring makita sa buong panahon ng taniman. Patuloy na suriin ang mga dahon at butil, ngunit ang pangunahing dapat bantayan ay ang kakulangan sa sustansiya ng lupa at mahinang kondisyon ng halaman.",
-    "dry": "Sa panahon ng tag-init, maaaring lumala ang brown spot kapag masyadong natutuyo ang palayan o kulang sa sustansiya ang lupa. Unahin ang sapat na tubig at balanseng abono."
+    "dry": "Sa panahon ng tag-araw, maaaring lumala ang brown spot kapag masyadong natutuyo ang palayan o kulang sa sustansiya ang lupa. Unahin ang sapat na tubig at balanseng abono."
     }
 }
 },
@@ -125,7 +173,7 @@
     ],
     "season_notes": {
     "wet": "Paalala sa tag-ulan: Dagdagan ang pagmamanman dahil maaaring paboran ng mahalumigmig at maulang kondisyon ang ilang sakit sa palay.",
-    "dry": "Paalala sa tag-init: Panatilihin ang sapat na irigasyon at bantayan ang palatandaan ng kakulangan sa tubig o sustansya."
+    "dry": "Paalala sa tag-araw: Panatilihin ang sapat na irigasyon at bantayan ang palatandaan ng kakulangan sa tubig o sustansya."
     }
 }
 },
@@ -143,10 +191,38 @@
     "Keep seedlings with enough water, especially in the seedbed.",
     "Avoid applying too much nitrogen fertilizer, especially ammonium sulfate.",
     "Apply fertilizer in smaller amounts at the right time instead of applying too much at once.",
-    "If the disease is severe or spreading fast, use the recommended fungicide for rice blast.",
+    "Use the recommended fungicide (e.g., triazoles and strobilurins) for rice blast when appropriate, following proper application guidelines.",
     "Follow the label instructions or ask an agricultural technician for the correct amount and timing.",
     "Use healthy seeds from fields or panicles without rice blast infection.",
-    "For the next planting, use rice varieties resistant to rice blast."
+    {
+        "text": "For the next planting, use rice varieties resistant to rice blast as PSB Rc10 (Pagsanjan), NSIC Rc 342SR (Mabango 4), NSIC Rc 354 (Tubigan 28), NSIC Rc 506 (Tubigan 41), NSIC Rc 508 (Tubigan 42), or NSIC Rc 512 (Tubigan 44).",
+        "links": [
+            {
+                "text": "PSB Rc10 (Pagsanjan)",
+                "url": "https://www.philrice.gov.ph/preventing-rice-pests-diseases-rainy-season/"
+            },
+            {
+                "text": "NSIC Rc 342SR (Mabango 4)",
+                "url": "https://www.philrice.gov.ph/da-chief-unveils-new-rice-technologies-2/"
+            },
+            {
+                "text": "NSIC Rc 354 (Tubigan 28)",
+                "url": "https://www.philrice.gov.ph/new-philrice-bred-varieties/"
+            },
+            {
+                "text": "NSIC Rc 506 (Tubigan 41)",
+                "url": "https://www.philrice.gov.ph/rcef-techno-demo-changes-farmers-old-ways/"
+            },
+            {
+                "text": "NSIC Rc 508 (Tubigan 42)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            },
+            {
+                "text": "NSIC Rc 512 (Tubigan 44)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            }
+        ]
+    }
     ],
     "season_notes": {
     "wet": "Since it is the rainy season, rice blast may spread faster because the leaves stay wet longer from rain, dew, and high humidity. Prioritize checking the field and reducing long leaf wetness.",
@@ -166,14 +242,42 @@
     "Panatilihing may sapat na tubig ang mga punla, lalo na sa punlaan.",
     "Iwasan ang sobrang paggamit ng nitrohenong abono, lalo na ang ammonium sulfate.",
     "Maglagay ng abono sa mas maliit na dami at sa tamang panahon sa halip na maglagay ng sobra nang isang beses.",
-    "Kung malala o mabilis kumalat ang sakit, gumamit ng inirerekomendang pamatay-amag para sa rice blast.",
+    "Gumamit ng inirerekomendang pamatay-amag (hal., triazoles at strobilurins) para sa rice blast kung kinakailangan, at sundin ang tamang paraan ng paggamit.",
     "Sundin ang label ng produkto o magtanong sa agricultural technician para sa tamang dami at tamang oras ng paggamit.",
     "Gumamit ng malusog na binhi mula sa palayan o uhay na walang impeksiyon ng rice blast.",
-    "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa rice blast."
+    {
+        "text": "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa rice blast katulad ng PSB Rc10 (Pagsanjan), NSIC Rc 342SR (Mabango 4), NSIC Rc 354 (Tubigan 28), NSIC Rc 506 (Tubigan 41), NSIC Rc 508 (Tubigan 42), o NSIC Rc 512 (Tubigan 44).",
+        "links": [
+            {
+                "text": "PSB Rc10 (Pagsanjan)",
+                "url": "https://www.philrice.gov.ph/preventing-rice-pests-diseases-rainy-season/"
+            },
+            {
+                "text": "NSIC Rc 342SR (Mabango 4)",
+                "url": "https://www.philrice.gov.ph/da-chief-unveils-new-rice-technologies-2/"
+            },
+            {
+                "text": "NSIC Rc 354 (Tubigan 28)",
+                "url": "https://www.philrice.gov.ph/new-philrice-bred-varieties/"
+            },
+            {
+                "text": "NSIC Rc 506 (Tubigan 41)",
+                "url": "https://www.philrice.gov.ph/rcef-techno-demo-changes-farmers-old-ways/"
+            },
+            {
+                "text": "NSIC Rc 508 (Tubigan 42)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            },
+            {
+                "text": "NSIC Rc 512 (Tubigan 44)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            }
+        ]
+    }
     ],
     "season_notes": {
     "wet": "Dahil tag-ulan, maaaring mas mabilis kumalat ang rice blast dahil mas matagal na nananatiling basa ang mga dahon mula sa ulan, hamog, at mataas na halumigmig. Unahin ang regular na pagsuri sa palayan at pagbabawas ng matagal na pagkabasa ng mga dahon.",
-    "dry": "Sa panahon ng tag-init, maaari pa ring lumitaw ang rice blast kung mahina o stress ang mga punla, o kung nababasa ang dahon dahil sa hamog, lalo na sa umaga."
+    "dry": "Sa panahon ng tag-araw, maaari pa ring lumitaw ang rice blast kung mahina o stress ang mga punla, o kung nababasa ang dahon dahil sa hamog, lalo na sa umaga."
     }
 }
 },
@@ -189,15 +293,30 @@
     "Look for oval, grayish-green, or water-soaked spots on the leaf sheath.",
     "Monitor the field from maximum tillering until booting or heading stage.",
     "Avoid applying too much nitrogen fertilizer because it can help the disease spread.",
-    "When new infections are seen, stop applying nitrogen fertilizer.",
     "Avoid planting rice too close together; give enough space so air can move between plants.",
     "Drain the field for a few days, around 3–5 days, then fill it with water again.",
     "Remove old stubbles and bury infected plant remains through deep ploughing during field preparation.",
     "Apply balanced fertilizer, including potassium fertilizer and manure.",
-    "If the disease is severe or spreading quickly, use a recommended fungicide.",
+    "When needed, use a recommended fungicide for sheath blight following proper application guidelines.",
     "Spray the leaf sheath where symptoms appear; repeat during booting if needed.",
     "Wear protective clothing and follow the product label when using pesticide.",
-    "For the next planting, use rice varieties with moderate resistance to sheath blight, if available."
+    {
+        "text": "For the next planting, use rice varieties (NSIC Rc 342SR (Mabango 4), NSIC Rc 506 (Tubigan 41), or NSIC Rc 446H (Mestiso 73)) with moderate resistance to sheath blight, if available.",
+        "links": [
+            {
+                "text": "NSIC Rc 342SR (Mabango 4)",
+                "url": "https://www.philrice.gov.ph/da-chief-unveils-new-rice-technologies-2/"
+            },
+            {
+                "text": "NSIC Rc 506 (Tubigan 41)",
+                "url": "https://www.philrice.gov.ph/rcef-techno-demo-changes-farmers-old-ways/"
+            },
+            {
+                "text": "NSIC Rc 446H (Mestiso 73)",
+                "url": "https://www.philrice.gov.ph/derby-promotes-affordable-hybrid-varieties/"
+            }
+        ]
+    }
     ],
     "season_notes": {
     "wet": "Since it is the rainy season, sheath blight may spread faster because the field is more humid, especially when plants are crowded and nitrogen fertilizer is high. Prioritize checking the lower part of the plant near the water level.",
@@ -215,19 +334,34 @@
     "Hanapin ang hugis-itlog, mamerdeng-abo, o tila basang batik sa lapak.",
     "Bantayan ang palayan mula sa pinakamaraming pagsusuwi hanggang sa pagsapaw o paglabas ng uhay.",
     "Iwasan ang sobrang paggamit ng nitrohenong abono dahil maaari nitong tulungan ang pagkalat ng sakit.",
-    "Kapag may bagong impeksiyon, itigil muna ang paglalagay ng nitrohenong abono.",
     "Iwasang magtanim ng palay na masyadong magkakadikit; magbigay ng sapat na agwat para makadaloy ang hangin sa pagitan ng mga halaman.",
     "Patuyuin ang palayan sa loob ng ilang araw, mga 3–5 araw, pagkatapos ay lagyan muli ng tubig.",
     "Alisin ang lumang pinaggapasan at ibaon ang infected na tirang halaman sa pamamagitan ng malalim na pag-aararo habang inihahanda ang bukid.",
     "Gumamit ng balanseng abono, kabilang ang potassium fertilizer at organikong pataba.",
-    "Kung malala o mabilis kumalat ang sakit, gumamit ng inirerekomendang pamatay-amag.",
+    "Kung kinakailangan, gumamit ng inirerekomendang pamatay-amag para sa sheath blight at sundin ang tamang paraan ng paggamit.",
     "I-spray ang lapak o leaf sheath kung saan makikita ang sintomas; ulitin sa panahon ng pagsapaw kung kinakailangan.",
     "Magsuot ng proteksiyon na damit at sundin ang label ng produkto kapag gumagamit ng pesticide.",
-    "Sa susunod na taniman, gumamit ng uri ng palay na may katamtamang tibay laban sa sheath blight, kung mayroon."
+    {
+        "text": "Sa susunod na taniman, gumamit ng uri ng palay  (NSIC Rc 342SR (Mabango 4), NSIC Rc 506 (Tubigan 41), o NSIC Rc 446H (Mestiso 73)) na may katamtamang tibay laban sa sheath blight, kung mayroon.",
+        "links": [
+            {
+                "text": "NSIC Rc 342SR (Mabango 4)",
+                "url": "https://www.philrice.gov.ph/da-chief-unveils-new-rice-technologies-2/"
+            },
+            {
+                "text": "NSIC Rc 506 (Tubigan 41)",
+                "url": "https://www.philrice.gov.ph/rcef-techno-demo-changes-farmers-old-ways/"
+            },
+            {
+                "text": "NSIC Rc 446H (Mestiso 73)",
+                "url": "https://www.philrice.gov.ph/derby-promotes-affordable-hybrid-varieties/"
+            }
+        ]
+    }
     ],
     "season_notes": {
     "wet": "Dahil tag-ulan, maaaring mas mabilis kumalat ang sheath blight dahil mas mahalumigmig ang palayan, lalo na kapag siksik ang tanim at mataas ang nitrohenong abono. Unahin ang pagsuri sa ibabang bahagi ng halaman malapit sa tubig.",
-    "dry": "Sa panahon ng tag-init, maaari pa ring tumubo ang sheath blight kung mahalumigmig ang palayan, masyadong magkakadikit ang mga tanim, o sobra ang paggamit ng nitrohenong abono."
+    "dry": "Sa panahon ng tag-araw, maaari pa ring tumubo ang sheath blight kung mahalumigmig ang palayan, masyadong magkakadikit ang mga tanim, o sobra ang paggamit ng nitrohenong abono."
     }
 }
 },
@@ -242,11 +376,39 @@
     "Control green leafhoppers because they carry and spread the tungro virus.",
     "Check young rice plants often because tungro is more serious during the early growth stage.",
     "Look for stunted plants, yellow to orange-yellow leaves, and fewer tillers.",
-    "Remove badly infected plants early so they will not become a source of the virus.",
+    "Remove infected plants early so they will not become a source of the virus.",
     "Remove volunteer rice, wild rice, weeds, and grasses that may carry the virus or serve as hiding places for green leafhoppers.",
     "Avoid planting near fields already infected with tungro, especially when rice plants are still young.",
     "Plant at the same time as nearby farmers when possible to reduce the spread of green leafhoppers.",
-    "For the next planting, use rice varieties resistant to tungro or resistant to green leafhoppers, if available."
+    {
+        "text": "For the next planting, use rice varieties resistant to tungro or resistant to green leafhoppers such as NSIC Rc 142 (Tubigan 7), NSIC Rc 120 (Matatag 6), NSIC Rc 342SR (Mabango 4), NSIC Rc 506 (Tubigan 41), NSIC Rc 508 (Tubigan 42), or NSIC Rc 512 (Tubigan 44).",
+        "links": [
+            {
+                "text": "NSIC Rc 142 (Tubigan 7)",
+                "url": "https://www.philrice.gov.ph/rice-clientele-recognizes-philrice-role/"
+            },
+            {
+                "text": "NSIC Rc 120 (Matatag 6)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            },
+            {
+                "text": "NSIC Rc 342SR (Mabango 4)",
+                "url": "https://www.philrice.gov.ph/da-chief-unveils-new-rice-technologies-2/"
+            },
+            {
+                "text": "NSIC Rc 506 (Tubigan 41)",
+                "url": "https://www.philrice.gov.ph/rcef-techno-demo-changes-farmers-old-ways/"
+            },
+            {
+                "text": "NSIC Rc 508 (Tubigan 42)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            },
+            {
+                "text": "NSIC Rc 512 (Tubigan 44)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            }
+        ]
+    }
     ],
     "season_notes": {
     "wet": "Since it is the rainy season, tungro may spread more because green leafhoppers can increase and move the virus from infected plants to healthy plants. Prioritize controlling green leafhoppers and removing infected plants early.",
@@ -263,15 +425,43 @@
     "Kontrolin ang green leafhoppers o berdeng ngusong-kabayo dahil sila ang nagdadala at nagpapakalat ng tungro virus.",
     "Regular na suriin ang batang palay dahil mas malala ang epekto ng tungro sa maagang yugto ng pagtubo.",
     "Hanapin ang mga palay na bansot, may dilaw hanggang kahel-dilaw na dahon, at kakaunti ang suwi.",
-    "Alisin nang maaga ang malalang infected na halaman upang hindi ito maging pagmulan ng bayrus.",
+    "Alisin nang maaga ang mga infected na halaman upang hindi ito maging pagmulan ng bayrus.",
     "Alisin ang kusang tumubong palay, ligaw na palay, damo, at grasses na maaaring magdala ng bayrus o pagtaguan ng green leafhoppers.",
     "Iwasang magtanim malapit sa palayang may tungro, lalo na kung bata pa ang palay.",
     "Magtanim kasabay ng mga kalapit na magsasaka kung maaari upang mabawasan ang pagkalat ng green leafhoppers.",
-    "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa tungro o matibay laban sa green leafhoppers, kung mayroon."
+    {
+        "text": "Sa susunod na taniman, gumamit ng uri ng palay na matibay laban sa tungro o matibay laban sa green leafhoppers, katulad ng NSIC Rc 142 (Tubigan 7), NSIC Rc 120 (Matatag 6), NSIC Rc 342SR (Mabango 4), NSIC Rc 506 (Tubigan 41), NSIC Rc 508 (Tubigan 42), o NSIC Rc 512 (Tubigan 44).",
+        "links": [
+            {
+                "text": "NSIC Rc 142 (Tubigan 7)",
+                "url": "https://www.philrice.gov.ph/rice-clientele-recognizes-philrice-role/"
+            },
+            {
+                "text": "NSIC Rc 120 (Matatag 6)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            },
+            {
+                "text": "NSIC Rc 342SR (Mabango 4)",
+                "url": "https://www.philrice.gov.ph/da-chief-unveils-new-rice-technologies-2/"
+            },
+            {
+                "text": "NSIC Rc 506 (Tubigan 41)",
+                "url": "https://www.philrice.gov.ph/rcef-techno-demo-changes-farmers-old-ways/"
+            },
+            {
+                "text": "NSIC Rc 508 (Tubigan 42)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            },
+            {
+                "text": "NSIC Rc 512 (Tubigan 44)",
+                "url": "https://www.pinoyrice.com/rice-varieties/"
+            }
+        ]
+    }
     ],
     "season_notes": {
     "wet": "Dahil tag-ulan, maaaring mas kumalat ang tungro dahil maaaring dumami ang green leafhoppers at mailipat nila ang bayrus mula sa infected na halaman papunta sa malusog na halaman. Unahin ang pagkontrol sa green leafhoppers at maagang pagtanggal ng infected na halaman.",
-    "dry": "Sa panahon ng tag-init, maaari pa ring kumalat ang tungro kung may green leafhoppers at infected na halaman sa paligid. Patuloy na suriin ang batang palay at alisin ang maaaring pagmulan ng bayrus."
+    "dry": "Sa panahon ng tag-araw, maaari pa ring kumalat ang tungro kung may green leafhoppers at infected na halaman sa paligid. Patuloy na suriin ang batang palay at alisin ang maaaring pagmulan ng bayrus."
     }
 }
 }

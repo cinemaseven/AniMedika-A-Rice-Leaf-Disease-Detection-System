@@ -48,19 +48,27 @@ export function initDate(app) {
 
     // Runs whenever the user selects a different date
     elements.datePicker.addEventListener("change", async () => {
-            elements.dateInput.value = toDisplayDate(elements.datePicker.value);
+        if (!elements.datePicker.value) {
+            setDateToToday();
+
+            setTimeout(() => {
+                elements.datePicker.blur();
+            }, 0);
+            
+        } else {
+            elements.dateInput.value =
+                toDisplayDate(elements.datePicker.value);
 
             updateSeasonDisplay();
-
-            // If an image was previously analyzed, submit it again using the new date
-            if (state.lastSubmittedFile) {
-                await app.actions.submitImage(
-                    state.lastSubmittedFile,
-                    { scroll: false }
-                );
-            }
         }
-    );
+
+        if (state.lastSubmittedFile) {
+            await app.actions.submitImage(
+                state.lastSubmittedFile,
+                { scroll: false }
+            );
+        }
+    });
 
     // Opens the hidden date picker when the visible calendar box is clicked
     elements.calendarBox.addEventListener("click", () => {

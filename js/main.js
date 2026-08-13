@@ -24,8 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         resultsSection: document.getElementById("resultsSection"),
         previewImage: document.getElementById("previewImage"),
         resultStatus: document.getElementById("resultStatus"),
-        // confidenceValue: document.getElementById("confidenceValue"),
-        // confidenceText: document.getElementById("confidenceText"),
         resultSeason: document.getElementById("resultSeason"),
         diseaseName: document.getElementById("diseaseName"),
         diseaseDescription: document.getElementById("diseaseDescription"),
@@ -35,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
         seasonNote: document.getElementById("seasonNote"),
         recommendationList: document.getElementById("recommendationList"),
         moreInformation: document.getElementById("moreInformation"),
-        // gaugeContainer: document.getElementById("confidenceOverlay"),
 
         // Language selector
         languagePopupOverlay: document.getElementById("languagePopupOverlay"),
@@ -141,12 +138,17 @@ function initAboutSection(app) {
     const icon = document.querySelector("#toggleAboutBtn .material-icons");
 
     toggleButton.addEventListener("click", () => {
-        const shouldShow = content.style.display === "none";
+        const shouldShow = !content.classList.contains("active");
 
-        content.style.display = shouldShow ? "flex" : "none";
+        content.classList.toggle("active", shouldShow);
+        toggleButton.classList.toggle("expanded", shouldShow);
 
-        buttonText.textContent = shouldShow ? app.text().showLess : app.text().showMore;
+        buttonText.textContent = shouldShow
+            ? app.text().showLess
+            : app.text().showMore;
 
-        icon.textContent = shouldShow ? "arrow_circle_up" : "arrow_circle_down";
+        icon.textContent = shouldShow
+            ? "arrow_circle_up"
+            : "arrow_circle_down";
     });
 }
