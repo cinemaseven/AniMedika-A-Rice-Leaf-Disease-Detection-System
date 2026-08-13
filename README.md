@@ -203,4 +203,4 @@ Detailed dataset preparation, controlled experiments, five-fold cross-validation
 
 ## License and Attribution
 
-Dataset sources, pretrained model resources, libraries, icons, images, and other third-party materials remain subject to their respective licenses and attribution requirements. A project-level software license should be added if the repository will be made available for reuse or redistribution.
+The datasets, pretrained model resources, libraries, icons, images, and other third-party materials used in this project remain subject to their respective licenses and attribution requirements.
