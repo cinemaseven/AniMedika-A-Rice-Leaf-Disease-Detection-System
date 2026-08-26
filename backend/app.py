@@ -47,36 +47,6 @@ def health():
         }
     )
 
-# ADDED FOR MODEL LOADING
-# @app.get("/api/warmup")
-# def warmup():
-#     try:
-#         warm_up_model()
-
-#         return jsonify(
-#             {
-#                 "status": "ready",
-#                 "model_ready": True,
-#             }
-#         )
-
-#     except ModelNotReadyError as exc:
-#         return (
-#             jsonify(
-#                 {
-#                     "status": "not_ready",
-#                     "model_ready": False,
-#                     "detail": str(exc),
-#                 }
-#             ),
-#             503,
-#         )
-
-#     except PredictionError as exc:
-#         app.logger.exception("Model warm-up error")
-#         return jsonify({"status": "error", "detail": str(exc)}), 500
-# ---
-
 @app.post("/api/predict")
 def predict():
     uploaded_file = request.files.get("image")

@@ -1253,14 +1253,6 @@ html {
         padding-right: 2rem;
     }
 
-    /* .main-content-wrapper {
-        padding: 0 2rem;
-    } */
-
-    /* .site-title {
-        font-size: 1.7rem;
-    } */
-
     .hero-image {
         height: 350px;
     }
@@ -1439,14 +1431,6 @@ html {
         width: 100%;
     }
 
-    /* .calendar {
-        width: 220px;             
-        display: inline-flex;   
-        padding: 0.6rem 0.9rem;  
-        font-size: 0.9rem;      
-        border-radius: 8px;
-    } */
-
     .date-input {
         font-size: 0.78rem;          
     }
@@ -1463,10 +1447,6 @@ html {
     .hero-image, .hero-link {
         display: none;
     }
-
-    /* .main-content-wrapper {
-        padding: 0 1rem;
-    } */
 
     .about-card-top {
         display: flex;
@@ -1538,10 +1518,6 @@ html {
     .upload-box {
         padding: 2rem 1rem;
     }
-
-    /* .upload-icon {
-        font-size: 4rem;
-    } */
 
     .upload-box p {
         font-size: 1.1rem;

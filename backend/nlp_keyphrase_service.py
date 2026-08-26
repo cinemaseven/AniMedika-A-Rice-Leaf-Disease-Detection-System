@@ -5,8 +5,7 @@ from collections.abc import Iterable
 
 _TOKEN_PATTERN = re.compile(r"[^\W_]+(?:[-’'][^\W_]+)*", re.UNICODE)
 
-# Language-level symptom/sign patterns. Matches are extracted directly from the
-# verified description text; the component does not generate new disease facts.
+# Language-level symptom/sign patterns. Matches are extracted directly from the verified description text; the component does not generate new disease facts.
 _KEYPHRASE_PATTERNS = {
     "en": (
         r"\byellow\s+to\s+white\s+(?:lesions?|spots?)\b",
@@ -124,8 +123,6 @@ def extract_key_phrases(
         for match in re.finditer(pattern, text, flags=re.IGNORECASE | re.UNICODE):
             matches.append((match.start(), match.end(), match.group(0)))
 
-    # Keep phrases in the same order in which the information appears in the
-    # description. Longer matches win when two matches start in the same place.
     matches.sort(key=lambda item: (item[0], -(item[1] - item[0])))
 
     key_phrases: list[str] = []
