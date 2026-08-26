@@ -31,6 +31,89 @@ export function initResults(app) {
         elements.keyPhrases.hidden = false;
     }
 
+    // Displays the original seasonal note with selected existing phrases in bold
+    function renderSeasonNote(note = "") {
+        elements.seasonNote.replaceChildren();
+
+        if (!note) {
+            elements.seasonNote.hidden = true;
+            return;
+        }
+
+        const boldPhrases = [
+            // English
+            "Wet-season note:",
+            "Dry-season note:",
+            "rainy season",
+            "dry season",
+            "may spread faster",
+            "can still spread",
+            "may still appear",
+            "may become worse",
+            "Increase monitoring",
+            "Maintain adequate irrigation",
+            "can still appear",
+            "can still develop",
+            "may spread more",
+
+            // Filipino
+            "Paalala sa tag-ulan:",
+            "Paalala sa tag-araw:",
+            "tag-ulan",
+            "tag-araw",
+            "maaaring mas mabilis kumalat",
+            "maaari pa ring kumalat",
+            "maaari pa ring lumitaw",
+            "maaaring lumala",
+            "Dagdagan ang pagmamanman",
+            "Panatilihin ang sapat na irigasyon",
+            "maaari pa ring tumubo",
+            "maaaring mas kumalat"
+        ];
+
+        const matches = [];
+
+        boldPhrases.forEach((phrase) => {
+            let startIndex = 0;
+            let position;
+
+            while ((position = note.indexOf(phrase, startIndex)) !== -1) {
+                matches.push({
+                    start: position,
+                    end: position + phrase.length
+                });
+
+                startIndex = position + phrase.length;
+            }
+        });
+
+        matches.sort((a, b) => a.start - b.start || b.end - a.end);
+
+        let cursor = 0;
+
+        matches.forEach((match) => {
+            if (match.start < cursor) {
+                return;
+            }
+
+            elements.seasonNote.append(
+                document.createTextNode(note.slice(cursor, match.start))
+            );
+
+            const strong = document.createElement("strong");
+            strong.textContent = note.slice(match.start, match.end);
+            elements.seasonNote.append(strong);
+
+            cursor = match.end;
+        });
+
+        elements.seasonNote.append(
+            document.createTextNode(note.slice(cursor))
+        );
+
+        elements.seasonNote.hidden = false;
+    }
+
      // Displays recommended actions and makes only configured rice variety names clickable
     function renderRecommendations(recommendations = []) {
         elements.recommendationList.replaceChildren();
@@ -170,6 +253,101 @@ export function initResults(app) {
         elements.moreInformation.append(label, sourceList);
         elements.moreInformation.hidden = false;
     }
+    // function renderMoreInformation(sources = []) {
+    //     elements.moreInformation.replaceChildren();
+
+    //     if (!Array.isArray(sources) || sources.length === 0) {
+    //         elements.moreInformation.hidden = true;
+    //         return;
+    //     }
+
+    //     const label = document.createElement("span");
+    //     label.className = "more-information-label";
+    //     label.textContent = "More information:";
+
+    //     const sourceList = document.createElement("ol");
+    //     sourceList.className = "more-information-list";
+
+    //     sources.forEach((source) => {
+    //         if (!source?.title) {
+    //             return;
+    //         }
+
+    //         const listItem = document.createElement("li");
+
+    //         // Normal source with one clickable title
+    //         if (source.url) {
+    //             let parsedUrl;
+
+    //             try {
+    //                 parsedUrl = new URL(source.url);
+    //             } catch (_error) {
+    //                 return;
+    //             }
+
+    //             if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+    //                 return;
+    //             }
+
+    //             const link = document.createElement("a");
+    //             link.href = parsedUrl.href;
+    //             link.target = "_blank";
+    //             link.rel = "noopener noreferrer";
+    //             link.textContent = source.title;
+
+    //             listItem.append(link);
+    //         }
+
+    //         // Grouped source with several numbered links
+    //         else if (Array.isArray(source.links)) {
+    //             listItem.append(
+    //                 document.createTextNode(`${source.title}: `)
+    //             );
+
+    //             source.links.forEach((item, index) => {
+    //                 if (!item?.url) {
+    //                     return;
+    //                 }
+
+    //                 let parsedUrl;
+
+    //                 try {
+    //                     parsedUrl = new URL(item.url);
+    //                 } catch (_error) {
+    //                     return;
+    //                 }
+
+    //                 if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+    //                     return;
+    //                 }
+
+    //                 if (index > 0) {
+    //                     listItem.append(document.createTextNode(", "));
+    //                 }
+
+    //                 const link = document.createElement("a");
+    //                 link.href = parsedUrl.href;
+    //                 link.target = "_blank";
+    //                 link.rel = "noopener noreferrer";
+    //                 link.textContent = item.label || index + 1;
+
+    //                 listItem.append(link);
+    //             });
+    //         }
+
+    //         if (listItem.childNodes.length > 0) {
+    //             sourceList.append(listItem);
+    //         }
+    //     });
+
+    //     if (sourceList.children.length === 0) {
+    //         elements.moreInformation.hidden = true;
+    //         return;
+    //     }
+
+    //     elements.moreInformation.append(label, sourceList);
+    //     elements.moreInformation.hidden = false;
+    // }
 
     // Displays the loading state while the image is being processed
     function showResultsLoading() {
@@ -191,7 +369,10 @@ export function initResults(app) {
 
         elements.recommendationList.innerHTML = `<li>${escapeHtml(app.text().awaitingRecommendations)}</li>`;
         renderMoreInformation();
-        elements.resultSeason.textContent = "";
+        // elements.resultSeason.textContent = "";
+        // elements.confidenceValue.textContent = "--%";
+        // elements.confidenceText.textContent = "";
+        // elements.gaugeContainer.style.setProperty("--fill-deg", "0deg");
     }
 
     // Displays prediction or server errors.
@@ -201,7 +382,7 @@ export function initResults(app) {
         elements.resultsSection.style.display = "block";
         elements.resultStatus.className = "result-status error";
         elements.resultStatus.textContent = "";
-        elements.resultSeason.textContent = "";
+        // elements.resultSeason.textContent = "";
 
         renderKeyPhrases();
         renderMoreInformation();
@@ -271,11 +452,12 @@ export function initResults(app) {
 
         elements.resultSeason.textContent = `${app.text().selectedSeason}: ` + `${seasonLabel}`;
 
-        if (elements.seasonNote) {
-            elements.seasonNote.textContent = localized.season_note || "";
-            elements.seasonNote.hidden = !localized.season_note;
-        }
-
+        // if (elements.seasonNote) {
+        //     elements.seasonNote.textContent = localized.season_note || "";
+        //     elements.seasonNote.hidden = !localized.season_note;
+        // }
+        renderSeasonNote(localized.season_note || "");
+        
         const recommendations = [...localized.general_recommendations];
 
         renderRecommendations(recommendations);

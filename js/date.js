@@ -27,11 +27,21 @@ export function initDate(app) {
     }
 
     // Updates the season text displayed beside the date
+    // function updateSeasonDisplay() {
+    //     const season = determineSeason(elements.datePicker.value);
+
+    //     elements.seasonDisplay.textContent = season === "wet" ? app.text().wetSeason : app.text().drySeason;
+    //     elements.seasonDisplay.dataset.season = season;
+
+    //     return season;
+    // }
     function updateSeasonDisplay() {
         const season = determineSeason(elements.datePicker.value);
+        const seasonLabel = season === "wet" ? app.text().wetSeason : app.text().drySeason;
 
-        elements.seasonDisplay.textContent = season === "wet" ? app.text().wetSeason : app.text().drySeason;
+        elements.seasonDisplay.textContent = seasonLabel;
         elements.seasonDisplay.dataset.season = season;
+        elements.resultSeason.textContent = `${app.text().selectedSeason}: ${seasonLabel}`;
 
         return season;
     }

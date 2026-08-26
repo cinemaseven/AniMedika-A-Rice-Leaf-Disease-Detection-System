@@ -32,7 +32,7 @@ def decode_uploaded_image(image_bytes: bytes) -> tuple[Image.Image, str]:
             image_format = (source.format or "").upper()
             if image_format not in ALLOWED_IMAGE_FORMATS:
                 raise InvalidImageError(
-                    "Unsupported image format. Please use JPEG, PNG, or WEBP, HEIC, or HEIF."
+                    "Unsupported image format. Please use JPEG, PNG, WEBP, HEIC, or HEIF."
                 )
 
             source.verify()

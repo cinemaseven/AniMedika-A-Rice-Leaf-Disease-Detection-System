@@ -22,6 +22,11 @@
     box-sizing: border-box;
 }
 
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
 /* === BODY === */
 body {
     background-color: var(--base);
@@ -56,6 +61,23 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+    position: relative;
+}
+
+.header-result-season {
+    position: absolute;
+    top: calc(100% + 0.15rem);
+    right: 0;
+    margin: 0;
+    color: var(--secondary);
+    font-family: var(--body-font);
+    font-size: 0.82rem;
+    font-weight: bold;
+    line-height: 1.15;
+    text-align: right;
+    white-space: nowrap;
+    opacity: 1;
+    pointer-events: none;
 }
 
 .header-img {
@@ -488,7 +510,7 @@ p, ol {
         display: none;
     }
 
-/* === RESULTS === */
+/* ===  RESULTS === */
 .results-section {
     margin: 4rem 0;
     animation: fadeIn 0.5s ease-in; 
@@ -520,6 +542,7 @@ p, ol {
     opacity: 0.7;
 }
 
+/* 2-Column Layout for Image and Text */
 .result-content {
     display: flex;
     gap: 3rem;
@@ -543,6 +566,7 @@ p, ol {
     object-fit: cover;
 }
 
+/* Right-side Details Box */
 .result-details {
     flex: 1;
     display: flex;
@@ -600,7 +624,6 @@ p, ol {
     font-size: inherit;
 }
 
-/* === RECOMMENDATIONS === */
 .season-display {
     display: none !important;
 }
@@ -619,11 +642,12 @@ p, ol {
     display: none;
 }
 
+/* Recommended Actions 2-Column Grid */
 .recommendation-card {
-    border: 1.5px solid var(--text-color1);
-    border-radius: 15px;
-    padding: 3rem;
-    margin-bottom: 2rem;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 1.5rem;
     background-color: transparent;
 }
 
@@ -632,23 +656,27 @@ p, ol {
     font-size: 2.5rem;
     color: var(--text-color1);
     font-weight: normal;
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
 }
 
 #recommendationList {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: block;
+    column-count: 2;
     column-gap: 4rem;
-    row-gap: 1.5rem;
-    padding-left: 1.5rem;
+    margin: 0;
+    padding: 1.5rem 1.5rem 0.65rem;
+    border-top: 1.5px solid rgba(14, 14, 14, 0.65);
+    border-bottom: 1.5px solid rgba(14, 14, 14, 0.65);
 }
 
 #recommendationList li {
+    break-inside: avoid;
     color: var(--text-color1);
     font-family: var(--body-font);
-    font-size: 1.15rem;
-    line-height: 1.6;
-    padding-left: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.45;
+    margin: 0 0 0.85rem;
+    padding-left: 0.2rem;
 }
 
 #recommendationList li::marker {
@@ -668,7 +696,11 @@ p, ol {
 }
 
 .more-information {
-    margin-top: 1.5rem;
+    width: 100%;
+    margin: 0 0 2rem;
+    padding: 1.15rem 1.5rem;
+    border: 1.5px solid rgba(14, 14, 14, 0.65);
+    border-radius: 15px;
     color: var(--text-color1);
     font-family: var(--body-font);
     font-size: 1rem;
@@ -708,7 +740,7 @@ p, ol {
     outline: none;
 }
 
-/* === DISCLAIMER === */
+/* Disclaimer Styling */
 .disclaimer {
     color: var(--text-color1);
     font-style: italic;
@@ -722,7 +754,7 @@ p, ol {
 .disclaimer strong {
     color: var(--secondary);
 }
-/* === FOOTER === */
+/* ===  FOOTER === */
 .site-footer {
     background: var(--accent1);
     color: var(--text-color2);
@@ -1221,6 +1253,14 @@ html {
         padding-right: 2rem;
     }
 
+    /* .main-content-wrapper {
+        padding: 0 2rem;
+    } */
+
+    /* .site-title {
+        font-size: 1.7rem;
+    } */
+
     .hero-image {
         height: 350px;
     }
@@ -1267,7 +1307,7 @@ html {
     }
 
     #recommendationList {
-        grid-template-columns: 1fr;
+        column-count: 1;
     }
 
     .result-details h2 {
@@ -1310,6 +1350,7 @@ html {
     }
 }
 
+
 /* ==========================================
     MOBILE VIEW (768px and below)
 ========================================== */
@@ -1317,9 +1358,9 @@ html {
 
     .site-header {
         width: 100%;
-        padding: 0.75rem 1rem;
-        border-bottom: 1.5px solid rgba(14,14,14);
-        margin-bottom: 1rem;
+        padding: 0.75rem 1rem 2rem;
+        border-bottom: 1.3px solid rgba(14,14,14);
+        margin-bottom: 1.45rem;
     }
 
     .container {
@@ -1398,13 +1439,34 @@ html {
         width: 100%;
     }
 
+    /* .calendar {
+        width: 220px;             
+        display: inline-flex;   
+        padding: 0.6rem 0.9rem;  
+        font-size: 0.9rem;      
+        border-radius: 8px;
+    } */
+
     .date-input {
         font-size: 0.78rem;          
+    }
+    
+    .header-result-season {
+        left: 50%;
+        right: auto;
+        width: calc(100vw - 2rem);
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 0.75rem;
     }
 
     .hero-image, .hero-link {
         display: none;
     }
+
+    /* .main-content-wrapper {
+        padding: 0 1rem;
+    } */
 
     .about-card-top {
         display: flex;
@@ -1477,6 +1539,9 @@ html {
         padding: 2rem 1rem;
     }
 
+    /* .upload-icon {
+        font-size: 4rem;
+    } */
 
     .upload-box p {
         font-size: 1.1rem;
@@ -1515,9 +1580,9 @@ html {
     }
 
     .result-content{
-        gap: 1rem;
+        gap: 0.6rem;
         margin-top: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 0.6rem;
     }
 
     .result-image-card {
@@ -1539,18 +1604,18 @@ html {
         line-height: 1.4;
     }
     .recommendation-card {
-        padding: 1.25rem;
+        padding: 0rem;
         margin-bottom: 1rem;
     }
 
     .recommendation-card h2 {
         font-size: 1.5rem;
-        margin: 0 0 0.75rem;
+        margin: 0 0 0.4rem;
     }
 
     .season-note {
         margin: 0 0 0.65rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 1.45;
     }
 
@@ -1564,6 +1629,10 @@ html {
         line-height: 1.45;
         margin: 0;
         padding-left: 0.2rem;
+    }
+
+    .more-information {
+        font-size: 0.9rem;
     }
 
     .site-footer {
@@ -1628,21 +1697,6 @@ html {
     .primary-action-btn,
     .secondary-action-btn {
         width: 100%;
-    }
-
-    .season-display {
-        text-align: center;
-    }
-
-    .result-status {
-        min-height: 0;
-        font-size: 0.8rem;
-        line-height: 1.3;
-    }
-
-    .result-season {
-        font-size: 0.82rem;
-        line-height: 1.3;
     }
 }
 
